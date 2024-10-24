@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace GestionDeBiblioteca
 {
-    public class Lector : Usuario
+    public class Blibliotecario : Usuario
     {
-        public Lector(string id, string name, string rol) : base(id, name, rol)
+        public Blibliotecario(string id, string name, string rol) : base(id, name, rol)
         {
 
         }
