@@ -56,7 +56,9 @@ namespace GestionDeBiblioteca
 
         private void AgregarUsuario_Click(object sender, EventArgs e)
         {
-
+            AgregarUsuario agregarUsuario= new AgregarUsuario();
+            agregarUsuario.Show();
+            this.Close();
         }
 
         private void EditarUsuario_Click(object sender, EventArgs e)
