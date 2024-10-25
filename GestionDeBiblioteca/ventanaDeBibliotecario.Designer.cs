@@ -56,18 +56,20 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(135, 32);
+            label1.Location = new Point(94, 19);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(620, 36);
+            label1.Size = new Size(427, 25);
             label1.TabIndex = 0;
             label1.Text = "Hola!!. Bienvenido al menu de bibliotecario ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(433, 152);
+            label2.Location = new Point(303, 91);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(0, 25);
+            label2.Size = new Size(0, 15);
             label2.TabIndex = 1;
             // 
             // AgregarLibro
@@ -75,9 +77,10 @@
             AgregarLibro.BackColor = Color.DarkRed;
             AgregarLibro.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             AgregarLibro.ForeColor = Color.White;
-            AgregarLibro.Location = new Point(47, 141);
+            AgregarLibro.Location = new Point(33, 85);
+            AgregarLibro.Margin = new Padding(2);
             AgregarLibro.Name = "AgregarLibro";
-            AgregarLibro.Size = new Size(176, 34);
+            AgregarLibro.Size = new Size(123, 20);
             AgregarLibro.TabIndex = 2;
             AgregarLibro.Text = "Agregar Libro";
             AgregarLibro.UseVisualStyleBackColor = false;
@@ -88,9 +91,10 @@
             GestionL.AutoSize = true;
             GestionL.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             GestionL.ForeColor = SystemColors.ButtonHighlight;
-            GestionL.Location = new Point(19, 12);
+            GestionL.Location = new Point(13, 7);
+            GestionL.Margin = new Padding(2, 0, 2, 0);
             GestionL.Name = "GestionL";
-            GestionL.Size = new Size(227, 32);
+            GestionL.Size = new Size(155, 22);
             GestionL.TabIndex = 3;
             GestionL.Text = "Gestion de Libros";
             GestionL.Click += Gestion_Click;
@@ -100,11 +104,12 @@
             EditarLibro.BackColor = Color.DarkRed;
             EditarLibro.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EditarLibro.ForeColor = Color.White;
-            EditarLibro.Location = new Point(47, 184);
+            EditarLibro.Location = new Point(33, 110);
+            EditarLibro.Margin = new Padding(2);
             EditarLibro.Name = "EditarLibro";
-            EditarLibro.Size = new Size(176, 34);
+            EditarLibro.Size = new Size(123, 20);
             EditarLibro.TabIndex = 4;
-            EditarLibro.Text = "Editar Libro";
+            EditarLibro.Text = "Buscar Libro";
             EditarLibro.UseVisualStyleBackColor = false;
             EditarLibro.Click += EditarLibro_Click;
             // 
@@ -113,9 +118,10 @@
             EliminarLibro.BackColor = Color.DarkRed;
             EliminarLibro.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EliminarLibro.ForeColor = Color.White;
-            EliminarLibro.Location = new Point(47, 228);
+            EliminarLibro.Location = new Point(33, 137);
+            EliminarLibro.Margin = new Padding(2);
             EliminarLibro.Name = "EliminarLibro";
-            EliminarLibro.Size = new Size(176, 34);
+            EliminarLibro.Size = new Size(123, 20);
             EliminarLibro.TabIndex = 5;
             EliminarLibro.Text = "Eliminar Libro";
             EliminarLibro.UseVisualStyleBackColor = false;
@@ -125,9 +131,10 @@
             // 
             pictureBox1.BackColor = Color.Brown;
             pictureBox1.Image = Properties.Resources.Book_free_icons_designed_by_Smashicons_removebg_preview;
-            pictureBox1.Location = new Point(79, 47);
+            pictureBox1.Location = new Point(55, 28);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(98, 82);
+            pictureBox1.Size = new Size(69, 49);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -135,9 +142,10 @@
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.ffrf_removebg_preview1;
-            pictureBox2.Location = new Point(55, 12);
+            pictureBox2.Location = new Point(38, 7);
+            pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(83, 78);
+            pictureBox2.Size = new Size(58, 47);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
@@ -147,9 +155,10 @@
             GestionU.AutoSize = true;
             GestionU.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             GestionU.ForeColor = SystemColors.ButtonHighlight;
-            GestionU.Location = new Point(16, 12);
+            GestionU.Location = new Point(11, 7);
+            GestionU.Margin = new Padding(2, 0, 2, 0);
             GestionU.Name = "GestionU";
-            GestionU.Size = new Size(243, 32);
+            GestionU.Size = new Size(166, 22);
             GestionU.TabIndex = 8;
             GestionU.Text = "Gestion de Usuario";
             GestionU.Click += GestionU_Click;
@@ -159,9 +168,10 @@
             AgregarUsuario.BackColor = Color.DarkRed;
             AgregarUsuario.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             AgregarUsuario.ForeColor = Color.White;
-            AgregarUsuario.Location = new Point(45, 146);
+            AgregarUsuario.Location = new Point(32, 88);
+            AgregarUsuario.Margin = new Padding(2);
             AgregarUsuario.Name = "AgregarUsuario";
-            AgregarUsuario.Size = new Size(188, 34);
+            AgregarUsuario.Size = new Size(132, 20);
             AgregarUsuario.TabIndex = 9;
             AgregarUsuario.Text = "Agregar Usuario";
             AgregarUsuario.UseVisualStyleBackColor = false;
@@ -172,9 +182,10 @@
             EliminarUsuario.BackColor = Color.DarkRed;
             EliminarUsuario.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EliminarUsuario.ForeColor = Color.White;
-            EliminarUsuario.Location = new Point(45, 231);
+            EliminarUsuario.Location = new Point(32, 139);
+            EliminarUsuario.Margin = new Padding(2);
             EliminarUsuario.Name = "EliminarUsuario";
-            EliminarUsuario.Size = new Size(188, 34);
+            EliminarUsuario.Size = new Size(132, 20);
             EliminarUsuario.TabIndex = 10;
             EliminarUsuario.Text = "Eliminar Usuario";
             EliminarUsuario.UseVisualStyleBackColor = false;
@@ -185,9 +196,10 @@
             EditarUsuario.BackColor = Color.DarkRed;
             EditarUsuario.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             EditarUsuario.ForeColor = Color.White;
-            EditarUsuario.Location = new Point(45, 188);
+            EditarUsuario.Location = new Point(32, 113);
+            EditarUsuario.Margin = new Padding(2);
             EditarUsuario.Name = "EditarUsuario";
-            EditarUsuario.Size = new Size(188, 34);
+            EditarUsuario.Size = new Size(132, 20);
             EditarUsuario.TabIndex = 11;
             EditarUsuario.Text = "Editar Usuario";
             EditarUsuario.UseVisualStyleBackColor = false;
@@ -197,9 +209,10 @@
             // 
             pictureBox3.BackColor = Color.Brown;
             pictureBox3.Image = Properties.Resources.Captura_de_pantalla_2024_10_22_203527_removebg_preview;
-            pictureBox3.Location = new Point(73, 47);
+            pictureBox3.Location = new Point(51, 28);
+            pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(118, 93);
+            pictureBox3.Size = new Size(83, 56);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 12;
             pictureBox3.TabStop = false;
@@ -209,12 +222,14 @@
             SalirBibliotecario.BackColor = Color.Red;
             SalirBibliotecario.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             SalirBibliotecario.ForeColor = SystemColors.ButtonHighlight;
-            SalirBibliotecario.Location = new Point(674, 403);
+            SalirBibliotecario.Location = new Point(472, 242);
+            SalirBibliotecario.Margin = new Padding(2);
             SalirBibliotecario.Name = "SalirBibliotecario";
-            SalirBibliotecario.Size = new Size(112, 34);
+            SalirBibliotecario.Size = new Size(78, 20);
             SalirBibliotecario.TabIndex = 13;
             SalirBibliotecario.Text = "Salir";
             SalirBibliotecario.UseVisualStyleBackColor = false;
+            SalirBibliotecario.Click += SalirBibliotecario_Click;
             // 
             // panel1
             // 
@@ -224,9 +239,10 @@
             panel1.Controls.Add(GestionU);
             panel1.Controls.Add(EditarLibro);
             panel1.Controls.Add(EliminarLibro);
-            panel1.Location = new Point(103, 110);
+            panel1.Location = new Point(72, 66);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(262, 287);
+            panel1.Size = new Size(183, 172);
             panel1.TabIndex = 14;
             // 
             // panel2
@@ -237,17 +253,18 @@
             panel2.Controls.Add(AgregarUsuario);
             panel2.Controls.Add(EliminarUsuario);
             panel2.Controls.Add(EditarUsuario);
-            panel2.Location = new Point(422, 110);
+            panel2.Location = new Point(295, 66);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(267, 287);
+            panel2.Size = new Size(187, 172);
             panel2.TabIndex = 15;
             // 
             // ventanaDeBibliotecario
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.DarkRed;
-            ClientSize = new Size(798, 444);
+            ClientSize = new Size(559, 266);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(SalirBibliotecario);
@@ -255,6 +272,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "ventanaDeBibliotecario";
             StartPosition = FormStartPosition.CenterScreen;

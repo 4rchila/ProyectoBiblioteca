@@ -30,12 +30,16 @@ namespace GestionDeBiblioteca
 
         private void AgregarLibro_Click(object sender, EventArgs e)
         {
-
+            AgregarLibro agregarLibro = new AgregarLibro();
+            agregarLibro.Show();
+            this.Hide();
         }
 
         private void EditarLibro_Click(object sender, EventArgs e)
         {
-
+            EditarLibro editarLibro = new EditarLibro();
+            editarLibro.Show();
+            this.Close();
         }
 
         private void EliminarLibro_Click(object sender, EventArgs e)
@@ -43,7 +47,7 @@ namespace GestionDeBiblioteca
 
         }
 
-      //Gestion de usuarios
+        //Gestion de usuarios
 
         private void GestionU_Click(object sender, EventArgs e)
         {
@@ -63,6 +67,11 @@ namespace GestionDeBiblioteca
         private void EliminarUsuario_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SalirBibliotecario_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
