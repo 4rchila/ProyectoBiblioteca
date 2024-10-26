@@ -23,5 +23,15 @@ namespace GestionDeBiblioteca
             ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
             ventanaBibliotecario.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AgregarLibro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

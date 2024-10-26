@@ -63,16 +63,15 @@ namespace GestionDeBiblioteca
 
         private void EditarUsuario_Click(object sender, EventArgs e)
         {
-
+            EditarUsuario editarUsuario = new EditarUsuario();
+            editarUsuario.Show();
+            this.Close();
         }
 
         private void EliminarUsuario_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void SalirBibliotecario_Click(object sender, EventArgs e)
-        {
+            EliminarUsuario eliminarUsuario = new EliminarUsuario();
+            eliminarUsuario.Show();
             this.Close();
         }
     }
