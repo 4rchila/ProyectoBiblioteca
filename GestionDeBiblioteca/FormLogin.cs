@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class form1 : Form
+    public partial class FormLogin : Form
     {
-        public form1()
+        public FormLogin()
         {
             InitializeComponent();
         }
@@ -77,7 +77,7 @@ namespace GestionDeBiblioteca
         {
             btnInicio.Enabled = false;
             controlBotones();
-            ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
+            FormPrincipal ventanaBibliotecario = new FormPrincipal();
             ventanaBibliotecario.Show();
             this.Hide();
         }

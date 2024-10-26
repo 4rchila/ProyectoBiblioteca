@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class AgregarLibro : Form
+    public partial class FormEditarLibro : Form
     {
-        public AgregarLibro()
+        public FormEditarLibro()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
-            ventanaBibliotecario.Show();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GestionDeBiblioteca
 {
-    partial class ventanaDeBibliotecario
+    partial class FormPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -175,7 +175,6 @@
             AgregarUsuario.TabIndex = 9;
             AgregarUsuario.Text = "Agregar Usuario";
             AgregarUsuario.UseVisualStyleBackColor = false;
-            AgregarUsuario.Click += AgregarUsuario_Click;
             // 
             // EliminarUsuario
             // 
@@ -259,7 +258,7 @@
             panel2.Size = new Size(187, 172);
             panel2.TabIndex = 15;
             // 
-            // ventanaDeBibliotecario
+            // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -274,7 +273,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             MaximizeBox = false;
-            Name = "ventanaDeBibliotecario";
+            Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ventanaDeBibliotecario";
             Load += ventanaDeBibliotecario_Load;
