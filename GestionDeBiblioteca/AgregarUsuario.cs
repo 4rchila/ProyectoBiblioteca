@@ -36,17 +36,35 @@ namespace GestionDeBiblioteca
         {
 
         }
-
+        string rol;
         private void button1_Click(object sender, EventArgs e)
         {
+
             string password = passwordUsuario.Text;
             string nombre = nombreUsuario.Text;
-            string rol = rolUsuario.Text;
+            string rol;
+            MessageBox.Show(rolUsuario.Text);
+            if (rolUsuario.Text == "")
+            {
+                rol = "Lector";
 
+            }
+            else
+            {
+                rol = rolUsuario.Text;
+                
+
+            }
             Program.AgregarUsuario(nombre, rol, password);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rolUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

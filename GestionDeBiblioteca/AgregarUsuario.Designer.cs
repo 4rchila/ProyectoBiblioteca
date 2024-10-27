@@ -71,6 +71,7 @@
             rolUsuario.Name = "rolUsuario";
             rolUsuario.Size = new Size(428, 25);
             rolUsuario.TabIndex = 21;
+            rolUsuario.SelectedIndexChanged += rolUsuario_SelectedIndexChanged;
             // 
             // passwordUsuario
             // 

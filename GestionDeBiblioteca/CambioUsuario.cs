@@ -30,7 +30,22 @@ namespace GestionDeBiblioteca
             string cambioNombre = CambioNombre.Text;
             string cambioPassword = CambioNombre.Text;
 
-            Program.CambiarUsuario(cambioNombre,cambioPassword, usuario);
+            if (cambioNombre == "" && cambioPassword == "")
+            {
+                MessageBox.Show("No hay parametros que editar, vuelve a intentarlo");
+            }
+            else
+            {
+                Program.CambiarUsuario(cambioNombre, cambioPassword, usuario);
+            }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            EditarUsuario  editarUsuario = new EditarUsuario();
+            editarUsuario.Show();
         }
     }
 }

@@ -33,6 +33,8 @@ namespace GestionDeBiblioteca
         {
             string nombreUsuario = nombreUsuarioBuscar.Text;
             var busqueda = Program.BuscarUsuario(nombreUsuario);
+            MessageBox.Show(busqueda.Name);
+
             if (busqueda == null)
             {
                 MessageBox.Show("Usuario no encontrado");

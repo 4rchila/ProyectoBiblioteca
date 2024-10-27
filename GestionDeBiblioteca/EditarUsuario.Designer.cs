@@ -39,7 +39,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(40, 50);
+            button2.Location = new Point(72, 65);
             button2.Margin = new Padding(4, 5, 4, 5);
             button2.Name = "button2";
             button2.Size = new Size(107, 38);
@@ -56,7 +56,7 @@
             panel1.Controls.Add(nombreUsuarioBuscar);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(184, 37);
+            panel1.Location = new Point(216, 52);
             panel1.Name = "panel1";
             panel1.Size = new Size(559, 643);
             panel1.TabIndex = 3;

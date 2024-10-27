@@ -56,13 +56,20 @@ namespace GestionDeBiblioteca
 
         public static void CambiarUsuario(string nombre, string password,Usuario n) 
         {
-            if (nombre == null)
+            if (nombre == "")
             {
-                n.Password = password;
-            } else if (password == null) 
-            {
-                n.Name = nombre;
+                BuscarUsuario(n.Name).Password = password;
             }
+            else if (password == "")
+            {
+                BuscarUsuario(n.Name).Name = nombre;
+            }
+            else 
+            {
+                BuscarUsuario(n.Name).Password = password;
+                BuscarUsuario(n.Name).Name = nombre;
+            }
+            MessageBox.Show("Usuario editado exitosamente ");
         }
 
     }
