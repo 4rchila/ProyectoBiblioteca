@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            AgregarUser = new Panel();
             rolUsuario = new ListBox();
-            paswordUsuario = new TextBox();
+            passwordUsuario = new TextBox();
             label4 = new Label();
             registrarUsuario = new Button();
             label3 = new Label();
@@ -38,25 +38,25 @@
             label2 = new Label();
             label1 = new Label();
             button2 = new Button();
-            panel1.SuspendLayout();
+            AgregarUser.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // AgregarUser
             // 
-            panel1.BackColor = Color.FromArgb(251, 243, 232);
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(rolUsuario);
-            panel1.Controls.Add(paswordUsuario);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(registrarUsuario);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(nombreUsuario);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(169, 49);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(559, 643);
-            panel1.TabIndex = 0;
+            AgregarUser.BackColor = Color.FromArgb(251, 243, 232);
+            AgregarUser.BorderStyle = BorderStyle.FixedSingle;
+            AgregarUser.Controls.Add(rolUsuario);
+            AgregarUser.Controls.Add(passwordUsuario);
+            AgregarUser.Controls.Add(label4);
+            AgregarUser.Controls.Add(registrarUsuario);
+            AgregarUser.Controls.Add(label3);
+            AgregarUser.Controls.Add(nombreUsuario);
+            AgregarUser.Controls.Add(label2);
+            AgregarUser.Controls.Add(label1);
+            AgregarUser.Location = new Point(169, 49);
+            AgregarUser.Name = "AgregarUser";
+            AgregarUser.Size = new Size(559, 643);
+            AgregarUser.TabIndex = 0;
             // 
             // rolUsuario
             // 
@@ -72,18 +72,18 @@
             rolUsuario.Size = new Size(428, 25);
             rolUsuario.TabIndex = 21;
             // 
-            // paswordUsuario
+            // passwordUsuario
             // 
-            paswordUsuario.BackColor = SystemColors.Window;
-            paswordUsuario.BorderStyle = BorderStyle.FixedSingle;
-            paswordUsuario.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            paswordUsuario.ForeColor = Color.FromArgb(107, 91, 61);
-            paswordUsuario.Location = new Point(52, 385);
-            paswordUsuario.Margin = new Padding(4, 5, 4, 5);
-            paswordUsuario.MaxLength = 15;
-            paswordUsuario.Name = "paswordUsuario";
-            paswordUsuario.Size = new Size(428, 30);
-            paswordUsuario.TabIndex = 20;
+            passwordUsuario.BackColor = SystemColors.Window;
+            passwordUsuario.BorderStyle = BorderStyle.FixedSingle;
+            passwordUsuario.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passwordUsuario.ForeColor = Color.FromArgb(107, 91, 61);
+            passwordUsuario.Location = new Point(52, 385);
+            passwordUsuario.Margin = new Padding(4, 5, 4, 5);
+            passwordUsuario.MaxLength = 15;
+            passwordUsuario.Name = "passwordUsuario";
+            passwordUsuario.Size = new Size(428, 30);
+            passwordUsuario.TabIndex = 20;
             // 
             // label4
             // 
@@ -131,7 +131,7 @@
             nombreUsuario.BorderStyle = BorderStyle.FixedSingle;
             nombreUsuario.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nombreUsuario.ForeColor = Color.FromArgb(107, 91, 61);
-            nombreUsuario.Location = new Point(52, 176);
+            nombreUsuario.Location = new Point(52, 166);
             nombreUsuario.Margin = new Padding(4, 5, 4, 5);
             nombreUsuario.MaxLength = 15;
             nombreUsuario.Name = "nombreUsuario";
@@ -161,6 +161,7 @@
             label1.TabIndex = 0;
             label1.Text = "Registrar Usuario";
             label1.TextAlign = ContentAlignment.TopCenter;
+            label1.Click += label1_Click;
             // 
             // button2
             // 
@@ -180,27 +181,27 @@
             BackColor = Color.FromArgb(140, 122, 91);
             ClientSize = new Size(915, 742);
             Controls.Add(button2);
-            Controls.Add(panel1);
+            Controls.Add(AgregarUser);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MinimizeBox = false;
             Name = "AgregarUsuario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AgregarUsuario";
             Load += AgregarUsuario_Load;
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            AgregarUser.ResumeLayout(false);
+            AgregarUser.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel AgregarUser;
         private Label label1;
         private Button registrarUsuario;
         private Label label3;
         private TextBox nombreUsuario;
         private Label label2;
-        private TextBox paswordUsuario;
+        private TextBox passwordUsuario;
         private Label label4;
         private ListBox rolUsuario;
         private Button button2;

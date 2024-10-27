@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Xml.Linq;
 
 namespace GestionDeBiblioteca
 {
     public partial class AgregarUsuario : Form
     {
+
         public AgregarUsuario()
         {
             InitializeComponent();
@@ -36,15 +39,16 @@ namespace GestionDeBiblioteca
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string password = passwordUsuario.Text;
+            string nombre = nombreUsuario.Text;
+            string rol = rolUsuario.Text;
 
-            if (rolUsuario.Text == "Lector") 
-            {
-                Lector nuevoLector = new Lector(paswordUsuario.Text,nombreUsuario.Text,rolUsuario.Text);
-            }
-            else
-            {
-                Blibliotecario nuevoBibliotecario = new Blibliotecario(paswordUsuario.Text,nombreUsuario.Text, rolUsuario.Text);
-            }
+            Program.AgregarUsuario(nombre, rol, password);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
