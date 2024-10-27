@@ -36,27 +36,33 @@ namespace GestionDeBiblioteca
         {
 
         }
-        string rol;
+       
         private void button1_Click(object sender, EventArgs e)
         {
-
             string password = passwordUsuario.Text;
             string nombre = nombreUsuario.Text;
             string rol;
-            MessageBox.Show(rolUsuario.Text);
-            if (rolUsuario.Text == "")
+            var existencia = Program.ComprobarExistencia(nombre, password);
+            if (existencia != true)
             {
-                rol = "Lector";
+                MessageBox.Show($"El usuario con nombre: {nombre} existe");
+            }
+            else 
+            {
+                if (rolUsuario.Text == "")
+                {
+                    rol = "Lector";
+
+                }
+                else
+                {
+                    rol = rolUsuario.Text;
+
+
+                }
+                Program.AgregarUsuario(nombre, rol, password);
 
             }
-            else
-            {
-                rol = rolUsuario.Text;
-                
-
-            }
-            Program.AgregarUsuario(nombre, rol, password);
-
         }
 
         private void label1_Click(object sender, EventArgs e)

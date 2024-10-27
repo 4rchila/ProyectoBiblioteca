@@ -71,6 +71,25 @@ namespace GestionDeBiblioteca
             }
             MessageBox.Show("Usuario editado exitosamente ");
         }
+        public static bool ComprobarExistencia(string nombre, string password) 
+        {
+            if (BuscarUsuario(nombre) == null)
+            {
+                return true;
+            }
+            else 
+            {
+                var usuarioBusquedaNombre = BuscarUsuario(nombre).Name;
 
+
+                if (nombre == usuarioBusquedaNombre)
+                {
+                    return false;
+                }
+                else return true;
+            }
+            
+
+        }
     }
 }
