@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class EditarLibro : Form
+    public partial class FormEditarLibro : Form
     {
-        public EditarLibro()
+        public FormEditarLibro()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class ventanaDeLector : Form
+    public partial class FormLector : Form
     {
-        public ventanaDeLector()
+        public FormLector()
         {
             InitializeComponent();
         }

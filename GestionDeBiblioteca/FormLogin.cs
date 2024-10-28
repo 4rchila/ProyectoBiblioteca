@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class form1 : Form
+    public partial class FormLogin : Form
     {
-        public  static form1 instancia;
-        public form1()
+        public  static FormLogin instancia;
+        public FormLogin()
         {
             InitializeComponent();
             instancia = this;

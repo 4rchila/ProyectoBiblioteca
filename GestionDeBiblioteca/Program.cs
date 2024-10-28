@@ -18,7 +18,7 @@ namespace GestionDeBiblioteca
             Blibliotecario firstBibliotecario = new Blibliotecario("Pablito666", "ApjLorenzo", "Bibliotecario");
             listaBibliotecarios.Add(firstBibliotecario);
             ApplicationConfiguration.Initialize();
-            Application.Run(new form1());
+            Application.Run(new FormLogin());
       
         }
    
@@ -34,16 +34,16 @@ namespace GestionDeBiblioteca
 
                     if (usuarioInicio.Rol == "Bibliotecario")
                     {
-                        form1.instancia.Hide();
-                        ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
+                        FormLogin.instancia.Hide();
+                        FormBibliotecario ventanaBibliotecario = new FormBibliotecario();
                         ventanaBibliotecario.Show();
 
 
                     }
                     else if (usuarioInicio.Rol == "Lector")
                     {
-                        form1.instancia.Hide();
-                        ventanaDeLector ventanaLector = new ventanaDeLector();
+                        FormLogin.instancia.Hide();
+                        FormLector ventanaLector = new FormLector();
                         ventanaLector.Show();
 
                     }

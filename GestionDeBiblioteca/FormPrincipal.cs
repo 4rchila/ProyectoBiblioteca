@@ -1,6 +1,6 @@
 ﻿namespace GestionDeBiblioteca
 {
-    partial class EditarLibro
+    partial class FormEditarLibro
     {
         /// <summary>
         /// Required designer variable.

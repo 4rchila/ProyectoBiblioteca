@@ -50,7 +50,7 @@ namespace GestionDeBiblioteca
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
+            FormBibliotecario ventanaBibliotecario = new FormBibliotecario();
             ventanaBibliotecario.Show();
         }
     }

@@ -1,6 +1,6 @@
 ﻿namespace GestionDeBiblioteca
 {
-    partial class form1
+    partial class FormLogin
     {
         /// <summary>
         ///  Required designer variable.

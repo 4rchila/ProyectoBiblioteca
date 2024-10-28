@@ -1,6 +1,6 @@
 ﻿namespace GestionDeBiblioteca
 {
-    partial class ventanaDeLector
+    partial class FormLector
     {
         /// <summary>
         /// Required designer variable.

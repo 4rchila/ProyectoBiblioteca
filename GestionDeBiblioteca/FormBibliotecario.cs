@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class ventanaDeBibliotecario : Form
+    public partial class FormBibliotecario : Form
     {
-        public ventanaDeBibliotecario()
+        public FormBibliotecario()
         {
             InitializeComponent();
         }
@@ -30,14 +30,14 @@ namespace GestionDeBiblioteca
 
         private void AgregarLibro_Click(object sender, EventArgs e)
         {
-            AgregarLibro agregarLibro = new AgregarLibro();
+            FormAgregarLibro agregarLibro = new FormAgregarLibro();
             agregarLibro.Show();
             this.Hide();
         }
 
         private void EditarLibro_Click(object sender, EventArgs e)
         {
-            EditarLibro editarLibro = new EditarLibro();
+            FormEditarLibro editarLibro = new FormEditarLibro();
             editarLibro.Show();
             this.Close();
         }
