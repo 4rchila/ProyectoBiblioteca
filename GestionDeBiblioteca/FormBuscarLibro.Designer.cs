@@ -61,6 +61,8 @@
             listViewLibros.BackColor = Color.FromArgb(251, 243, 232);
             listViewLibros.BorderStyle = BorderStyle.None;
             listViewLibros.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
+            listViewLibros.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            listViewLibros.ForeColor = Color.FromArgb(166, 152, 128);
             listViewLibros.Location = new Point(35, 95);
             listViewLibros.Name = "listViewLibros";
             listViewLibros.Size = new Size(731, 237);

@@ -41,6 +41,7 @@
             label2 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
+            label6 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -48,6 +49,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(251, 243, 232);
+            panel1.Controls.Add(label6);
             panel1.Controls.Add(comboBoxGenero);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label5);
@@ -69,7 +71,7 @@
             comboBoxGenero.ForeColor = Color.FromArgb(107, 91, 61);
             comboBoxGenero.FormattingEnabled = true;
             comboBoxGenero.Items.AddRange(new object[] { "Ciencia", "Cómico", "Drámatico ", "Fantasía", "Ficción", "Lírico", "Novela" });
-            comboBoxGenero.Location = new Point(29, 308);
+            comboBoxGenero.Location = new Point(29, 313);
             comboBoxGenero.Name = "comboBoxGenero";
             comboBoxGenero.Size = new Size(300, 23);
             comboBoxGenero.TabIndex = 10;
@@ -91,7 +93,7 @@
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.FromArgb(166, 152, 128);
-            label5.Location = new Point(29, 280);
+            label5.Location = new Point(29, 285);
             label5.Name = "label5";
             label5.Size = new Size(45, 15);
             label5.TabIndex = 7;
@@ -103,7 +105,7 @@
             txtBoxIsbn.BorderStyle = BorderStyle.FixedSingle;
             txtBoxIsbn.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxIsbn.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxIsbn.Location = new Point(29, 238);
+            txtBoxIsbn.Location = new Point(29, 243);
             txtBoxIsbn.MaxLength = 10;
             txtBoxIsbn.Name = "txtBoxIsbn";
             txtBoxIsbn.PlaceholderText = "Ingrese el ISBN";
@@ -114,7 +116,7 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.FromArgb(166, 152, 128);
-            label4.Location = new Point(29, 211);
+            label4.Location = new Point(29, 216);
             label4.Name = "label4";
             label4.Size = new Size(32, 15);
             label4.TabIndex = 5;
@@ -126,7 +128,7 @@
             txtBoxAutor.BorderStyle = BorderStyle.FixedSingle;
             txtBoxAutor.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxAutor.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxAutor.Location = new Point(29, 166);
+            txtBoxAutor.Location = new Point(29, 171);
             txtBoxAutor.MaxLength = 30;
             txtBoxAutor.Name = "txtBoxAutor";
             txtBoxAutor.PlaceholderText = "Ingrese el nombre del autor";
@@ -137,7 +139,7 @@
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.FromArgb(166, 152, 128);
-            label3.Location = new Point(29, 139);
+            label3.Location = new Point(29, 144);
             label3.Name = "label3";
             label3.Size = new Size(37, 15);
             label3.TabIndex = 3;
@@ -149,7 +151,7 @@
             txtBoxTitulo.BorderStyle = BorderStyle.FixedSingle;
             txtBoxTitulo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxTitulo.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxTitulo.Location = new Point(29, 94);
+            txtBoxTitulo.Location = new Point(29, 99);
             txtBoxTitulo.MaxLength = 30;
             txtBoxTitulo.Name = "txtBoxTitulo";
             txtBoxTitulo.PlaceholderText = "Ingrese el titulo del libro";
@@ -160,7 +162,7 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.FromArgb(166, 152, 128);
-            label2.Location = new Point(29, 67);
+            label2.Location = new Point(29, 72);
             label2.Name = "label2";
             label2.Size = new Size(37, 15);
             label2.TabIndex = 1;
@@ -171,7 +173,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(140, 122, 91);
-            label1.Location = new Point(29, 12);
+            label1.Location = new Point(57, 12);
             label1.Name = "label1";
             label1.Size = new Size(252, 29);
             label1.TabIndex = 0;
@@ -188,6 +190,16 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.ForeColor = Color.FromArgb(166, 152, 128);
+            label6.Location = new Point(85, 41);
+            label6.Name = "label6";
+            label6.Size = new Size(186, 15);
+            label6.TabIndex = 11;
+            label6.Text = "Agrega un nuevo libro al catálogo";
             // 
             // FormAgregarLibro
             // 
@@ -221,5 +233,6 @@
         private TextBox txtBoxIsbn;
         private ComboBox comboBoxGenero;
         private PictureBox pictureBox1;
+        private Label label6;
     }
 }

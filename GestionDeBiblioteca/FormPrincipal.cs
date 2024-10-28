@@ -36,7 +36,9 @@ namespace GestionDeBiblioteca
         }
         private void EliminarLibro_Click(object sender, EventArgs e)
         {
-
+            FormEditarLibro ventanaEditar = new FormEditarLibro();
+            ventanaEditar.Show();
+            this.Hide();
         }
 
         //Gestion de usuarios
