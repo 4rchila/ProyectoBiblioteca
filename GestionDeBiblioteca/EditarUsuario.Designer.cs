@@ -28,25 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
             panel1 = new Panel();
             BuscarUsuario = new Button();
             nombreUsuarioBuscar = new TextBox();
             label2 = new Label();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // button2
-            // 
-            button2.Location = new Point(72, 65);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(107, 38);
-            button2.TabIndex = 4;
-            button2.Text = "Regresar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
             // 
             // panel1
             // 
@@ -56,7 +46,7 @@
             panel1.Controls.Add(nombreUsuarioBuscar);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(216, 52);
+            panel1.Location = new Point(211, 52);
             panel1.Name = "panel1";
             panel1.Size = new Size(559, 643);
             panel1.TabIndex = 3;
@@ -115,13 +105,24 @@
             label1.TextAlign = ContentAlignment.TopCenter;
             label1.Click += label1_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Captura_de_pantalla_2024_10_27_190611_removebg_preview;
+            pictureBox1.Location = new Point(13, 52);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(197, 155);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // EditarUsuario
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(140, 122, 91);
             ClientSize = new Size(915, 742);
-            Controls.Add(button2);
+            Controls.Add(pictureBox1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "EditarUsuario";
@@ -129,16 +130,16 @@
             Text = "EditarUsuario";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button button2;
         private Panel panel1;
         private Button BuscarUsuario;
         private TextBox nombreUsuarioBuscar;
         private Label label2;
         private Label label1;
+        private PictureBox pictureBox1;
     }
 }

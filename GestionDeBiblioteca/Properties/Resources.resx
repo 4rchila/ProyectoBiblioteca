@@ -124,14 +124,17 @@
   <data name="ffrf-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ffrf-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="85592" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\85592.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Livro Vermelho Dos Desenhos Animados 3d PNG , Livro Clipart, Livro, Trabalhando Imagem PNG e PSD Para Download Gratuito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Livro Vermelho Dos Desenhos Animados 3d PNG , Livro Clipart, Livro, Trabalhando Imagem PNG e PSD Para Download Gratuito.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Book (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Book (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Download_free_png_of_Red_book_png_sticker__reading_image_on_transparent_background_by_Chim__about_red__closed_book__book__red_book__and_closed_6542627-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Download_free_png_of_Red_book_png_sticker__reading_image_on_transparent_background_by_Chim__about_red__closed_book__book__red_book__and_closed_6542627-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Captura_de_pantalla_2024-10-22_203527-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura_de_pantalla_2024-10-22_203527-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="descarga (17)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\descarga (17).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,10 +142,10 @@
   <data name="Book_free_icons_designed_by_Smashicons-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Book_free_icons_designed_by_Smashicons-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Download_free_png_of_Red_book_png_sticker__reading_image_on_transparent_background_by_Chim__about_red__closed_book__book__red_book__and_closed_6542627-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Download_free_png_of_Red_book_png_sticker__reading_image_on_transparent_background_by_Chim__about_red__closed_book__book__red_book__and_closed_6542627-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="85592" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\85592.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Captura_de_pantalla_2024-10-22_203527-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Captura_de_pantalla_2024-10-22_203527-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Captura_de_pantalla_2024-10-27_190611-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Captura_de_pantalla_2024-10-27_190611-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

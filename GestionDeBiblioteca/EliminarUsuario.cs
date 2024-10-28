@@ -22,13 +22,6 @@ namespace GestionDeBiblioteca
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
-            ventanaBibliotecario.Show();
-        }
-
         private void BuscarUsuarioEliminar_Click(object sender, EventArgs e)
         {
             string nombreUsuario = nombreUsuarioBuscarEliminar.Text;
@@ -40,16 +33,23 @@ namespace GestionDeBiblioteca
             }
             else
             {
-                foreach(var c in Program.listaLectores) 
+                foreach (var c in Program.listaLectores)
                 {
-                    if (busqueda == c) 
+                    if (busqueda == c)
                     {
-                       Program.listaLectores.Remove(c);
+                        Program.listaLectores.Remove(c);
                         MessageBox.Show("Usuario eliminado existoamente");
-                       break;
+                        break;
                     }
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
+            ventanaBibliotecario.Show();
         }
     }
 }

@@ -37,8 +37,9 @@
             nombreUsuario = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            button2 = new Button();
+            pictureBox1 = new PictureBox();
             AgregarUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // AgregarUser
@@ -53,7 +54,7 @@
             AgregarUser.Controls.Add(nombreUsuario);
             AgregarUser.Controls.Add(label2);
             AgregarUser.Controls.Add(label1);
-            AgregarUser.Location = new Point(169, 49);
+            AgregarUser.Location = new Point(188, 48);
             AgregarUser.Name = "AgregarUser";
             AgregarUser.Size = new Size(559, 643);
             AgregarUser.TabIndex = 0;
@@ -164,16 +165,16 @@
             label1.TextAlign = ContentAlignment.TopCenter;
             label1.Click += label1_Click;
             // 
-            // button2
+            // pictureBox1
             // 
-            button2.Location = new Point(26, 49);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(107, 38);
-            button2.TabIndex = 2;
-            button2.Text = "Regresar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            pictureBox1.Image = Properties.Resources.Captura_de_pantalla_2024_10_27_190611_removebg_preview;
+            pictureBox1.Location = new Point(-9, 29);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(197, 151);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // AgregarUsuario
             // 
@@ -181,7 +182,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(140, 122, 91);
             ClientSize = new Size(915, 742);
-            Controls.Add(button2);
+            Controls.Add(pictureBox1);
             Controls.Add(AgregarUser);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MinimizeBox = false;
@@ -191,6 +192,7 @@
             Load += AgregarUsuario_Load;
             AgregarUser.ResumeLayout(false);
             AgregarUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -205,6 +207,6 @@
         private TextBox passwordUsuario;
         private Label label4;
         private ListBox rolUsuario;
-        private Button button2;
+        private PictureBox pictureBox1;
     }
 }

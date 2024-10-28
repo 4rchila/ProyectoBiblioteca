@@ -25,18 +25,13 @@ namespace GestionDeBiblioteca
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
-            ventanaBibliotecario.Show();
-        }
+        
 
         private void AgregarUsuario_Load(object sender, EventArgs e)
         {
 
         }
-       
+
         private void button1_Click(object sender, EventArgs e)
         {
             string password = passwordUsuario.Text;
@@ -47,7 +42,7 @@ namespace GestionDeBiblioteca
             {
                 MessageBox.Show($"El usuario con nombre: {nombre} existe");
             }
-            else 
+            else
             {
                 if (rolUsuario.Text == "")
                 {
@@ -73,6 +68,13 @@ namespace GestionDeBiblioteca
         private void rolUsuario_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
+            ventanaBibliotecario.Show();
         }
     }
 }
