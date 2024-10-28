@@ -28,41 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarLibro));
             panel1 = new Panel();
-            radioButton1 = new RadioButton();
+            checkBox1 = new CheckBox();
+            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
-            comboBoxGenero = new ComboBox();
+            comboBoxGeneroEdit = new ComboBox();
             label5 = new Label();
-            txtBoxIsbn = new TextBox();
+            txtBoxIsbnEditar = new TextBox();
             label4 = new Label();
-            txtBoxAutor = new TextBox();
+            txtBoxAutorEditar = new TextBox();
             label3 = new Label();
-            txtBoxTitulo = new TextBox();
+            txtBoxTituloEditar = new TextBox();
             label6 = new Label();
             panel2 = new Panel();
             panel3 = new Panel();
             label7 = new Label();
             label2 = new Label();
             label1 = new Label();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(251, 243, 232);
-            panel1.Controls.Add(radioButton1);
+            panel1.Controls.Add(checkBox1);
+            panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(comboBoxGenero);
+            panel1.Controls.Add(comboBoxGeneroEdit);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(txtBoxIsbn);
+            panel1.Controls.Add(txtBoxIsbnEditar);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(txtBoxAutor);
+            panel1.Controls.Add(txtBoxAutorEditar);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(txtBoxTitulo);
+            panel1.Controls.Add(txtBoxTituloEditar);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label2);
@@ -72,24 +77,39 @@
             panel1.Size = new Size(634, 341);
             panel1.TabIndex = 2;
             // 
-            // radioButton1
+            // checkBox1
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.ForeColor = Color.FromArgb(166, 152, 128);
-            radioButton1.Location = new Point(32, 250);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(84, 19);
-            radioButton1.TabIndex = 21;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Disponible ";
-            radioButton1.UseVisualStyleBackColor = true;
+            checkBox1.AutoSize = true;
+            checkBox1.Checked = true;
+            checkBox1.CheckState = CheckState.Checked;
+            checkBox1.FlatStyle = FlatStyle.Popup;
+            checkBox1.ForeColor = Color.FromArgb(166, 152, 128);
+            checkBox1.Location = new Point(31, 244);
+            checkBox1.Name = "checkBox1";
+            checkBox1.Size = new Size(80, 19);
+            checkBox1.TabIndex = 23;
+            checkBox1.Text = "Disponible";
+            checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(140, 122, 91);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.FromArgb(237, 226, 213);
+            button3.Location = new Point(30, 275);
+            button3.Name = "button3";
+            button3.Size = new Size(60, 32);
+            button3.TabIndex = 22;
+            button3.Text = "Buscar";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
             button2.BackColor = Color.FromArgb(140, 122, 91);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.FromArgb(237, 226, 213);
-            button2.Location = new Point(338, 268);
+            button2.Location = new Point(338, 275);
             button2.Name = "button2";
             button2.Size = new Size(104, 32);
             button2.TabIndex = 20;
@@ -99,25 +119,27 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(140, 122, 91);
+            button1.Enabled = false;
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(237, 226, 213);
-            button1.Location = new Point(458, 268);
+            button1.Location = new Point(458, 275);
             button1.Name = "button1";
             button1.Size = new Size(138, 32);
             button1.TabIndex = 19;
             button1.Text = "Guardar cambios";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // comboBoxGenero
+            // comboBoxGeneroEdit
             // 
-            comboBoxGenero.BackColor = Color.FromArgb(255, 249, 240);
-            comboBoxGenero.ForeColor = Color.FromArgb(107, 91, 61);
-            comboBoxGenero.FormattingEnabled = true;
-            comboBoxGenero.Items.AddRange(new object[] { "Ciencia", "Cómico", "Drámatico ", "Fantasía", "Ficción", "Lírico", "Novela" });
-            comboBoxGenero.Location = new Point(338, 205);
-            comboBoxGenero.Name = "comboBoxGenero";
-            comboBoxGenero.Size = new Size(260, 23);
-            comboBoxGenero.TabIndex = 18;
+            comboBoxGeneroEdit.BackColor = Color.FromArgb(255, 249, 240);
+            comboBoxGeneroEdit.ForeColor = Color.FromArgb(107, 91, 61);
+            comboBoxGeneroEdit.FormattingEnabled = true;
+            comboBoxGeneroEdit.Items.AddRange(new object[] { "Ciencia", "Cómico", "Drámatico ", "Fantasía", "Ficción", "Lírico", "Novela" });
+            comboBoxGeneroEdit.Location = new Point(338, 205);
+            comboBoxGeneroEdit.Name = "comboBoxGeneroEdit";
+            comboBoxGeneroEdit.Size = new Size(260, 23);
+            comboBoxGeneroEdit.TabIndex = 18;
             // 
             // label5
             // 
@@ -129,18 +151,18 @@
             label5.TabIndex = 17;
             label5.Text = "Género";
             // 
-            // txtBoxIsbn
+            // txtBoxIsbnEditar
             // 
-            txtBoxIsbn.BackColor = Color.FromArgb(255, 249, 240);
-            txtBoxIsbn.BorderStyle = BorderStyle.FixedSingle;
-            txtBoxIsbn.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBoxIsbn.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxIsbn.Location = new Point(30, 205);
-            txtBoxIsbn.MaxLength = 10;
-            txtBoxIsbn.Name = "txtBoxIsbn";
-            txtBoxIsbn.PlaceholderText = "Ingrese el ISBN";
-            txtBoxIsbn.Size = new Size(253, 22);
-            txtBoxIsbn.TabIndex = 16;
+            txtBoxIsbnEditar.BackColor = Color.FromArgb(255, 249, 240);
+            txtBoxIsbnEditar.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxIsbnEditar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxIsbnEditar.ForeColor = Color.FromArgb(107, 91, 61);
+            txtBoxIsbnEditar.Location = new Point(30, 205);
+            txtBoxIsbnEditar.MaxLength = 10;
+            txtBoxIsbnEditar.Name = "txtBoxIsbnEditar";
+            txtBoxIsbnEditar.PlaceholderText = "Ingrese el ISBN";
+            txtBoxIsbnEditar.Size = new Size(253, 22);
+            txtBoxIsbnEditar.TabIndex = 16;
             // 
             // label4
             // 
@@ -152,18 +174,18 @@
             label4.TabIndex = 15;
             label4.Text = "ISBN";
             // 
-            // txtBoxAutor
+            // txtBoxAutorEditar
             // 
-            txtBoxAutor.BackColor = Color.FromArgb(255, 249, 240);
-            txtBoxAutor.BorderStyle = BorderStyle.FixedSingle;
-            txtBoxAutor.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBoxAutor.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxAutor.Location = new Point(338, 157);
-            txtBoxAutor.MaxLength = 30;
-            txtBoxAutor.Name = "txtBoxAutor";
-            txtBoxAutor.PlaceholderText = "Ingrese el nombre del autor";
-            txtBoxAutor.Size = new Size(258, 22);
-            txtBoxAutor.TabIndex = 14;
+            txtBoxAutorEditar.BackColor = Color.FromArgb(255, 249, 240);
+            txtBoxAutorEditar.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxAutorEditar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxAutorEditar.ForeColor = Color.FromArgb(107, 91, 61);
+            txtBoxAutorEditar.Location = new Point(338, 157);
+            txtBoxAutorEditar.MaxLength = 30;
+            txtBoxAutorEditar.Name = "txtBoxAutorEditar";
+            txtBoxAutorEditar.PlaceholderText = "Ingrese el nombre del autor";
+            txtBoxAutorEditar.Size = new Size(258, 22);
+            txtBoxAutorEditar.TabIndex = 14;
             // 
             // label3
             // 
@@ -175,18 +197,18 @@
             label3.TabIndex = 13;
             label3.Text = "Autor";
             // 
-            // txtBoxTitulo
+            // txtBoxTituloEditar
             // 
-            txtBoxTitulo.BackColor = Color.FromArgb(255, 249, 240);
-            txtBoxTitulo.BorderStyle = BorderStyle.FixedSingle;
-            txtBoxTitulo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBoxTitulo.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxTitulo.Location = new Point(32, 157);
-            txtBoxTitulo.MaxLength = 30;
-            txtBoxTitulo.Name = "txtBoxTitulo";
-            txtBoxTitulo.PlaceholderText = "Ingrese el titulo del libro";
-            txtBoxTitulo.Size = new Size(251, 22);
-            txtBoxTitulo.TabIndex = 12;
+            txtBoxTituloEditar.BackColor = Color.FromArgb(255, 249, 240);
+            txtBoxTituloEditar.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxTituloEditar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxTituloEditar.ForeColor = Color.FromArgb(107, 91, 61);
+            txtBoxTituloEditar.Location = new Point(32, 157);
+            txtBoxTituloEditar.MaxLength = 30;
+            txtBoxTituloEditar.Name = "txtBoxTituloEditar";
+            txtBoxTituloEditar.PlaceholderText = "Ingrese el titulo del libro";
+            txtBoxTituloEditar.Size = new Size(251, 22);
+            txtBoxTituloEditar.TabIndex = 12;
             // 
             // label6
             // 
@@ -248,12 +270,25 @@
             label1.TabIndex = 1;
             label1.Text = "Editar Libro";
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(28, 47);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 28);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // FormEditarLibro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 230, 211);
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormEditarLibro";
@@ -264,6 +299,7 @@
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -274,17 +310,19 @@
         private Panel panel2;
         private Label label2;
         private Panel panel3;
-        private ComboBox comboBoxGenero;
+        private ComboBox comboBoxGeneroEdit;
         private Label label5;
-        private TextBox txtBoxIsbn;
+        private TextBox txtBoxIsbnEditar;
         private Label label4;
-        private TextBox txtBoxAutor;
+        private TextBox txtBoxAutorEditar;
         private Label label3;
-        private TextBox txtBoxTitulo;
+        private TextBox txtBoxTituloEditar;
         private Label label6;
         private Label label7;
-        private RadioButton radioButton1;
         private Button button2;
         private Button button1;
+        private Button button3;
+        private PictureBox pictureBox1;
+        private CheckBox checkBox1;
     }
 }
