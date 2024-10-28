@@ -66,7 +66,7 @@ namespace GestionDeBiblioteca
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormPrincipal formPrincipal = new FormPrincipal();
+            FormBibliotecario formPrincipal = new FormBibliotecario();
             formPrincipal.Show();
         }
         public void InicializarControles()

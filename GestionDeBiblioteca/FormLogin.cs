@@ -77,7 +77,7 @@ namespace GestionDeBiblioteca
         {
             btnInicio.Enabled = false;
             controlBotones();
-            FormPrincipal ventanaBibliotecario = new FormPrincipal();
+            FormBibliotecario ventanaBibliotecario = new FormBibliotecario();
             ventanaBibliotecario.Show();
             this.Hide();
         }

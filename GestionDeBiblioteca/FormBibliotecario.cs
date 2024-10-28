@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class FormPrincipal : Form
+    public partial class FormBibliotecario : Form
     {
-        public FormPrincipal()
+        public FormBibliotecario()
         {
             InitializeComponent();
         }

@@ -16,25 +16,8 @@ namespace GestionDeBiblioteca
         public FormBuscarLibro()
         {
             InitializeComponent();
-            InitializeImageList();
             CargarLibros(DatosGlobales.Libros);
             listViewLibros.Sorting = SortOrder.None;
-        }
-        private void InitializeImageList()
-        {
-            imageList = new ImageList();
-            try
-            {
-                // Cargar imágenes desde recursos
-                //imageList.Images.Add(Properties.Resources.Editar); // Reemplaza con el nombre correcto
-                //imageList.Images.Add(Properties.Resources.Eliminar);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error al cargar imágenes: {ex.Message}");
-            }
-
-            listViewLibros.SmallImageList = imageList; // Asignar el ImageList al ListView
         }
         public void CargarLibros(IEnumerable<Libro> libros)
         {
@@ -47,8 +30,6 @@ namespace GestionDeBiblioteca
                 item.SubItems.Add(libro.Genero);
                 item.SubItems.Add(EsDisponible(libro.Disponibilidad));
 
-                item.SubItems.Add(""); // Columna para las acciones
-                item.Tag = libro;
                 listViewLibros.Items.Add(item);
             }
         }
@@ -77,41 +58,8 @@ namespace GestionDeBiblioteca
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-            FormPrincipal ventanaBibliotecario = new FormPrincipal();
+            FormBibliotecario ventanaBibliotecario = new FormBibliotecario();
             ventanaBibliotecario.Show();
-        }
-        private void listViewLibros_MouseClick(object sender, MouseEventArgs e)
-        {
-            // Detectar clic en un ítem del ListView
-            var item = listViewLibros.GetItemAt(e.X, e.Y);
-            if (item != null)
-            {
-                // Comprobar si se hace clic en la posición de la imagen
-                var mousePosition = e.Location;
-                if (item.Bounds.Contains(mousePosition))
-                {
-                    // Lógica para editar
-                    if (item.ImageIndex == 0) // Índice del ícono de editar
-                    {
-                        // Aquí puedes abrir el formulario de edición
-                        // Por ejemplo:
-                        var libro = (Libro)item.Tag; // Recuperar el libro del Tag
-                    }
-                    // Lógica para eliminar
-                    else if (item.ImageIndex == 1) // Índice del ícono de eliminar
-                    {
-                        // Aquí puedes implementar la lógica para eliminar
-                        // Por ejemplo, mostrar un mensaje de confirmación
-                        DialogResult result = MessageBox.Show("¿Estás seguro de que deseas eliminar este libro?", "Confirmar eliminación", MessageBoxButtons.YesNo);
-                        if (result == DialogResult.Yes)
-                        {
-                            // Eliminar el libro de DatosGlobales.Libros
-                            DatosGlobales.Libros.Remove((Libro)item.Tag); // Supongamos que guardaste el libro en el Tag
-                            CargarLibros(DatosGlobales.Libros); // Recargar la lista
-                        }
-                    }
-                }
-            }
         }
     }
 }
