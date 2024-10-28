@@ -9,6 +9,5 @@ namespace GestionDeBiblioteca
     public static class DatosGlobales
     {
         public static List<Libro> Libros { get; set; } = new List<Libro>();
-
     }
 }

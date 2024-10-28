@@ -28,61 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBuscarLibro));
             panel1 = new Panel();
-            listView1 = new ListView();
-            columnHeader1 = new ColumnHeader();
+            listViewLibros = new ListView();
+            columnHeader1 = new ColumnHeader("(ninguna)");
             columnHeader2 = new ColumnHeader();
             columnHeader3 = new ColumnHeader();
             columnHeader4 = new ColumnHeader();
             columnHeader5 = new ColumnHeader();
+            columnHeader6 = new ColumnHeader();
             txtBoxBuscar = new TextBox();
             label1 = new Label();
             textBox1 = new TextBox();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(251, 243, 232);
-            panel1.Controls.Add(listView1);
+            panel1.Controls.Add(listViewLibros);
             panel1.Controls.Add(txtBoxBuscar);
             panel1.Controls.Add(label1);
             panel1.Location = new Point(58, 27);
             panel1.Name = "panel1";
-            panel1.Size = new Size(698, 327);
+            panel1.Size = new Size(789, 362);
             panel1.TabIndex = 1;
             // 
-            // listView1
+            // listViewLibros
             // 
-            listView1.BackColor = Color.FromArgb(251, 243, 232);
-            listView1.BorderStyle = BorderStyle.None;
-            listView1.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
-            listView1.Location = new Point(36, 106);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(618, 187);
-            listView1.TabIndex = 11;
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.Details;
+            listViewLibros.BackColor = Color.FromArgb(251, 243, 232);
+            listViewLibros.BorderStyle = BorderStyle.None;
+            listViewLibros.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
+            listViewLibros.Location = new Point(35, 95);
+            listViewLibros.Name = "listViewLibros";
+            listViewLibros.Size = new Size(731, 237);
+            listViewLibros.TabIndex = 4;
+            listViewLibros.UseCompatibleStateImageBehavior = false;
+            listViewLibros.View = View.Details;
             // 
             // columnHeader1
             // 
-            columnHeader1.Text = "Titulo";
+            columnHeader1.DisplayIndex = 2;
+            columnHeader1.Text = "Título";
+            columnHeader1.Width = 150;
             // 
             // columnHeader2
             // 
+            columnHeader2.DisplayIndex = 0;
             columnHeader2.Text = "Autor";
+            columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
+            columnHeader3.DisplayIndex = 1;
             columnHeader3.Text = "ISBN";
+            columnHeader3.Width = 130;
             // 
             // columnHeader4
             // 
-            columnHeader4.Text = "Disponibilidad";
+            columnHeader4.Text = "Género";
+            columnHeader4.Width = 100;
             // 
             // columnHeader5
             // 
-            columnHeader5.Text = "Acciones";
+            columnHeader5.Text = "Disponible";
+            columnHeader5.Width = 100;
+            // 
+            // columnHeader6
+            // 
+            columnHeader6.Text = "Acciones";
+            columnHeader6.Width = 100;
             // 
             // txtBoxBuscar
             // 
@@ -94,8 +111,9 @@
             txtBoxBuscar.MaxLength = 15;
             txtBoxBuscar.Name = "txtBoxBuscar";
             txtBoxBuscar.PlaceholderText = "Ingrese el titulo del libro";
-            txtBoxBuscar.Size = new Size(621, 22);
+            txtBoxBuscar.Size = new Size(733, 22);
             txtBoxBuscar.TabIndex = 3;
+            txtBoxBuscar.TextChanged += txtBoxBuscar_TextChanged;
             // 
             // label1
             // 
@@ -115,17 +133,33 @@
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(12, 27);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 28);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 2;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
             // FormBuscarLibro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 230, 211);
-            ClientSize = new Size(803, 409);
+            ClientSize = new Size(882, 424);
+            Controls.Add(pictureBox1);
             Controls.Add(panel1);
+            Cursor = Cursors.Hand;
+            FormBorderStyle = FormBorderStyle.None;
             Name = "FormBuscarLibro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormBuscarLibro";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -134,13 +168,15 @@
         private Panel panel1;
         private TextBox txtBoxBuscar;
         private Label label1;
-        private ListView listView1;
         private ComboBox comboBoxBuscar;
         private TextBox textBox1;
-        private ColumnHeader columnHeader1;
+        private ListView listViewLibros;
+        public ColumnHeader columnHeader1;
         private ColumnHeader columnHeader2;
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
+        private ColumnHeader columnHeader6;
+        private PictureBox pictureBox1;
     }
 }

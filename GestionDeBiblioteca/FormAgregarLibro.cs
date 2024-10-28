@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,22 +17,14 @@ namespace GestionDeBiblioteca
         {
             InitializeComponent();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FormPrincipal ventanaBibliotecario = new FormPrincipal();
-            ventanaBibliotecario.Show();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
-                string titulo = txtBoxTitulo.Text;
-                string autor = txtBoxAutor.Text;
-                string isbn = txtBoxIsbn.Text;
-                string genero = comboBoxGenero.Text;
+                string titulo = txtBoxTitulo.Text.ToUpper();
+                string autor = txtBoxAutor.Text.ToUpper();
+                string isbn = txtBoxIsbn.Text.ToUpper();
+                string genero = comboBoxGenero.Text.ToUpper();
 
                 if (string.IsNullOrEmpty(titulo) || string.IsNullOrEmpty(autor) ||
                     string.IsNullOrEmpty(isbn) || string.IsNullOrEmpty(genero))
@@ -42,20 +35,26 @@ namespace GestionDeBiblioteca
 
                 Libro nuevoLibro = new Libro(titulo, autor, isbn, genero, true, 0);
                 DatosGlobales.Libros.Add(nuevoLibro);
-                // Agregar el objeto Libro completo al ListBox
-
                 MessageBox.Show("Libro agregado correctamente.");
 
-                // Clear textboxes for next entry
-                txtBoxTitulo.Text = "";
-                txtBoxAutor.Text = "";
-                txtBoxIsbn.Text = "";
+                txtBoxTitulo.Clear();
+                txtBoxAutor.Clear();
+                txtBoxIsbn.Clear();
+                comboBoxGenero.SelectedIndex = -1;
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormPrincipal ventanaBibliotecario = new FormPrincipal();
+            ventanaBibliotecario.Show();
         }
     }
 }

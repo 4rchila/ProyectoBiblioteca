@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarLibro));
             panel1 = new Panel();
             comboBoxGenero = new ComboBox();
             button1 = new Button();
@@ -39,8 +40,9 @@
             txtBoxTitulo = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            button2 = new Button();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -56,7 +58,7 @@
             panel1.Controls.Add(txtBoxTitulo);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(136, 23);
+            panel1.Location = new Point(80, 23);
             panel1.Name = "panel1";
             panel1.Size = new Size(374, 433);
             panel1.TabIndex = 0;
@@ -102,7 +104,7 @@
             txtBoxIsbn.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxIsbn.ForeColor = Color.FromArgb(107, 91, 61);
             txtBoxIsbn.Location = new Point(29, 238);
-            txtBoxIsbn.MaxLength = 15;
+            txtBoxIsbn.MaxLength = 10;
             txtBoxIsbn.Name = "txtBoxIsbn";
             txtBoxIsbn.PlaceholderText = "Ingrese el ISBN";
             txtBoxIsbn.Size = new Size(300, 22);
@@ -125,7 +127,7 @@
             txtBoxAutor.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxAutor.ForeColor = Color.FromArgb(107, 91, 61);
             txtBoxAutor.Location = new Point(29, 166);
-            txtBoxAutor.MaxLength = 15;
+            txtBoxAutor.MaxLength = 30;
             txtBoxAutor.Name = "txtBoxAutor";
             txtBoxAutor.PlaceholderText = "Ingrese el nombre del autor";
             txtBoxAutor.Size = new Size(300, 22);
@@ -148,7 +150,7 @@
             txtBoxTitulo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxTitulo.ForeColor = Color.FromArgb(107, 91, 61);
             txtBoxTitulo.Location = new Point(29, 94);
-            txtBoxTitulo.MaxLength = 15;
+            txtBoxTitulo.MaxLength = 30;
             txtBoxTitulo.Name = "txtBoxTitulo";
             txtBoxTitulo.PlaceholderText = "Ingrese el titulo del libro";
             txtBoxTitulo.Size = new Size(300, 22);
@@ -175,29 +177,33 @@
             label1.TabIndex = 0;
             label1.Text = "Agregar Nuevo Libro";
             // 
-            // button2
+            // pictureBox1
             // 
-            button2.Location = new Point(12, 23);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Regresar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(28, 23);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 28);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // FormAgregarLibro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 230, 211);
-            ClientSize = new Size(656, 479);
-            Controls.Add(button2);
+            ClientSize = new Size(530, 479);
+            Controls.Add(pictureBox1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormAgregarLibro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AgregarLibro";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -213,7 +219,7 @@
         private Button button1;
         private Label label5;
         private TextBox txtBoxIsbn;
-        private Button button2;
         private ComboBox comboBoxGenero;
+        private PictureBox pictureBox1;
     }
 }

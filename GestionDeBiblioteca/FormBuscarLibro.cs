@@ -15,36 +15,49 @@ namespace GestionDeBiblioteca
         public FormBuscarLibro()
         {
             InitializeComponent();
+            CargarLibros(DatosGlobales.Libros);
+            listViewLibros.Sorting = SortOrder.None;
         }
-
-        private void FormBuscarLibro_Load(object sender, EventArgs e)
+        public void CargarLibros(IEnumerable<Libro> libros)
         {
-            comboBoxBuscar.DataSource = DatosGlobales.Libros;
-            comboBoxBuscar.DisplayMember = "MostrarInfo";
-        }
-        public void ActualizarListBox()
-        {
-            comboBoxBuscar.DataSource = null;
-            comboBoxBuscar.DataSource = DatosGlobales.Libros;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            string textoBusqueda = textBox1.Text.ToLower();
-            var librosFiltrados = DatosGlobales.Libros.Where(l => l.Titulo.ToLower().Contains(textoBusqueda)).ToList();
-            comboBoxBuscar.DataSource = librosFiltrados;
-        }
-
-        private void comboBoxBuscar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (comboBoxBuscar.SelectedIndex >= 0)
+            listViewLibros.Items.Clear();
+            foreach (var libro in libros)
             {
-                Libro libroSeleccionado = (Libro)comboBoxBuscar.SelectedItem;
-                // Mostrar detalles del libro seleccionado
-                // ... (código para mostrar detalles)
-                // Por ejemplo, en un MessageBox o en otros controles
-                MessageBox.Show($"Título: {libroSeleccionado.Titulo}\nAutor: {libroSeleccionado.Autor}");
+                ListViewItem item = new ListViewItem(libro.Titulo);
+                item.SubItems.Add(libro.Autor);
+                item.SubItems.Add(libro.ISBN);
+                item.SubItems.Add(libro.Genero);
+                item.SubItems.Add(EsDisponible(libro.Disponibilidad));
+                listViewLibros.Items.Add(item);
             }
+        }
+        private string EsDisponible(bool disponible)
+        {
+            return disponible ? "Si" : "No";
+        }
+
+        private void txtBoxBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtBoxBuscar.Text.ToUpper();
+
+            // Filtrar los libros que coincidan con el texto ingresado en título, autor o ISBN
+            var librosFiltrados = DatosGlobales.Libros
+                .Where(libro =>
+                    libro.Titulo.ToUpper().Contains(filtro) ||
+                    libro.Autor.ToUpper().Contains(filtro) ||
+                    libro.ISBN.ToUpper().Contains(filtro)  ||
+                    libro.Genero.ToUpper().Contains(filtro))
+                .OrderBy(libro => libro.Titulo) // Ordenar por título
+                .ToList();
+
+            CargarLibros(librosFiltrados); // Mostrar solo los libros filtrados
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormPrincipal ventanaBibliotecario = new FormPrincipal();
+            ventanaBibliotecario.Show();
         }
     }
 }
