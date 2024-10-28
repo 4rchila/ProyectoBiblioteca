@@ -6,9 +6,11 @@ namespace GestionDeBiblioteca
 {
     public partial class form1 : Form
     {
+        public  static form1 instancia;
         public form1()
         {
             InitializeComponent();
+            instancia = this;
         }
         //private void form1_Load(object sender, EventArgs e)
         //{
@@ -75,11 +77,8 @@ namespace GestionDeBiblioteca
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            btnInicio.Enabled = false;
-            controlBotones();
-            ventanaDeBibliotecario ventanaBibliotecario = new ventanaDeBibliotecario();
-            ventanaBibliotecario.Show();
-            this.Hide();
+            Program.ComprobarPassword(Usuario.Text, Contraseña.Text);
+            
         }
 
         private void form1_Load(object sender, EventArgs e)
