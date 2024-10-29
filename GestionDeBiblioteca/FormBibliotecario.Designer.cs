@@ -164,7 +164,6 @@
             AgregarUsuario.TabIndex = 9;
             AgregarUsuario.Text = "Agregar Usuario";
             AgregarUsuario.UseVisualStyleBackColor = false;
-            AgregarUsuario.Click += AgregarUsuario_Click;
             // 
             // EliminarUsuario
             // 
@@ -229,7 +228,7 @@
             panel2.Size = new Size(267, 287);
             panel2.TabIndex = 15;
             // 
-            // ventanaDeBibliotecario
+            // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -242,7 +241,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "ventanaDeBibliotecario";
+            Name = "FormPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ventanaDeBibliotecario";
             Load += ventanaDeBibliotecario_Load;

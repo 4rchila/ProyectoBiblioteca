@@ -28,151 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarLibro));
             panel1 = new Panel();
-            listBox1 = new ListBox();
+            comboBoxGenero = new ComboBox();
             button1 = new Button();
             label5 = new Label();
-            textBox3 = new TextBox();
+            txtBoxIsbn = new TextBox();
             label4 = new Label();
-            textBox2 = new TextBox();
+            txtBoxAutor = new TextBox();
             label3 = new Label();
-            textBox1 = new TextBox();
+            txtBoxTitulo = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            button2 = new Button();
+            pictureBox1 = new PictureBox();
+            label6 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(251, 243, 232);
-            panel1.Controls.Add(listBox1);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(comboBoxGenero);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(textBox3);
+            panel1.Controls.Add(txtBoxIsbn);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(txtBoxAutor);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtBoxTitulo);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(194, 38);
-            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Location = new Point(80, 23);
             panel1.Name = "panel1";
-            panel1.Size = new Size(534, 722);
+            panel1.Size = new Size(374, 433);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
-            // listBox1
+            // comboBoxGenero
             // 
-            listBox1.BorderStyle = BorderStyle.FixedSingle;
-            listBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            listBox1.ForeColor = Color.FromArgb(107, 91, 61);
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 21;
-            listBox1.Items.AddRange(new object[] { "Ficción", "Ciencia", "Lírico", "Drámatico ", "Cómico", "Fantasía", "Novela" });
-            listBox1.Location = new Point(41, 498);
-            listBox1.Margin = new Padding(4, 5, 4, 5);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(428, 23);
-            listBox1.TabIndex = 10;
+            comboBoxGenero.BackColor = Color.FromArgb(255, 249, 240);
+            comboBoxGenero.ForeColor = Color.FromArgb(107, 91, 61);
+            comboBoxGenero.FormattingEnabled = true;
+            comboBoxGenero.Items.AddRange(new object[] { "Ciencia", "Cómico", "Drámatico ", "Fantasía", "Ficción", "Lírico", "Novela" });
+            comboBoxGenero.Location = new Point(29, 313);
+            comboBoxGenero.Name = "comboBoxGenero";
+            comboBoxGenero.Size = new Size(300, 23);
+            comboBoxGenero.TabIndex = 10;
             // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(140, 122, 91);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(237, 226, 213);
-            button1.Location = new Point(41, 615);
-            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Location = new Point(29, 369);
             button1.Name = "button1";
-            button1.Size = new Size(453, 53);
+            button1.Size = new Size(317, 32);
             button1.TabIndex = 9;
             button1.Text = "Agregar Libro";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.ForeColor = Color.FromArgb(166, 152, 128);
-            label5.Location = new Point(41, 467);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(29, 285);
             label5.Name = "label5";
-            label5.Size = new Size(69, 25);
+            label5.Size = new Size(45, 15);
             label5.TabIndex = 7;
             label5.Text = "Género";
             // 
-            // textBox3
+            // txtBoxIsbn
             // 
-            textBox3.BackColor = Color.FromArgb(255, 249, 240);
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.ForeColor = Color.FromArgb(107, 91, 61);
-            textBox3.Location = new Point(41, 397);
-            textBox3.Margin = new Padding(4, 5, 4, 5);
-            textBox3.MaxLength = 15;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(428, 30);
-            textBox3.TabIndex = 6;
-            textBox3.Text = "Ingrese el ISBN";
+            txtBoxIsbn.BackColor = Color.FromArgb(255, 249, 240);
+            txtBoxIsbn.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxIsbn.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxIsbn.ForeColor = Color.FromArgb(107, 91, 61);
+            txtBoxIsbn.Location = new Point(29, 243);
+            txtBoxIsbn.MaxLength = 10;
+            txtBoxIsbn.Name = "txtBoxIsbn";
+            txtBoxIsbn.PlaceholderText = "Ingrese el ISBN";
+            txtBoxIsbn.Size = new Size(300, 22);
+            txtBoxIsbn.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.FromArgb(166, 152, 128);
-            label4.Location = new Point(41, 352);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(29, 216);
             label4.Name = "label4";
-            label4.Size = new Size(50, 25);
+            label4.Size = new Size(32, 15);
             label4.TabIndex = 5;
             label4.Text = "ISBN";
             // 
-            // textBox2
+            // txtBoxAutor
             // 
-            textBox2.BackColor = Color.FromArgb(255, 249, 240);
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.ForeColor = Color.FromArgb(107, 91, 61);
-            textBox2.Location = new Point(41, 277);
-            textBox2.Margin = new Padding(4, 5, 4, 5);
-            textBox2.MaxLength = 15;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(428, 30);
-            textBox2.TabIndex = 4;
-            textBox2.Text = "Ingrese el nombre del autor";
+            txtBoxAutor.BackColor = Color.FromArgb(255, 249, 240);
+            txtBoxAutor.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxAutor.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxAutor.ForeColor = Color.FromArgb(107, 91, 61);
+            txtBoxAutor.Location = new Point(29, 171);
+            txtBoxAutor.MaxLength = 30;
+            txtBoxAutor.Name = "txtBoxAutor";
+            txtBoxAutor.PlaceholderText = "Ingrese el nombre del autor";
+            txtBoxAutor.Size = new Size(300, 22);
+            txtBoxAutor.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.ForeColor = Color.FromArgb(166, 152, 128);
-            label3.Location = new Point(41, 232);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(29, 144);
             label3.Name = "label3";
-            label3.Size = new Size(57, 25);
+            label3.Size = new Size(37, 15);
             label3.TabIndex = 3;
             label3.Text = "Autor";
             // 
-            // textBox1
+            // txtBoxTitulo
             // 
-            textBox1.BackColor = Color.FromArgb(255, 249, 240);
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.ForeColor = Color.FromArgb(107, 91, 61);
-            textBox1.Location = new Point(41, 157);
-            textBox1.Margin = new Padding(4, 5, 4, 5);
-            textBox1.MaxLength = 15;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(428, 30);
-            textBox1.TabIndex = 2;
-            textBox1.Text = "Ingrese el titulo del libro";
+            txtBoxTitulo.BackColor = Color.FromArgb(255, 249, 240);
+            txtBoxTitulo.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxTitulo.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxTitulo.ForeColor = Color.FromArgb(107, 91, 61);
+            txtBoxTitulo.Location = new Point(29, 99);
+            txtBoxTitulo.MaxLength = 30;
+            txtBoxTitulo.Name = "txtBoxTitulo";
+            txtBoxTitulo.PlaceholderText = "Ingrese el titulo del libro";
+            txtBoxTitulo.Size = new Size(300, 22);
+            txtBoxTitulo.TabIndex = 2;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.FromArgb(166, 152, 128);
-            label2.Location = new Point(41, 112);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(29, 72);
             label2.Name = "label2";
-            label2.Size = new Size(56, 25);
+            label2.Size = new Size(37, 15);
             label2.TabIndex = 1;
             label2.Text = "Título";
             // 
@@ -181,39 +173,49 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(140, 122, 91);
-            label1.Location = new Point(41, 20);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(57, 12);
             label1.Name = "label1";
-            label1.Size = new Size(374, 43);
+            label1.Size = new Size(252, 29);
             label1.TabIndex = 0;
             label1.Text = "Agregar Nuevo Libro";
             // 
-            // button2
+            // pictureBox1
             // 
-            button2.Location = new Point(17, 38);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(107, 38);
-            button2.TabIndex = 1;
-            button2.Text = "Regresar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            pictureBox1.Cursor = Cursors.Hand;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(28, 23);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(32, 28);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
-            // AgregarLibro
+            // label6
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            label6.AutoSize = true;
+            label6.ForeColor = Color.FromArgb(166, 152, 128);
+            label6.Location = new Point(85, 41);
+            label6.Name = "label6";
+            label6.Size = new Size(186, 15);
+            label6.TabIndex = 11;
+            label6.Text = "Agrega un nuevo libro al catálogo";
+            // 
+            // FormAgregarLibro
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 230, 211);
-            ClientSize = new Size(937, 798);
-            Controls.Add(button2);
+            ClientSize = new Size(530, 479);
+            Controls.Add(pictureBox1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(4, 5, 4, 5);
-            Name = "AgregarLibro";
+            Name = "FormAgregarLibro";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AgregarLibro";
-            Load += AgregarLibro_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -221,15 +223,16 @@
 
         private Panel panel1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtBoxTitulo;
         private Label label2;
         private Label label4;
-        private TextBox textBox2;
+        private TextBox txtBoxAutor;
         private Label label3;
         private Button button1;
         private Label label5;
-        private TextBox textBox3;
-        private ListBox listBox1;
-        private Button button2;
+        private TextBox txtBoxIsbn;
+        private ComboBox comboBoxGenero;
+        private PictureBox pictureBox1;
+        private Label label6;
     }
 }

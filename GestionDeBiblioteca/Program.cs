@@ -19,14 +19,6 @@ namespace GestionDeBiblioteca
             listaBibliotecarios.Add(firstBibliotecario);
             ApplicationConfiguration.Initialize();
             Application.Run(new FormLogin());
-      
-        }
-   
-        public static void ComprobarPassword(string nombre, string password) 
-        {
-            if (BuscarUsuario(nombre) != null)
-            {
-                var usuarioInicio = BuscarUsuario(nombre);
 
 
                 if (usuarioInicio.Name == nombre && usuarioInicio.Password == password)
