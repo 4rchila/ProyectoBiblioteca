@@ -1,16 +1,16 @@
 ﻿namespace GestionDeBiblioteca
 {
-    partial class FormAgregarLibro
+    partial class AgregarLibro
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Limpiar los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,16 +20,16 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de componentes
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarLibro));
             panel1 = new Panel();
+            label6 = new Label();
             comboBoxGenero = new ComboBox();
             button1 = new Button();
             label5 = new Label();
@@ -40,10 +40,7 @@
             txtBoxTitulo = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            label6 = new Label();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -60,10 +57,20 @@
             panel1.Controls.Add(txtBoxTitulo);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(80, 23);
+            panel1.Location = new Point(148, 73);
             panel1.Name = "panel1";
             panel1.Size = new Size(374, 433);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.ForeColor = Color.FromArgb(166, 152, 128);
+            label6.Location = new Point(85, 41);
+            label6.Name = "label6";
+            label6.Size = new Size(186, 15);
+            label6.TabIndex = 11;
+            label6.Text = "Agrega un nuevo libro al catálogo";
             // 
             // comboBoxGenero
             // 
@@ -79,6 +86,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(140, 122, 91);
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(62, 44, 25);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(237, 226, 213);
             button1.Location = new Point(29, 369);
@@ -172,67 +180,39 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(140, 122, 91);
+            label1.ForeColor = Color.FromArgb(62, 44, 25);
             label1.Location = new Point(57, 12);
             label1.Name = "label1";
             label1.Size = new Size(252, 29);
             label1.TabIndex = 0;
             label1.Text = "Agregar Nuevo Libro";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(28, 23);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(32, 28);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.ForeColor = Color.FromArgb(166, 152, 128);
-            label6.Location = new Point(85, 41);
-            label6.Name = "label6";
-            label6.Size = new Size(186, 15);
-            label6.TabIndex = 11;
-            label6.Text = "Agrega un nuevo libro al catálogo";
-            // 
-            // FormAgregarLibro
+            // AgregarLibro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 230, 211);
-            ClientSize = new Size(530, 479);
-            Controls.Add(pictureBox1);
+            BackColor = Color.FromArgb(251, 243, 232);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FormAgregarLibro";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "AgregarLibro";
+            Name = "AgregarLibro";
+            Size = new Size(718, 522);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Label label1;
-        private TextBox txtBoxTitulo;
-        private Label label2;
-        private Label label4;
-        private TextBox txtBoxAutor;
-        private Label label3;
+        private Label label6;
+        private ComboBox comboBoxGenero;
         private Button button1;
         private Label label5;
         private TextBox txtBoxIsbn;
-        private ComboBox comboBoxGenero;
-        private PictureBox pictureBox1;
-        private Label label6;
+        private Label label4;
+        private TextBox txtBoxAutor;
+        private Label label3;
+        private TextBox txtBoxTitulo;
+        private Label label2;
+        private Label label1;
     }
 }

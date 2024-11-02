@@ -69,5 +69,12 @@ namespace GestionDeBiblioteca
             formBuscarLibro.Show();
             this.Hide();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Bibliotecario ventanaBiblio = new Bibliotecario();
+            ventanaBiblio.Show();
+            this.Hide();
+        }
     }
 }

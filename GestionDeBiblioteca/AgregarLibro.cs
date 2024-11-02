@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +10,13 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class FormAgregarLibro : Form
+    public partial class AgregarLibro : UserControl
     {
-        public FormAgregarLibro()
+        public AgregarLibro()
         {
             InitializeComponent();
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             try
@@ -34,7 +34,7 @@ namespace GestionDeBiblioteca
                 }
 
                 Libro nuevoLibro = new Libro(titulo, autor, isbn, genero, true, 0);
-                DatosGlobales.Libros.Add(nuevoLibro);
+                Program.ListaLibros.Add(nuevoLibro);
                 MessageBox.Show("Libro agregado correctamente.");
 
                 txtBoxTitulo.Clear();
@@ -47,14 +47,6 @@ namespace GestionDeBiblioteca
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FormBibliotecario ventanaBibliotecario = new FormBibliotecario();
-            ventanaBibliotecario.Show();
         }
     }
 }

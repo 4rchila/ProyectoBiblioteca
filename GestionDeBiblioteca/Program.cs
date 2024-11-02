@@ -5,6 +5,7 @@ namespace GestionDeBiblioteca
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        public static List<Libro> ListaLibros = new List<Libro>();
         [STAThread]
         static void Main()
         {

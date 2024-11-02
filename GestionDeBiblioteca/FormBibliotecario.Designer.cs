@@ -215,6 +215,7 @@
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 12;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // SalirBibliotecario
             // 
@@ -258,7 +259,7 @@
             panel2.Size = new Size(187, 172);
             panel2.TabIndex = 15;
             // 
-            // FormPrincipal
+            // FormBibliotecario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -273,7 +274,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(2);
             MaximizeBox = false;
-            Name = "FormPrincipal";
+            Name = "FormBibliotecario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ventanaDeBibliotecario";
             Load += ventanaDeBibliotecario_Load;

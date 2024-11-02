@@ -1,16 +1,16 @@
 ﻿namespace GestionDeBiblioteca
 {
-    partial class FormEditarLibro
+    partial class EditarLibro
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// Variable del diseñador necesaria.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Limpiar los recursos que se estén usando.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,19 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Código generado por el Diseñador de componentes
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Método necesario para admitir el Diseñador. No se puede modificar
+        /// el contenido de este método con el editor de código.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditarLibro));
             panel1 = new Panel();
             checkBox1 = new CheckBox();
             button3 = new Button();
-            button2 = new Button();
             button1 = new Button();
             comboBoxGeneroEdit = new ComboBox();
             label5 = new Label();
@@ -47,11 +45,9 @@
             label7 = new Label();
             label2 = new Label();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -59,7 +55,6 @@
             panel1.BackColor = Color.FromArgb(251, 243, 232);
             panel1.Controls.Add(checkBox1);
             panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(comboBoxGeneroEdit);
             panel1.Controls.Add(label5);
@@ -72,10 +67,10 @@
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(79, 47);
+            panel1.Location = new Point(37, 38);
             panel1.Name = "panel1";
             panel1.Size = new Size(634, 341);
-            panel1.TabIndex = 2;
+            panel1.TabIndex = 3;
             // 
             // checkBox1
             // 
@@ -94,6 +89,7 @@
             // button3
             // 
             button3.BackColor = Color.FromArgb(140, 122, 91);
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.FromArgb(237, 226, 213);
             button3.Location = new Point(30, 275);
@@ -104,22 +100,11 @@
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(140, 122, 91);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(237, 226, 213);
-            button2.Location = new Point(338, 275);
-            button2.Name = "button2";
-            button2.Size = new Size(104, 32);
-            button2.TabIndex = 20;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(140, 122, 91);
             button1.Enabled = false;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(237, 226, 213);
             button1.Location = new Point(458, 275);
@@ -157,7 +142,7 @@
             txtBoxIsbnEditar.BorderStyle = BorderStyle.FixedSingle;
             txtBoxIsbnEditar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxIsbnEditar.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxIsbnEditar.Location = new Point(30, 205);
+            txtBoxIsbnEditar.Location = new Point(31, 158);
             txtBoxIsbnEditar.MaxLength = 10;
             txtBoxIsbnEditar.Name = "txtBoxIsbnEditar";
             txtBoxIsbnEditar.PlaceholderText = "Ingrese el ISBN";
@@ -168,7 +153,7 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.FromArgb(166, 152, 128);
-            label4.Location = new Point(30, 187);
+            label4.Location = new Point(31, 140);
             label4.Name = "label4";
             label4.Size = new Size(32, 15);
             label4.TabIndex = 15;
@@ -203,7 +188,7 @@
             txtBoxTituloEditar.BorderStyle = BorderStyle.FixedSingle;
             txtBoxTituloEditar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxTituloEditar.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxTituloEditar.Location = new Point(32, 157);
+            txtBoxTituloEditar.Location = new Point(31, 206);
             txtBoxTituloEditar.MaxLength = 30;
             txtBoxTituloEditar.Name = "txtBoxTituloEditar";
             txtBoxTituloEditar.PlaceholderText = "Ingrese el titulo del libro";
@@ -214,7 +199,7 @@
             // 
             label6.AutoSize = true;
             label6.ForeColor = Color.FromArgb(166, 152, 128);
-            label6.Location = new Point(30, 139);
+            label6.Location = new Point(29, 188);
             label6.Name = "label6";
             label6.Size = new Size(37, 15);
             label6.TabIndex = 11;
@@ -263,53 +248,36 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(140, 122, 91);
+            label1.ForeColor = Color.FromArgb(62, 44, 25);
             label1.Location = new Point(254, 13);
             label1.Name = "label1";
             label1.Size = new Size(149, 29);
             label1.TabIndex = 1;
             label1.Text = "Editar Libro";
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Cursor = Cursors.Hand;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(28, 47);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(32, 28);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
-            // FormEditarLibro
+            // EditarLibro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(245, 230, 211);
-            ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
+            AutoValidate = AutoValidate.EnableAllowFocusChange;
+            BackColor = Color.FromArgb(251, 243, 232);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Name = "FormEditarLibro";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormEditarLibro";
+            Name = "EditarLibro";
+            Size = new Size(718, 522);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Label label1;
-        private Panel panel2;
-        private Label label2;
-        private Panel panel3;
+        private CheckBox checkBox1;
+        private Button button3;
+        private Button button1;
         private ComboBox comboBoxGeneroEdit;
         private Label label5;
         private TextBox txtBoxIsbnEditar;
@@ -318,11 +286,10 @@
         private Label label3;
         private TextBox txtBoxTituloEditar;
         private Label label6;
+        private Panel panel2;
+        private Panel panel3;
         private Label label7;
-        private Button button2;
-        private Button button1;
-        private Button button3;
-        private PictureBox pictureBox1;
-        private CheckBox checkBox1;
+        private Label label2;
+        private Label label1;
     }
 }
