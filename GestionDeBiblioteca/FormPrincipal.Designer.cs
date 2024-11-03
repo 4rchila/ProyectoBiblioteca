@@ -28,282 +28,215 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            label2 = new Label();
-            AgregarLibro = new Button();
-            GestionL = new Label();
-            EditarLibro = new Button();
-            EliminarLibro = new Button();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            GestionU = new Label();
-            AgregarUsuario = new Button();
-            EliminarUsuario = new Button();
-            EditarUsuario = new Button();
-            pictureBox3 = new PictureBox();
-            SalirBibliotecario = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormBibliotecario));
             panel1 = new Panel();
-            panel2 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            pictureBox1 = new PictureBox();
+            label3 = new Label();
+            label1 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            label2 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(62, 44, 25);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label1);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(716, 46);
+            panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(543, 8);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(28, 30);
+            pictureBox1.TabIndex = 8;
+            pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(573, 16);
+            label3.Name = "label3";
+            label3.Size = new Size(134, 13);
+            label3.TabIndex = 7;
+            label3.Text = "Bienvenido, Bibliotecario";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(94, 19);
-            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.Image = (Image)resources.GetObject("label1.Image");
+            label1.ImageAlign = ContentAlignment.MiddleLeft;
+            label1.Location = new Point(11, 11);
             label1.Name = "label1";
-            label1.Size = new Size(427, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Hola!!. Bienvenido al menu de bibliotecario ";
+            label1.Size = new Size(123, 25);
+            label1.TabIndex = 1;
+            label1.Text = "     BiblioTech";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(62, 44, 25);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(140, 122, 91);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(140, 122, 91);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(79, 196);
+            button1.Name = "button1";
+            button1.Size = new Size(244, 152);
+            button1.TabIndex = 1;
+            button1.TextAlign = ContentAlignment.BottomCenter;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(62, 44, 25);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.TopCenter;
+            button2.Location = new Point(403, 196);
+            button2.Name = "button2";
+            button2.Size = new Size(244, 152);
+            button2.TabIndex = 2;
+            button2.TextAlign = ContentAlignment.BottomCenter;
+            button2.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(303, 91);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.BackColor = Color.FromArgb(62, 44, 25);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(137, 270);
             label2.Name = "label2";
-            label2.Size = new Size(0, 15);
-            label2.TabIndex = 1;
+            label2.Size = new Size(141, 21);
+            label2.TabIndex = 6;
+            label2.Text = "Gestión de Libros";
             // 
-            // AgregarLibro
+            // label4
             // 
-            AgregarLibro.BackColor = Color.DarkRed;
-            AgregarLibro.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AgregarLibro.ForeColor = Color.White;
-            AgregarLibro.Location = new Point(33, 85);
-            AgregarLibro.Margin = new Padding(2);
-            AgregarLibro.Name = "AgregarLibro";
-            AgregarLibro.Size = new Size(123, 20);
-            AgregarLibro.TabIndex = 2;
-            AgregarLibro.Text = "Agregar Libro";
-            AgregarLibro.UseVisualStyleBackColor = false;
+            label4.AutoSize = true;
+            label4.BackColor = Color.FromArgb(62, 44, 25);
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(462, 270);
+            label4.Name = "label4";
+            label4.Size = new Size(141, 21);
+            label4.TabIndex = 7;
+            label4.Text = "Gestión de Libros";
             // 
-            // GestionL
+            // label5
             // 
-            GestionL.AutoSize = true;
-            GestionL.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GestionL.ForeColor = SystemColors.ButtonHighlight;
-            GestionL.Location = new Point(13, 7);
-            GestionL.Margin = new Padding(2, 0, 2, 0);
-            GestionL.Name = "GestionL";
-            GestionL.Size = new Size(155, 22);
-            GestionL.TabIndex = 3;
-            GestionL.Text = "Gestion de Libros";
-            GestionL.Click += Gestion_Click;
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(62, 44, 25);
+            label5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(166, 152, 128);
+            label5.Location = new Point(108, 304);
+            label5.Name = "label5";
+            label5.Size = new Size(183, 26);
+            label5.TabIndex = 8;
+            label5.Text = "Explora el catalogo, añade, edita y\r\n      elimina libros de la colección";
             // 
-            // EditarLibro
+            // label6
             // 
-            EditarLibro.BackColor = Color.DarkRed;
-            EditarLibro.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EditarLibro.ForeColor = Color.White;
-            EditarLibro.Location = new Point(33, 110);
-            EditarLibro.Margin = new Padding(2);
-            EditarLibro.Name = "EditarLibro";
-            EditarLibro.Size = new Size(123, 20);
-            EditarLibro.TabIndex = 4;
-            EditarLibro.Text = "Buscar Libro";
-            EditarLibro.UseVisualStyleBackColor = false;
+            label6.AutoSize = true;
+            label6.BackColor = Color.FromArgb(62, 44, 25);
+            label6.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.FromArgb(166, 152, 128);
+            label6.Location = new Point(440, 304);
+            label6.Name = "label6";
+            label6.Size = new Size(174, 26);
+            label6.TabIndex = 9;
+            label6.Text = "Maneja los perfiles, crea, edita y \r\n              elimina usuarios\r\n";
             // 
-            // EliminarLibro
+            // label7
             // 
-            EliminarLibro.BackColor = Color.DarkRed;
-            EliminarLibro.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EliminarLibro.ForeColor = Color.White;
-            EliminarLibro.Location = new Point(33, 137);
-            EliminarLibro.Margin = new Padding(2);
-            EliminarLibro.Name = "EliminarLibro";
-            EliminarLibro.Size = new Size(123, 20);
-            EliminarLibro.TabIndex = 5;
-            EliminarLibro.Text = "Eliminar Libro";
-            EliminarLibro.UseVisualStyleBackColor = false;
+            label7.AutoSize = true;
+            label7.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.FromArgb(62, 44, 25);
+            label7.Location = new Point(177, 77);
+            label7.Name = "label7";
+            label7.Size = new Size(394, 29);
+            label7.TabIndex = 10;
+            label7.Text = "Bienvenido al sistema BiblioTech";
             // 
-            // pictureBox1
+            // label8
             // 
-            pictureBox1.BackColor = Color.Brown;
-            pictureBox1.Image = Properties.Resources.Book_free_icons_designed_by_Smashicons_removebg_preview;
-            pictureBox1.Location = new Point(55, 28);
-            pictureBox1.Margin = new Padding(2);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(69, 49);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.Image = Properties.Resources.ffrf_removebg_preview1;
-            pictureBox2.Location = new Point(38, 7);
-            pictureBox2.Margin = new Padding(2);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(58, 47);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 7;
-            pictureBox2.TabStop = false;
-            // 
-            // GestionU
-            // 
-            GestionU.AutoSize = true;
-            GestionU.Font = new Font("Times New Roman", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            GestionU.ForeColor = SystemColors.ButtonHighlight;
-            GestionU.Location = new Point(11, 7);
-            GestionU.Margin = new Padding(2, 0, 2, 0);
-            GestionU.Name = "GestionU";
-            GestionU.Size = new Size(166, 22);
-            GestionU.TabIndex = 8;
-            GestionU.Text = "Gestion de Usuario";
-            GestionU.Click += GestionU_Click;
-            // 
-            // AgregarUsuario
-            // 
-            AgregarUsuario.BackColor = Color.DarkRed;
-            AgregarUsuario.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            AgregarUsuario.ForeColor = Color.White;
-            AgregarUsuario.Location = new Point(32, 88);
-            AgregarUsuario.Margin = new Padding(2);
-            AgregarUsuario.Name = "AgregarUsuario";
-            AgregarUsuario.Size = new Size(132, 20);
-            AgregarUsuario.TabIndex = 9;
-            AgregarUsuario.Text = "Agregar Usuario";
-            AgregarUsuario.UseVisualStyleBackColor = false;
-            // 
-            // EliminarUsuario
-            // 
-            EliminarUsuario.BackColor = Color.DarkRed;
-            EliminarUsuario.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EliminarUsuario.ForeColor = Color.White;
-            EliminarUsuario.Location = new Point(32, 139);
-            EliminarUsuario.Margin = new Padding(2);
-            EliminarUsuario.Name = "EliminarUsuario";
-            EliminarUsuario.Size = new Size(132, 20);
-            EliminarUsuario.TabIndex = 10;
-            EliminarUsuario.Text = "Eliminar Usuario";
-            EliminarUsuario.UseVisualStyleBackColor = false;
-            EliminarUsuario.Click += EliminarUsuario_Click;
-            // 
-            // EditarUsuario
-            // 
-            EditarUsuario.BackColor = Color.DarkRed;
-            EditarUsuario.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            EditarUsuario.ForeColor = Color.White;
-            EditarUsuario.Location = new Point(32, 113);
-            EditarUsuario.Margin = new Padding(2);
-            EditarUsuario.Name = "EditarUsuario";
-            EditarUsuario.Size = new Size(132, 20);
-            EditarUsuario.TabIndex = 11;
-            EditarUsuario.Text = "Editar Usuario";
-            EditarUsuario.UseVisualStyleBackColor = false;
-            EditarUsuario.Click += EditarUsuario_Click;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Brown;
-            pictureBox3.Image = Properties.Resources.Captura_de_pantalla_2024_10_22_203527_removebg_preview;
-            pictureBox3.Location = new Point(51, 28);
-            pictureBox3.Margin = new Padding(2);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(83, 56);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 12;
-            pictureBox3.TabStop = false;
-            pictureBox3.Click += pictureBox3_Click;
-            // 
-            // SalirBibliotecario
-            // 
-            SalirBibliotecario.BackColor = Color.Red;
-            SalirBibliotecario.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SalirBibliotecario.ForeColor = SystemColors.ButtonHighlight;
-            SalirBibliotecario.Location = new Point(472, 242);
-            SalirBibliotecario.Margin = new Padding(2);
-            SalirBibliotecario.Name = "SalirBibliotecario";
-            SalirBibliotecario.Size = new Size(78, 20);
-            SalirBibliotecario.TabIndex = 13;
-            SalirBibliotecario.Text = "Salir";
-            SalirBibliotecario.UseVisualStyleBackColor = false;
-            SalirBibliotecario.Click += SalirBibliotecario_Click;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.Brown;
-            panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(AgregarLibro);
-            panel1.Controls.Add(GestionU);
-            panel1.Controls.Add(EditarLibro);
-            panel1.Controls.Add(EliminarLibro);
-            panel1.Location = new Point(72, 66);
-            panel1.Margin = new Padding(2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(183, 172);
-            panel1.TabIndex = 14;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.Brown;
-            panel2.Controls.Add(GestionL);
-            panel2.Controls.Add(pictureBox3);
-            panel2.Controls.Add(AgregarUsuario);
-            panel2.Controls.Add(EliminarUsuario);
-            panel2.Controls.Add(EditarUsuario);
-            panel2.Location = new Point(295, 66);
-            panel2.Margin = new Padding(2);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(187, 172);
-            panel2.TabIndex = 15;
+            label8.AutoSize = true;
+            label8.BackColor = Color.FromArgb(251, 243, 232);
+            label8.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.FromArgb(166, 152, 128);
+            label8.Location = new Point(215, 115);
+            label8.Name = "label8";
+            label8.Size = new Size(314, 13);
+            label8.TabIndex = 11;
+            label8.Text = "Tu asistente digital para la gestión eficiente de la biblioteca";
             // 
             // FormBibliotecario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkRed;
-            ClientSize = new Size(559, 266);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
-            Controls.Add(SalirBibliotecario);
-            Controls.Add(pictureBox2);
+            BackColor = Color.FromArgb(251, 243, 232);
+            ClientSize = new Size(716, 394);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Controls.Add(button2);
+            Controls.Add(button1);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             MaximizeBox = false;
             Name = "FormBibliotecario";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ventanaDeBibliotecario";
-            Load += ventanaDeBibliotecario_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Button AgregarLibro;
-        private Label GestionL;
-        private Button EditarLibro;
-        private Button EliminarLibro;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private Label GestionU;
-        private Button AgregarUsuario;
-        private Button EliminarUsuario;
-        private Button EditarUsuario;
-        private PictureBox pictureBox3;
-        private Button SalirBibliotecario;
         private Panel panel1;
-        private Panel panel2;
+        private Label label1;
+        private Label label3;
+        private PictureBox pictureBox1;
+        private Button button1;
+        private Button button2;
+        private Label label2;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
     }
 }

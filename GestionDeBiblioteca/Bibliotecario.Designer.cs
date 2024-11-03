@@ -44,6 +44,7 @@
             agregarLibro1 = new AgregarLibro();
             catalogo1 = new Catalogo();
             panel4 = new Panel();
+            label4 = new Label();
             pictureBox2 = new PictureBox();
             label5 = new Label();
             pictureBox1 = new PictureBox();
@@ -51,7 +52,6 @@
             label2 = new Label();
             panel5 = new Panel();
             labelHeader = new Label();
-            label4 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -247,6 +247,18 @@
             panel4.Size = new Size(698, 82);
             panel4.TabIndex = 4;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.FromArgb(166, 152, 128);
+            label4.ImageAlign = ContentAlignment.MiddleLeft;
+            label4.Location = new Point(612, 34);
+            label4.Name = "label4";
+            label4.Size = new Size(71, 13);
+            label4.TabIndex = 10;
+            label4.Text = "Bibliotecario";
+            // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
@@ -318,18 +330,6 @@
             labelHeader.Size = new Size(295, 13);
             labelHeader.TabIndex = 7;
             labelHeader.Text = "Tienes  libros en tu catalogo | 2 disponibles | 1 prestado";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.FromArgb(166, 152, 128);
-            label4.ImageAlign = ContentAlignment.MiddleLeft;
-            label4.Location = new Point(612, 34);
-            label4.Name = "label4";
-            label4.Size = new Size(71, 13);
-            label4.TabIndex = 10;
-            label4.Text = "Bibliotecario";
             // 
             // Bibliotecario
             // 
