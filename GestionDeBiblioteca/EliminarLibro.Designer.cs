@@ -67,7 +67,7 @@
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(40, 109);
+            panel1.Location = new Point(34, 50);
             panel1.Name = "panel1";
             panel1.Size = new Size(634, 341);
             panel1.TabIndex = 4;
@@ -269,7 +269,7 @@
             BackColor = Color.FromArgb(251, 243, 232);
             Controls.Add(panel1);
             Name = "EliminarLibro";
-            Size = new Size(718, 522);
+            Size = new Size(718, 432);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

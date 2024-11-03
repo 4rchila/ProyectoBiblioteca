@@ -46,7 +46,7 @@
             panel2.Controls.Add(listViewLibros);
             panel2.Controls.Add(txtBoxBuscar);
             panel2.Controls.Add(label7);
-            panel2.Location = new Point(30, 57);
+            panel2.Location = new Point(28, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(660, 433);
             panel2.TabIndex = 2;
@@ -125,7 +125,7 @@
             BackColor = Color.FromArgb(251, 243, 232);
             Controls.Add(panel2);
             Name = "Catalogo";
-            Size = new Size(718, 522);
+            Size = new Size(718, 432);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);

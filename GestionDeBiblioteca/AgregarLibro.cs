@@ -32,15 +32,31 @@ namespace GestionDeBiblioteca
                     MessageBox.Show("Por favor complete todos los campos.");
                     return;
                 }
+                Libro buscarTitulo = Program.ListaLibros.Find(p=>p.Titulo ==  titulo);
+                if (buscarTitulo == null)
+                {
 
-                Libro nuevoLibro = new Libro(titulo, autor, isbn, genero, true, 0);
-                Program.ListaLibros.Add(nuevoLibro);
-                MessageBox.Show("Libro agregado correctamente.");
+                    Libro buscarISBN = Program.ListaLibros.Find(p => p.ISBN == isbn);
+                    if (buscarISBN == null)
+                    {
+                        Libro nuevoLibro = new Libro(titulo, autor, isbn, genero, true, 0);
+                        Program.ListaLibros.Add(nuevoLibro);
+                        MessageBox.Show("Libro agregado correctamente.");
 
-                txtBoxTitulo.Clear();
-                txtBoxAutor.Clear();
-                txtBoxIsbn.Clear();
-                comboBoxGenero.SelectedIndex = -1;
+                        txtBoxTitulo.Clear();
+                        txtBoxAutor.Clear();
+                        txtBoxIsbn.Clear();
+                        comboBoxGenero.SelectedIndex = -1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ya existe un libro con ese ISBN.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Ya existe un libro con ese título.");
+                }
             }
 
             catch (Exception ex)

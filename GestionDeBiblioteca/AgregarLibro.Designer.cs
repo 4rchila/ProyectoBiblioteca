@@ -57,7 +57,7 @@
             panel1.Controls.Add(txtBoxTitulo);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(148, 73);
+            panel1.Location = new Point(157, 3);
             panel1.Name = "panel1";
             panel1.Size = new Size(374, 433);
             panel1.TabIndex = 1;

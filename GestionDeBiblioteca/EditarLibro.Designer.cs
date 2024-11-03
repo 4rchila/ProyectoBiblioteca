@@ -67,7 +67,7 @@
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(36, 96);
+            panel1.Location = new Point(34, 45);
             panel1.Name = "panel1";
             panel1.Size = new Size(634, 341);
             panel1.TabIndex = 3;
@@ -263,7 +263,7 @@
             BackColor = Color.FromArgb(251, 243, 232);
             Controls.Add(panel1);
             Name = "EditarLibro";
-            Size = new Size(718, 522);
+            Size = new Size(718, 432);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
