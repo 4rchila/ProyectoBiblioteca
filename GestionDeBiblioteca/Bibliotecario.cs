@@ -40,5 +40,13 @@ namespace GestionDeBiblioteca
             SidePanel.Top = button3.Top;
             editarLibro1.BringToFront();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SidePanel.Height = button4.Height;
+            SidePanel.Top = button4.Top;
+            eliminarLibro1.BringToFront();
+            
+        }
     }
 }

@@ -86,7 +86,7 @@
             // button1
             // 
             button1.BackColor = Color.FromArgb(140, 122, 91);
-            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(62, 44, 25);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(237, 226, 213);
             button1.Location = new Point(29, 369);

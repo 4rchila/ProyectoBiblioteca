@@ -39,6 +39,7 @@
             agregarLibro1 = new AgregarLibro();
             catalogo1 = new Catalogo();
             editarLibro1 = new EditarLibro();
+            eliminarLibro1 = new EliminarLibro();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -70,6 +71,7 @@
             button4.TabIndex = 4;
             button4.Text = "Eliminar Libro";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -135,6 +137,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(249, 237, 226);
+            panel2.Controls.Add(eliminarLibro1);
             panel2.Controls.Add(editarLibro1);
             panel2.Controls.Add(agregarLibro1);
             panel2.Controls.Add(catalogo1);
@@ -169,6 +172,14 @@
             editarLibro1.Size = new Size(718, 522);
             editarLibro1.TabIndex = 2;
             // 
+            // eliminarLibro1
+            // 
+            eliminarLibro1.BackColor = Color.FromArgb(251, 243, 232);
+            eliminarLibro1.Location = new Point(0, 0);
+            eliminarLibro1.Name = "eliminarLibro1";
+            eliminarLibro1.Size = new Size(718, 522);
+            eliminarLibro1.TabIndex = 3;
+            // 
             // Bibliotecario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -198,6 +209,7 @@
         private Panel panel2;
         private AgregarLibro agregarLibro1;
         private Catalogo catalogo1;
+        private EliminarLibro eliminarLibro1;
         private EditarLibro editarLibro1;
     }
 }

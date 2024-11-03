@@ -84,7 +84,6 @@
             AgregarLibro.TabIndex = 2;
             AgregarLibro.Text = "Agregar Libro";
             AgregarLibro.UseVisualStyleBackColor = false;
-            AgregarLibro.Click += AgregarLibro_Click;
             // 
             // GestionL
             // 
@@ -111,7 +110,6 @@
             EditarLibro.TabIndex = 4;
             EditarLibro.Text = "Buscar Libro";
             EditarLibro.UseVisualStyleBackColor = false;
-            EditarLibro.Click += EditarLibro_Click;
             // 
             // EliminarLibro
             // 
@@ -125,7 +123,6 @@
             EliminarLibro.TabIndex = 5;
             EliminarLibro.Text = "Eliminar Libro";
             EliminarLibro.UseVisualStyleBackColor = false;
-            EliminarLibro.Click += EliminarLibro_Click;
             // 
             // pictureBox1
             // 
