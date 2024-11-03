@@ -20,25 +20,25 @@ namespace GestionDeBiblioteca
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string buscarTitulo = txtBoxIsbnEditar.Text.ToUpper();
-            Libro existe = Program.ListaLibros.Find(p => p.ISBN == buscarTitulo);
+            string buscarIsbn = txtBoxIsbnEditar.Text.ToUpper();
+            Libro existe = Program.ListaLibros.Find(p => p.ISBN == buscarIsbn);
             if (existe != null)
             {
                 MostrarControles(true);
 
-                txtBoxIsbnEditar.Tag = existe.Titulo;
+                txtBoxIsbnEditar.Tag = existe.ISBN;
                 txtBoxTituloEditar.Text = existe.Titulo;
                 txtBoxAutorEditar.Text = existe.Autor;
                 txtBoxIsbnEditar.Text = existe.ISBN;
                 comboBoxGeneroEdit.Text = existe.Genero;
-                checkBox1.Enabled = existe.Disponibilidad;
+                checkBox1.Checked = existe.Disponibilidad;
 
                 button1.Enabled = true;
             }
             else
             {
                 InicializarControles();
-                MessageBox.Show("No hay libros con ese título.");
+                MessageBox.Show("No hay libros con ese ISBN.");
             }
         }
         public void InicializarControles()
@@ -50,6 +50,7 @@ namespace GestionDeBiblioteca
             txtBoxAutorEditar.Visible = false;
             txtBoxTituloEditar.Visible = false;
             comboBoxGeneroEdit.Visible = false;
+            txtBoxIsbnEditar.Text = null;
             checkBox1.Visible = false;
 
             button1.Enabled = false;
@@ -80,7 +81,15 @@ namespace GestionDeBiblioteca
             if (existe != null)
             {
                 Program.ListaLibros.Remove(existe);
-                MessageBox.Show("Libro eliminado correctamente.");
+                DialogResult result = MessageBox.Show("¿Estás seguro que quieres eliminar el libro?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    MessageBox.Show("Libro eliminado correctamente.");
+                }
+                else
+                {
+                }
             }
         }
     }

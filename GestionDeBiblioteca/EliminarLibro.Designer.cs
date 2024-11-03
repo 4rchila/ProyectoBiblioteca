@@ -67,7 +67,7 @@
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(40, 118);
+            panel1.Location = new Point(40, 109);
             panel1.Name = "panel1";
             panel1.Size = new Size(634, 341);
             panel1.TabIndex = 4;
@@ -77,6 +77,7 @@
             checkBox1.AutoSize = true;
             checkBox1.Checked = true;
             checkBox1.CheckState = CheckState.Checked;
+            checkBox1.Enabled = false;
             checkBox1.FlatStyle = FlatStyle.Popup;
             checkBox1.ForeColor = Color.FromArgb(166, 152, 128);
             checkBox1.Location = new Point(31, 244);
@@ -111,13 +112,14 @@
             button1.Name = "button1";
             button1.Size = new Size(138, 32);
             button1.TabIndex = 19;
-            button1.Text = "Guardar cambios";
+            button1.Text = "Eliminar";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // comboBoxGeneroEdit
             // 
             comboBoxGeneroEdit.BackColor = Color.FromArgb(255, 249, 240);
+            comboBoxGeneroEdit.Enabled = false;
             comboBoxGeneroEdit.ForeColor = Color.FromArgb(107, 91, 61);
             comboBoxGeneroEdit.FormattingEnabled = true;
             comboBoxGeneroEdit.Items.AddRange(new object[] { "Ciencia", "Cómico", "Drámatico ", "Fantasía", "Ficción", "Lírico", "Novela" });
@@ -129,6 +131,7 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Enabled = false;
             label5.ForeColor = Color.FromArgb(166, 152, 128);
             label5.Location = new Point(338, 187);
             label5.Name = "label5";
@@ -163,6 +166,7 @@
             // 
             txtBoxAutorEditar.BackColor = Color.FromArgb(255, 249, 240);
             txtBoxAutorEditar.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxAutorEditar.Enabled = false;
             txtBoxAutorEditar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxAutorEditar.ForeColor = Color.FromArgb(107, 91, 61);
             txtBoxAutorEditar.Location = new Point(338, 157);
@@ -175,6 +179,7 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Enabled = false;
             label3.ForeColor = Color.FromArgb(166, 152, 128);
             label3.Location = new Point(338, 139);
             label3.Name = "label3";
@@ -186,6 +191,7 @@
             // 
             txtBoxTituloEditar.BackColor = Color.FromArgb(255, 249, 240);
             txtBoxTituloEditar.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxTituloEditar.Enabled = false;
             txtBoxTituloEditar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxTituloEditar.ForeColor = Color.FromArgb(107, 91, 61);
             txtBoxTituloEditar.Location = new Point(31, 206);
@@ -198,6 +204,7 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Enabled = false;
             label6.ForeColor = Color.FromArgb(166, 152, 128);
             label6.Location = new Point(29, 188);
             label6.Name = "label6";

@@ -24,6 +24,7 @@ namespace GestionDeBiblioteca
         {
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
+            catalogo1.CargarLibros(Program.ListaLibros);
             catalogo1.BringToFront();
         }
 
@@ -38,6 +39,8 @@ namespace GestionDeBiblioteca
         {
             SidePanel.Height = button3.Height;
             SidePanel.Top = button3.Top;
+            editarLibro1.InicializarControles();
+            eliminarLibro1.InicializarControles();
             editarLibro1.BringToFront();
         }
 
@@ -45,6 +48,8 @@ namespace GestionDeBiblioteca
         {
             SidePanel.Height = button4.Height;
             SidePanel.Top = button4.Top;
+            editarLibro1.InicializarControles();
+            eliminarLibro1.InicializarControles();
             eliminarLibro1.BringToFront();
             
         }
