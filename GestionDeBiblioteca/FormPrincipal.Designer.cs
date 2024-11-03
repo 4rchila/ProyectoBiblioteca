@@ -124,6 +124,7 @@
             button2.TabIndex = 2;
             button2.TextAlign = ContentAlignment.BottomCenter;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label2
             // 
@@ -143,11 +144,11 @@
             label4.BackColor = Color.FromArgb(62, 44, 25);
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(462, 270);
+            label4.Location = new Point(453, 270);
             label4.Name = "label4";
-            label4.Size = new Size(141, 21);
+            label4.Size = new Size(161, 21);
             label4.TabIndex = 7;
-            label4.Text = "Gestión de Libros";
+            label4.Text = "Gestión de Usuarios";
             // 
             // label5
             // 

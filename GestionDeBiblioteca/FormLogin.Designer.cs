@@ -103,7 +103,7 @@
             redbookpicture.BackgroundImageLayout = ImageLayout.None;
             redbookpicture.Image = Properties.Resources.Download_free_png_of_Red_book_png_sticker__reading_image_on_transparent_background_by_Chim__about_red__closed_book__book__red_book__and_closed_6542627_removebg_preview;
             redbookpicture.Location = new Point(26, 37);
-            redbookpicture.Margin = new Padding(2, 2, 2, 2);
+            redbookpicture.Margin = new Padding(2);
             redbookpicture.Name = "redbookpicture";
             redbookpicture.Size = new Size(125, 61);
             redbookpicture.SizeMode = PictureBoxSizeMode.Zoom;
@@ -118,7 +118,7 @@
             Usuario.Cursor = Cursors.IBeam;
             Usuario.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Usuario.Location = new Point(17, 31);
-            Usuario.Margin = new Padding(2, 2, 2, 2);
+            Usuario.Margin = new Padding(2);
             Usuario.Name = "Usuario";
             Usuario.Size = new Size(180, 26);
             Usuario.TabIndex = 6;
@@ -128,7 +128,7 @@
             // 
             Contraseña.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Contraseña.Location = new Point(18, 91);
-            Contraseña.Margin = new Padding(2, 2, 2, 2);
+            Contraseña.Margin = new Padding(2);
             Contraseña.Name = "Contraseña";
             Contraseña.Size = new Size(180, 26);
             Contraseña.TabIndex = 7;
@@ -163,7 +163,7 @@
             // 
             btnInicio.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInicio.Location = new Point(71, 126);
-            btnInicio.Margin = new Padding(2, 2, 2, 2);
+            btnInicio.Margin = new Padding(2);
             btnInicio.Name = "btnInicio";
             btnInicio.Size = new Size(78, 20);
             btnInicio.TabIndex = 10;
@@ -184,12 +184,12 @@
             panel1.Controls.Add(Contraseña);
             panel1.Controls.Add(Usuario);
             panel1.Location = new Point(350, 76);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(210, 158);
             panel1.TabIndex = 11;
             // 
-            // form1
+            // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -202,9 +202,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.Fixed3D;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             MaximizeBox = false;
-            Name = "form1";
+            Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Biblioteca Central";
             Load += form1_Load;

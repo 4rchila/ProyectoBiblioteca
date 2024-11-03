@@ -1,6 +1,6 @@
 ﻿namespace GestionDeBiblioteca
 {
-    partial class Bibliotecario
+    partial class GestionUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bibliotecario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GestionUsuarios));
             panel1 = new Panel();
             button5 = new Button();
             panel3 = new Panel();
@@ -38,11 +38,6 @@
             SidePanel = new Panel();
             button1 = new Button();
             label1 = new Label();
-            panel2 = new Panel();
-            eliminarLibro1 = new EliminarLibro();
-            editarLibro1 = new EditarLibro();
-            agregarLibro1 = new AgregarLibro();
-            catalogo1 = new Catalogo();
             panel4 = new Panel();
             label4 = new Label();
             pictureBox2 = new PictureBox();
@@ -52,8 +47,11 @@
             label2 = new Label();
             panel5 = new Panel();
             labelHeader = new Label();
+            listaUsuarios1 = new ListaUsuarios();
+            agregaUsuario1 = new AgregaUsuario();
+            editarUsuario1 = new EditarUsuario();
+            eliminarUsuario1 = new EliminarUsuario();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -75,7 +73,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(171, 522);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
             // 
             // button5
             // 
@@ -91,7 +89,7 @@
             button5.TabIndex = 5;
             button5.Text = "Regresar";
             button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click_1;
+            button5.Click += button5_Click;
             // 
             // panel3
             // 
@@ -112,7 +110,7 @@
             button4.Name = "button4";
             button4.Size = new Size(157, 40);
             button4.TabIndex = 4;
-            button4.Text = "      Eliminar Libro";
+            button4.Text = "        Eliminar Usuario";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -128,7 +126,7 @@
             button3.Name = "button3";
             button3.Size = new Size(157, 40);
             button3.TabIndex = 3;
-            button3.Text = "   Editar Libro";
+            button3.Text = "       Editar Usuario";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -144,7 +142,7 @@
             button2.Name = "button2";
             button2.Size = new Size(157, 40);
             button2.TabIndex = 2;
-            button2.Text = "      Agregar Libro";
+            button2.Text = "        Añadir Usuario";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
@@ -168,7 +166,7 @@
             button1.Name = "button1";
             button1.Size = new Size(159, 40);
             button1.TabIndex = 0;
-            button1.Text = "Catalogo";
+            button1.Text = "Usuarios";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -185,53 +183,6 @@
             label1.TabIndex = 0;
             label1.Text = "     BiblioTech";
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(249, 237, 226);
-            panel2.Controls.Add(eliminarLibro1);
-            panel2.Controls.Add(editarLibro1);
-            panel2.Controls.Add(agregarLibro1);
-            panel2.Controls.Add(catalogo1);
-            panel2.Controls.Add(panel4);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(171, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(718, 522);
-            panel2.TabIndex = 3;
-            // 
-            // eliminarLibro1
-            // 
-            eliminarLibro1.BackColor = Color.FromArgb(251, 243, 232);
-            eliminarLibro1.Location = new Point(8, 90);
-            eliminarLibro1.Name = "eliminarLibro1";
-            eliminarLibro1.Size = new Size(710, 432);
-            eliminarLibro1.TabIndex = 8;
-            // 
-            // editarLibro1
-            // 
-            editarLibro1.AutoValidate = AutoValidate.EnableAllowFocusChange;
-            editarLibro1.BackColor = Color.FromArgb(251, 243, 232);
-            editarLibro1.Location = new Point(8, 90);
-            editarLibro1.Name = "editarLibro1";
-            editarLibro1.Size = new Size(713, 432);
-            editarLibro1.TabIndex = 7;
-            // 
-            // agregarLibro1
-            // 
-            agregarLibro1.BackColor = Color.FromArgb(251, 243, 232);
-            agregarLibro1.Location = new Point(6, 90);
-            agregarLibro1.Name = "agregarLibro1";
-            agregarLibro1.Size = new Size(712, 522);
-            agregarLibro1.TabIndex = 6;
-            // 
-            // catalogo1
-            // 
-            catalogo1.BackColor = Color.FromArgb(251, 243, 232);
-            catalogo1.Location = new Point(3, 90);
-            catalogo1.Name = "catalogo1";
-            catalogo1.Size = new Size(715, 432);
-            catalogo1.TabIndex = 5;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(62, 44, 25);
@@ -242,10 +193,10 @@
             panel4.Controls.Add(label3);
             panel4.Controls.Add(label2);
             panel4.Controls.Add(panel5);
-            panel4.Location = new Point(8, 8);
+            panel4.Location = new Point(180, 7);
             panel4.Name = "panel4";
             panel4.Size = new Size(698, 82);
-            panel4.TabIndex = 4;
+            panel4.TabIndex = 5;
             // 
             // label4
             // 
@@ -296,9 +247,9 @@
             label3.ForeColor = Color.FromArgb(166, 152, 128);
             label3.Location = new Point(64, 31);
             label3.Name = "label3";
-            label3.Size = new Size(204, 13);
+            label3.Size = new Size(188, 13);
             label3.TabIndex = 6;
-            label3.Text = "Explora, añade y organiza tu colección";
+            label3.Text = "Administra los usuarios registrados";
             // 
             // label2
             // 
@@ -307,9 +258,9 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(64, 10);
             label2.Name = "label2";
-            label2.Size = new Size(141, 21);
+            label2.Size = new Size(161, 21);
             label2.TabIndex = 5;
-            label2.Text = "Gestión de Libros";
+            label2.Text = "Gestión de Usuarios";
             // 
             // panel5
             // 
@@ -327,24 +278,59 @@
             labelHeader.ForeColor = Color.FromArgb(166, 152, 128);
             labelHeader.Location = new Point(12, 7);
             labelHeader.Name = "labelHeader";
-            labelHeader.Size = new Size(295, 13);
+            labelHeader.Size = new Size(294, 26);
             labelHeader.TabIndex = 7;
-            labelHeader.Text = "Tienes  libros en tu catalogo | 2 disponibles | 1 prestado";
+            labelHeader.Text = "Hay 2 usuarios registrados | 2 bibliotecario(s) | 3 Lector(s\r\n)";
             // 
-            // Bibliotecario
+            // listaUsuarios1
+            // 
+            listaUsuarios1.BackColor = Color.FromArgb(251, 243, 232);
+            listaUsuarios1.Location = new Point(171, 95);
+            listaUsuarios1.Name = "listaUsuarios1";
+            listaUsuarios1.Size = new Size(718, 427);
+            listaUsuarios1.TabIndex = 6;
+            // 
+            // agregaUsuario1
+            // 
+            agregaUsuario1.BackColor = Color.FromArgb(251, 243, 232);
+            agregaUsuario1.Location = new Point(171, 95);
+            agregaUsuario1.Name = "agregaUsuario1";
+            agregaUsuario1.Size = new Size(718, 427);
+            agregaUsuario1.TabIndex = 7;
+            // 
+            // editarUsuario1
+            // 
+            editarUsuario1.BackColor = Color.FromArgb(251, 243, 232);
+            editarUsuario1.Location = new Point(171, 95);
+            editarUsuario1.Name = "editarUsuario1";
+            editarUsuario1.Size = new Size(718, 427);
+            editarUsuario1.TabIndex = 8;
+            // 
+            // eliminarUsuario1
+            // 
+            eliminarUsuario1.BackColor = Color.FromArgb(251, 243, 232);
+            eliminarUsuario1.Location = new Point(171, 95);
+            eliminarUsuario1.Name = "eliminarUsuario1";
+            eliminarUsuario1.Size = new Size(718, 427);
+            eliminarUsuario1.TabIndex = 9;
+            // 
+            // GestionUsuarios
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(251, 243, 232);
             ClientSize = new Size(889, 522);
-            Controls.Add(panel2);
+            Controls.Add(eliminarUsuario1);
+            Controls.Add(editarUsuario1);
+            Controls.Add(agregaUsuario1);
+            Controls.Add(listaUsuarios1);
+            Controls.Add(panel4);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Bibliotecario";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Bibliotecario";
+            Name = "GestionUsuarios";
+            Text = "GestionUsuarios";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -357,27 +343,26 @@
         #endregion
 
         private Panel panel1;
+        private Button button5;
+        private Panel panel3;
+        private Button button4;
+        private Button button3;
+        private Button button2;
         private Panel SidePanel;
         private Button button1;
         private Label label1;
-        private Button button2;
-        private Button button4;
-        private Button button3;
-        private Panel panel2;
-        private Panel panel3;
         private Panel panel4;
-        private Label label2;
-        private Panel panel5;
-        private Label label3;
-        private Label labelHeader;
-        private PictureBox pictureBox1;
+        private Label label4;
         private PictureBox pictureBox2;
         private Label label5;
-        private EliminarLibro eliminarLibro1;
-        private EditarLibro editarLibro1;
-        private AgregarLibro agregarLibro1;
-        private Catalogo catalogo1;
-        private Button button5;
-        private Label label4;
+        private PictureBox pictureBox1;
+        private Label label3;
+        private Label label2;
+        private Panel panel5;
+        private Label labelHeader;
+        private ListaUsuarios listaUsuarios1;
+        private AgregaUsuario agregaUsuario1;
+        private EditarUsuario editarUsuario1;
+        private EliminarUsuario eliminarUsuario1;
     }
 }

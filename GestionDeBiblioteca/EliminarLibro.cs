@@ -52,8 +52,6 @@ namespace GestionDeBiblioteca
             comboBoxGeneroEdit.Visible = false;
             txtBoxIsbnEditar.Text = null;
             checkBox1.Visible = false;
-
-            button1.Enabled = false;
         }
         public void MostrarControles(bool estado)
         {

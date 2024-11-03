@@ -18,8 +18,15 @@ namespace GestionDeBiblioteca
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Bibliotecario ventanaBibliotecario = new Bibliotecario();
+            GestionLibros ventanaBibliotecario = new GestionLibros();
             ventanaBibliotecario.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GestionUsuarios gestionUsuarios = new GestionUsuarios();    
+            gestionUsuarios.Show();
             this.Hide();
         }
     }
