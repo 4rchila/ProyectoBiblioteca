@@ -15,13 +15,14 @@ namespace GestionDeBiblioteca
         public Bibliotecario()
         {
             InitializeComponent();
+            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             catalogo1.BringToFront();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             catalogo1.CargarLibros(Program.ListaLibros);
@@ -30,6 +31,7 @@ namespace GestionDeBiblioteca
 
         private void button2_Click(object sender, EventArgs e)
         {
+            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
             SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
             agregarLibro1.BringToFront();
@@ -37,6 +39,7 @@ namespace GestionDeBiblioteca
 
         private void button3_Click(object sender, EventArgs e)
         {
+            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
             SidePanel.Height = button3.Height;
             SidePanel.Top = button3.Top;
             editarLibro1.InicializarControles();
@@ -46,12 +49,20 @@ namespace GestionDeBiblioteca
 
         private void button4_Click(object sender, EventArgs e)
         {
+            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
             SidePanel.Height = button4.Height;
             SidePanel.Top = button4.Top;
             editarLibro1.InicializarControles();
             eliminarLibro1.InicializarControles();
             eliminarLibro1.BringToFront();
-            
+
         }
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            FormBibliotecario formPrincipal = new FormBibliotecario();
+            formPrincipal.Show();
+            this.Close();
+        }
+
     }
 }

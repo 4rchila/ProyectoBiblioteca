@@ -17,7 +17,7 @@ namespace GestionDeBiblioteca
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAgregar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace GestionDeBiblioteca
                     MessageBox.Show("Por favor complete todos los campos.");
                     return;
                 }
-                Libro buscarTitulo = Program.ListaLibros.Find(p=>p.Titulo ==  titulo);
+                Libro buscarTitulo = Program.ListaLibros.Find(p => p.Titulo == titulo);
                 if (buscarTitulo == null)
                 {
 

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bibliotecario));
             panel1 = new Panel();
+            button5 = new Button();
             panel3 = new Panel();
             button4 = new Button();
             button3 = new Button();
@@ -38,6 +39,10 @@
             button1 = new Button();
             label1 = new Label();
             panel2 = new Panel();
+            eliminarLibro1 = new EliminarLibro();
+            editarLibro1 = new EditarLibro();
+            agregarLibro1 = new AgregarLibro();
+            catalogo1 = new Catalogo();
             panel4 = new Panel();
             pictureBox2 = new PictureBox();
             label5 = new Label();
@@ -45,11 +50,8 @@
             label3 = new Label();
             label2 = new Label();
             panel5 = new Panel();
+            labelHeader = new Label();
             label4 = new Label();
-            catalogo1 = new Catalogo();
-            agregarLibro1 = new AgregarLibro();
-            editarLibro1 = new EditarLibro();
-            eliminarLibro1 = new EliminarLibro();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel4.SuspendLayout();
@@ -61,6 +63,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(62, 44, 25);
+            panel1.Controls.Add(button5);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
@@ -73,6 +76,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(171, 522);
             panel1.TabIndex = 0;
+            // 
+            // button5
+            // 
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.White;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.ImageAlign = ContentAlignment.MiddleLeft;
+            button5.Location = new Point(16, 460);
+            button5.Name = "button5";
+            button5.Size = new Size(157, 40);
+            button5.TabIndex = 5;
+            button5.Text = "Regresar";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click_1;
             // 
             // panel3
             // 
@@ -180,9 +199,43 @@
             panel2.Size = new Size(718, 522);
             panel2.TabIndex = 3;
             // 
+            // eliminarLibro1
+            // 
+            eliminarLibro1.BackColor = Color.FromArgb(251, 243, 232);
+            eliminarLibro1.Location = new Point(8, 90);
+            eliminarLibro1.Name = "eliminarLibro1";
+            eliminarLibro1.Size = new Size(710, 432);
+            eliminarLibro1.TabIndex = 8;
+            // 
+            // editarLibro1
+            // 
+            editarLibro1.AutoValidate = AutoValidate.EnableAllowFocusChange;
+            editarLibro1.BackColor = Color.FromArgb(251, 243, 232);
+            editarLibro1.Location = new Point(8, 90);
+            editarLibro1.Name = "editarLibro1";
+            editarLibro1.Size = new Size(713, 432);
+            editarLibro1.TabIndex = 7;
+            // 
+            // agregarLibro1
+            // 
+            agregarLibro1.BackColor = Color.FromArgb(251, 243, 232);
+            agregarLibro1.Location = new Point(6, 90);
+            agregarLibro1.Name = "agregarLibro1";
+            agregarLibro1.Size = new Size(712, 522);
+            agregarLibro1.TabIndex = 6;
+            // 
+            // catalogo1
+            // 
+            catalogo1.BackColor = Color.FromArgb(251, 243, 232);
+            catalogo1.Location = new Point(3, 90);
+            catalogo1.Name = "catalogo1";
+            catalogo1.Size = new Size(715, 432);
+            catalogo1.TabIndex = 5;
+            // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(62, 44, 25);
+            panel4.Controls.Add(label4);
             panel4.Controls.Add(pictureBox2);
             panel4.Controls.Add(label5);
             panel4.Controls.Add(pictureBox1);
@@ -197,7 +250,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(594, 17);
+            pictureBox2.Location = new Point(580, 11);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(26, 26);
             pictureBox2.TabIndex = 9;
@@ -209,7 +262,7 @@
             label5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.FromArgb(166, 152, 128);
             label5.ImageAlign = ContentAlignment.MiddleLeft;
-            label5.Location = new Point(626, 22);
+            label5.Location = new Point(612, 16);
             label5.Name = "label5";
             label5.Size = new Size(30, 13);
             label5.TabIndex = 8;
@@ -249,55 +302,34 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(140, 122, 91);
-            panel5.Controls.Add(label4);
+            panel5.Controls.Add(labelHeader);
             panel5.Location = new Point(0, 56);
             panel5.Name = "panel5";
             panel5.Size = new Size(698, 26);
             panel5.TabIndex = 0;
+            // 
+            // labelHeader
+            // 
+            labelHeader.AutoSize = true;
+            labelHeader.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelHeader.ForeColor = Color.FromArgb(166, 152, 128);
+            labelHeader.Location = new Point(12, 7);
+            labelHeader.Name = "labelHeader";
+            labelHeader.Size = new Size(295, 13);
+            labelHeader.TabIndex = 7;
+            labelHeader.Text = "Tienes  libros en tu catalogo | 2 disponibles | 1 prestado";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.FromArgb(166, 152, 128);
-            label4.Location = new Point(12, 7);
+            label4.ImageAlign = ContentAlignment.MiddleLeft;
+            label4.Location = new Point(612, 34);
             label4.Name = "label4";
-            label4.Size = new Size(295, 13);
-            label4.TabIndex = 7;
-            label4.Text = "Tienes  libros en tu catalogo | 2 disponibles | 1 prestado";
-            // 
-            // catalogo1
-            // 
-            catalogo1.BackColor = Color.FromArgb(251, 243, 232);
-            catalogo1.Location = new Point(3, 90);
-            catalogo1.Name = "catalogo1";
-            catalogo1.Size = new Size(715, 432);
-            catalogo1.TabIndex = 5;
-            // 
-            // agregarLibro1
-            // 
-            agregarLibro1.BackColor = Color.FromArgb(251, 243, 232);
-            agregarLibro1.Location = new Point(6, 90);
-            agregarLibro1.Name = "agregarLibro1";
-            agregarLibro1.Size = new Size(712, 522);
-            agregarLibro1.TabIndex = 6;
-            // 
-            // editarLibro1
-            // 
-            editarLibro1.AutoValidate = AutoValidate.EnableAllowFocusChange;
-            editarLibro1.BackColor = Color.FromArgb(251, 243, 232);
-            editarLibro1.Location = new Point(8, 90);
-            editarLibro1.Name = "editarLibro1";
-            editarLibro1.Size = new Size(713, 432);
-            editarLibro1.TabIndex = 7;
-            // 
-            // eliminarLibro1
-            // 
-            eliminarLibro1.BackColor = Color.FromArgb(251, 243, 232);
-            eliminarLibro1.Location = new Point(8, 90);
-            eliminarLibro1.Name = "eliminarLibro1";
-            eliminarLibro1.Size = new Size(710, 432);
-            eliminarLibro1.TabIndex = 8;
+            label4.Size = new Size(71, 13);
+            label4.TabIndex = 10;
+            label4.Text = "Bibliotecario";
             // 
             // Bibliotecario
             // 
@@ -337,7 +369,7 @@
         private Label label2;
         private Panel panel5;
         private Label label3;
-        private Label label4;
+        private Label labelHeader;
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
         private Label label5;
@@ -345,5 +377,7 @@
         private EditarLibro editarLibro1;
         private AgregarLibro agregarLibro1;
         private Catalogo catalogo1;
+        private Button button5;
+        private Label label4;
     }
 }

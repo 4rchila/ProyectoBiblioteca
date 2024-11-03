@@ -16,6 +16,13 @@ namespace GestionDeBiblioteca
 
 
         }
+        public static string InfoLibros(List<Libro>libros)
+        {
+            int totalLibros = libros.Count;
+            int disponibles = libros.Count(l => l.Disponibilidad);
+            int prestados = totalLibros - disponibles;
+            return $"Tienes {totalLibros} libros en tu catálogo | {disponibles} disponibles | {prestados} prestado(s)";
+        }
 
     }
 }

@@ -31,7 +31,7 @@
             panel1 = new Panel();
             label6 = new Label();
             comboBoxGenero = new ComboBox();
-            button1 = new Button();
+            buttonAgregar = new Button();
             label5 = new Label();
             txtBoxIsbn = new TextBox();
             label4 = new Label();
@@ -48,7 +48,7 @@
             panel1.BackColor = Color.FromArgb(251, 243, 232);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(comboBoxGenero);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(buttonAgregar);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(txtBoxIsbn);
             panel1.Controls.Add(label4);
@@ -83,19 +83,19 @@
             comboBoxGenero.Size = new Size(300, 23);
             comboBoxGenero.TabIndex = 10;
             // 
-            // button1
+            // buttonAgregar
             // 
-            button1.BackColor = Color.FromArgb(140, 122, 91);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(237, 226, 213);
-            button1.Location = new Point(29, 369);
-            button1.Name = "button1";
-            button1.Size = new Size(317, 32);
-            button1.TabIndex = 9;
-            button1.Text = "Agregar Libro";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            buttonAgregar.BackColor = Color.FromArgb(140, 122, 91);
+            buttonAgregar.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
+            buttonAgregar.FlatStyle = FlatStyle.Flat;
+            buttonAgregar.ForeColor = Color.FromArgb(237, 226, 213);
+            buttonAgregar.Location = new Point(29, 369);
+            buttonAgregar.Name = "buttonAgregar";
+            buttonAgregar.Size = new Size(317, 32);
+            buttonAgregar.TabIndex = 9;
+            buttonAgregar.Text = "Agregar Libro";
+            buttonAgregar.UseVisualStyleBackColor = false;
+            buttonAgregar.Click += buttonAgregar_Click;
             // 
             // label5
             // 
@@ -205,7 +205,7 @@
         private Panel panel1;
         private Label label6;
         private ComboBox comboBoxGenero;
-        private Button button1;
+        private Button buttonAgregar;
         private Label label5;
         private TextBox txtBoxIsbn;
         private Label label4;
