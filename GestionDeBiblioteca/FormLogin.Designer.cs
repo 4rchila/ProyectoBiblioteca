@@ -29,206 +29,207 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label5 = new Label();
-            redbookpicture = new PictureBox();
-            Usuario = new TextBox();
-            Contraseña = new TextBox();
-            label4 = new Label();
-            label6 = new Label();
-            btnInicio = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             errorProvider1 = new ErrorProvider(components);
+            label1 = new Label();
+            txtBoxUsuario = new TextBox();
+            label4 = new Label();
+            label5 = new Label();
+            label2 = new Label();
+            button1 = new Button();
+            txtBoxContraseña = new TextBox();
+            label3 = new Label();
+            panel2 = new Panel();
             panel1 = new Panel();
-            ((System.ComponentModel.ISupportInitialize)redbookpicture).BeginInit();
+            pictureBox1 = new PictureBox();
+            panel3 = new Panel();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            panel2.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.ImageAlign = ContentAlignment.MiddleLeft;
-            label1.Location = new Point(52, 106);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(124, 25);
-            label1.TabIndex = 0;
-            label1.Text = "Bienvenido ";
-            label1.Click += label1_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Times New Roman", 16F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(26, 128);
-            label2.Margin = new Padding(2, 0, 2, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(183, 25);
-            label2.TabIndex = 1;
-            label2.Text = "Biblioteca Central\r\n";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(111, 241);
-            label3.Margin = new Padding(2, 0, 2, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(368, 57);
-            label3.TabIndex = 2;
-            label3.Text = "Puedes iniciar sesion como bibliotecario o \r\ncomo lector al sistema de gestion y prestamo de libros\r\n\r\n";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.DarkRed;
-            label5.Font = new Font("Times New Roman", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(368, 44);
-            label5.Margin = new Padding(2, 0, 2, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(169, 20);
-            label5.TabIndex = 4;
-            label5.Text = "INICIO DE SESION";
-            // 
-            // redbookpicture
-            // 
-            redbookpicture.BackColor = Color.DarkRed;
-            redbookpicture.BackgroundImageLayout = ImageLayout.None;
-            redbookpicture.Image = Properties.Resources.Download_free_png_of_Red_book_png_sticker__reading_image_on_transparent_background_by_Chim__about_red__closed_book__book__red_book__and_closed_6542627_removebg_preview;
-            redbookpicture.Location = new Point(26, 37);
-            redbookpicture.Margin = new Padding(2);
-            redbookpicture.Name = "redbookpicture";
-            redbookpicture.Size = new Size(125, 61);
-            redbookpicture.SizeMode = PictureBoxSizeMode.Zoom;
-            redbookpicture.TabIndex = 5;
-            redbookpicture.TabStop = false;
-            redbookpicture.Click += redbookpicture_Click;
-            // 
-            // Usuario
-            // 
-            Usuario.BackColor = SystemColors.ControlLightLight;
-            Usuario.BorderStyle = BorderStyle.FixedSingle;
-            Usuario.Cursor = Cursors.IBeam;
-            Usuario.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Usuario.Location = new Point(17, 31);
-            Usuario.Margin = new Padding(2);
-            Usuario.Name = "Usuario";
-            Usuario.Size = new Size(180, 26);
-            Usuario.TabIndex = 6;
-            Usuario.TextChanged += textBox1_TextChanged;
-            // 
-            // Contraseña
-            // 
-            Contraseña.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Contraseña.Location = new Point(18, 91);
-            Contraseña.Margin = new Padding(2);
-            Contraseña.Name = "Contraseña";
-            Contraseña.Size = new Size(180, 26);
-            Contraseña.TabIndex = 7;
-            Contraseña.TextChanged += textBox2_TextChanged;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Location = new Point(71, 8);
-            label4.Margin = new Padding(2, 0, 2, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(70, 20);
-            label4.TabIndex = 8;
-            label4.Text = "Usuario";
-            label4.Click += label4_Click;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Times New Roman", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Location = new Point(64, 64);
-            label6.Margin = new Padding(2, 0, 2, 0);
-            label6.Name = "label6";
-            label6.Size = new Size(98, 20);
-            label6.TabIndex = 9;
-            label6.Text = "Contraseña";
-            // 
-            // btnInicio
-            // 
-            btnInicio.Font = new Font("Arial", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnInicio.Location = new Point(71, 126);
-            btnInicio.Margin = new Padding(2);
-            btnInicio.Name = "btnInicio";
-            btnInicio.Size = new Size(78, 20);
-            btnInicio.TabIndex = 10;
-            btnInicio.Text = "Inicio";
-            btnInicio.UseVisualStyleBackColor = true;
-            btnInicio.Click += btnInicio_Click;
             // 
             // errorProvider1
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.White;
+            label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(62, 44, 25);
+            label1.Location = new Point(73, 14);
+            label1.Name = "label1";
+            label1.Size = new Size(170, 29);
+            label1.TabIndex = 2;
+            label1.Text = "Iniciar Sesión";
+            // 
+            // txtBoxUsuario
+            // 
+            txtBoxUsuario.BackColor = Color.FromArgb(255, 249, 240);
+            txtBoxUsuario.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxUsuario.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxUsuario.ForeColor = Color.FromArgb(107, 91, 61);
+            txtBoxUsuario.Location = new Point(44, 111);
+            txtBoxUsuario.MaxLength = 30;
+            txtBoxUsuario.Name = "txtBoxUsuario";
+            txtBoxUsuario.PlaceholderText = "Ingrese el nombre de usuario";
+            txtBoxUsuario.Size = new Size(223, 22);
+            txtBoxUsuario.TabIndex = 14;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.ForeColor = Color.FromArgb(62, 44, 25);
+            label4.Location = new Point(44, 84);
+            label4.Name = "label4";
+            label4.Size = new Size(47, 15);
+            label4.TabIndex = 13;
+            label4.Text = "Usuario";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.FromArgb(140, 122, 91);
+            label5.Location = new Point(123, 282);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 13);
+            label5.TabIndex = 19;
+            label5.Text = "Registrarse";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = Color.FromArgb(140, 122, 91);
+            label2.Location = new Point(61, 43);
+            label2.Name = "label2";
+            label2.Size = new Size(216, 30);
+            label2.TabIndex = 18;
+            label2.Text = "Inicia sesión y entra como bibliotecario \r\n                   o como lector";
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(62, 44, 25);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(140, 122, 91);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(140, 122, 91);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.White;
+            button1.ImageAlign = ContentAlignment.TopCenter;
+            button1.Location = new Point(61, 235);
+            button1.Name = "button1";
+            button1.Size = new Size(194, 34);
+            button1.TabIndex = 17;
+            button1.Text = "Iniciar Sesión";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // txtBoxContraseña
+            // 
+            txtBoxContraseña.BackColor = Color.FromArgb(255, 249, 240);
+            txtBoxContraseña.BorderStyle = BorderStyle.FixedSingle;
+            txtBoxContraseña.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBoxContraseña.ForeColor = Color.FromArgb(107, 91, 61);
+            txtBoxContraseña.Location = new Point(44, 187);
+            txtBoxContraseña.MaxLength = 30;
+            txtBoxContraseña.Name = "txtBoxContraseña";
+            txtBoxContraseña.PlaceholderText = "Ingrese la contraseña";
+            txtBoxContraseña.Size = new Size(223, 22);
+            txtBoxContraseña.TabIndex = 16;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = Color.FromArgb(62, 44, 25);
+            label3.Location = new Point(44, 160);
+            label3.Name = "label3";
+            label3.Size = new Size(67, 15);
+            label3.TabIndex = 15;
+            label3.Text = "Contraseña";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(txtBoxContraseña);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(txtBoxUsuario);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label1);
+            panel2.Location = new Point(27, 23);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(322, 317);
+            panel2.TabIndex = 1;
+            // 
             // panel1
             // 
-            panel1.BackColor = Color.Brown;
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(btnInicio);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(Contraseña);
-            panel1.Controls.Add(Usuario);
-            panel1.Location = new Point(350, 76);
-            panel1.Margin = new Padding(2);
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(pictureBox1);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(385, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(210, 158);
-            panel1.TabIndex = 11;
+            panel1.Size = new Size(314, 371);
+            panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(0, 3);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(308, 361);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(62, 44, 25);
+            panel3.Location = new Point(364, 37);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(3, 290);
+            panel3.TabIndex = 2;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkRed;
-            ClientSize = new Size(580, 281);
+            BackColor = Color.White;
+            ClientSize = new Size(699, 371);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(redbookpicture);
-            Controls.Add(label5);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             MaximizeBox = false;
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Biblioteca Central";
-            Load += form1_Load;
-            ((System.ComponentModel.ISupportInitialize)redbookpicture).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label5;
-        private PictureBox redbookpicture;
-        private TextBox Usuario;
-        private TextBox Contraseña;
-        private Label label4;
-        private Label label6;
-        private Button btnInicio;
         private ErrorProvider errorProvider1;
+        private Label label1;
+        private TextBox txtBoxUsuario;
+        private Label label4;
+        private TextBox txtBoxContraseña;
+        private Label label3;
+        private Button button1;
+        private Label label2;
+        private Label label5;
+        private Panel panel2;
         private Panel panel1;
+        private PictureBox pictureBox1;
+        private Panel panel3;
     }
 }

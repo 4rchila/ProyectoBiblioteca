@@ -15,6 +15,7 @@ namespace GestionDeBiblioteca
         // Configuramos el TextBox de Contraseña para que oculte el texto
         // Contraseña.UseSystemPasswordChar = true;
         //}
+        /*
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -81,10 +82,13 @@ namespace GestionDeBiblioteca
             ventanaBibliotecario.Show();
             this.Hide();
         }
+        */
 
-        private void form1_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            FormBibliotecario ventanaPrincipal = new FormBibliotecario();
+            ventanaPrincipal.Show();    
+            this.Hide();
         }
     }
 }
