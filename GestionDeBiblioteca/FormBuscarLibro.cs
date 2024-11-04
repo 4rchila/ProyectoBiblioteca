@@ -61,5 +61,10 @@ namespace GestionDeBiblioteca
             FormBibliotecario ventanaBibliotecario = new FormBibliotecario();
             ventanaBibliotecario.Show();
         }
+
+        private void listViewLibros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

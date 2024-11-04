@@ -12,6 +12,8 @@ namespace GestionDeBiblioteca
         public string Name { get; set; }
         public string Rol { get; set; }
 
+        public List<Libro> EstanteriaPersonal = new List<Libro>();
+
         public Usuario(string password, string name, string rol)
         {
             this.Password = password;

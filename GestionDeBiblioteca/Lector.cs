@@ -8,9 +8,14 @@ namespace GestionDeBiblioteca
 {
     public class Lector : Usuario
     {
+        public List<Libro> EstanteriaPersonal = new List<Libro>();
         public Lector(string password, string name, string rol) : base(password, name, rol)
         {
 
+        }
+        public void PrestarLibro() 
+        {
+           
         }
     }
 }

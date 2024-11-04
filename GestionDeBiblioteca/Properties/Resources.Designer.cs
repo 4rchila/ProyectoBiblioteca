@@ -113,6 +113,16 @@ namespace GestionDeBiblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2024_11_03_125553_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("Captura_de_pantalla_2024-11-03_125553-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap descarga__17_ {
             get {
                 object obj = ResourceManager.GetObject("descarga (17)", resourceCulture);

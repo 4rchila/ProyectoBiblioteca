@@ -6,8 +6,12 @@ namespace GestionDeBiblioteca
         ///  The main entry point for the application.
         /// </summary>
         public static List<Usuario> listaLectores = new List<Usuario>();
-       
+
         public static List<Usuario> listaBibliotecarios = new List<Usuario>();
+
+        public static List<Libro> listaDeLibros = new List<Libro>();
+
+
         [STAThread]
         static void Main()
         {
@@ -17,8 +21,22 @@ namespace GestionDeBiblioteca
             listaLectores.Add(firstLector);
             Blibliotecario firstBibliotecario = new Blibliotecario("Pablito666", "ApjLorenzo", "Bibliotecario");
             listaBibliotecarios.Add(firstBibliotecario);
+
+            Libro primerLibro = new Libro("qujito", "don", "1234567", "Drama", true, 2);
+            listaDeLibros.Add(primerLibro);
+            listaDeLibros.Add(new Libro("leyes poder", "robergreen", "2345678", "poder", false, 0));
+            listaDeLibros.Add(new Libro("Naturaleza", "robergreen", "3456789", "poderoso", true, 5));
+
+            //inicializar
             ApplicationConfiguration.Initialize();
             Application.Run(new FormLogin());
+
+        }
+        public static void ComprobarPassword(string nombre, string password)
+        {
+            if (BuscarUsuario(nombre) != null)
+            {
+                var usuarioInicio = BuscarUsuario(nombre);
 
 
                 if (usuarioInicio.Name == nombre && usuarioInicio.Password == password)
@@ -35,7 +53,7 @@ namespace GestionDeBiblioteca
                     else if (usuarioInicio.Rol == "Lector")
                     {
                         FormLogin.instancia.Hide();
-                        FormLector ventanaLector = new FormLector();
+                        FormLector ventanaLector = new FormLector(usuarioInicio);
                         ventanaLector.Show();
 
                     }
@@ -47,12 +65,12 @@ namespace GestionDeBiblioteca
                     MessageBox.Show("Alguno o ambos parametreos de inicio se encuentra incorrectos");
 
                 }
-                else 
+                else
                 {
                     MessageBox.Show("parametros incorrectos");
                 }
             }
-            else 
+            else
             {
                 MessageBox.Show("Usuario no valido");
             }
@@ -61,7 +79,7 @@ namespace GestionDeBiblioteca
         {
             if (rol == "Lector")
             {
-                Lector nuevoLector = new Lector(password,nombre, rol);
+                Lector nuevoLector = new Lector(password, nombre, rol);
                 listaLectores.Add(nuevoLector); // Agrega el nuevo lector a la lista
                 MessageBox.Show("Nuevo lector agregado: " + nombre);
             }
@@ -75,13 +93,13 @@ namespace GestionDeBiblioteca
         }
         public static Usuario BuscarUsuario(string nombre)
         {
-                foreach (var n in listaLectores)
+            foreach (var n in listaLectores)
+            {
+                if (n.Name == nombre)
                 {
-                    if (n.Name == nombre)
-                    {
-                        return n;
-                    }
+                    return n;
                 }
+            }
             foreach (var n in listaBibliotecarios)
             {
                 if (n.Name == nombre)
@@ -93,7 +111,7 @@ namespace GestionDeBiblioteca
 
         }
 
-        public static void CambiarUsuario(string nombre, string password,Usuario n) 
+        public static void CambiarUsuario(string nombre, string password, Usuario n)
         {
             if (nombre == "")
             {
@@ -103,20 +121,20 @@ namespace GestionDeBiblioteca
             {
                 BuscarUsuario(n.Name).Name = nombre;
             }
-            else 
+            else
             {
                 BuscarUsuario(n.Name).Password = password;
                 BuscarUsuario(n.Name).Name = nombre;
             }
             MessageBox.Show("Usuario editado exitosamente ");
         }
-        public static bool ComprobarExistencia(string nombre, string password) 
+        public static bool ComprobarExistencia(string nombre, string password)
         {
             if (BuscarUsuario(nombre) == null)
             {
                 return true;
             }
-            else 
+            else
             {
                 var usuarioBusquedaNombre = BuscarUsuario(nombre).Name;
 
@@ -127,7 +145,10 @@ namespace GestionDeBiblioteca
                 }
                 else return true;
             }
-            
+
+//////////////////////////////////////////////////////////////
+///Lector 
+
 
         }
     }

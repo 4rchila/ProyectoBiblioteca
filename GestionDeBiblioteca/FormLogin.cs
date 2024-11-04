@@ -6,6 +6,7 @@ namespace GestionDeBiblioteca
 {
     public partial class FormLogin : Form
     {
+        public static FormLogin instancia;
         public FormLogin()
         {
             InitializeComponent();
@@ -13,8 +14,8 @@ namespace GestionDeBiblioteca
         }
         //private void form1_Load(object sender, EventArgs e)
         //{
-        // Configuramos el TextBox de Contrase�a para que oculte el texto
-        // Contrase�a.UseSystemPasswordChar = true;
+        // Configuramos el TextBox de Contraseña para que oculte el texto
+        // Contraseña.UseSystemPasswordChar = true;
         //}
         private void label1_Click(object sender, EventArgs e)
         {
@@ -29,31 +30,31 @@ namespace GestionDeBiblioteca
         private void controlBotones()
         {
 
-            if (Contrase�a.Text.Trim() != string.Empty && Usuario.Text.Trim() != string.Empty)
+            if (Contraseña.Text.Trim() != string.Empty && Usuario.Text.Trim() != string.Empty)
             {
                 btnInicio.Enabled = true;
                 errorProvider1.SetError(Usuario, "");
-                errorProvider1.SetError(Contrase�a, "");
+                errorProvider1.SetError(Contraseña, "");
             }
-            else if (Usuario.Text.Trim() == string.Empty && Contrase�a.Text.Trim() == string.Empty)
+            else if (Usuario.Text.Trim() == string.Empty && Contraseña.Text.Trim() == string.Empty)
             {
                 errorProvider1.SetError(Usuario, "Debe colocarse un caracter antes");
                 Usuario.Focus();
 
-                errorProvider1.SetError(Contrase�a, "Debe colocarse un caracter antes");
-                Contrase�a.Focus();
+                errorProvider1.SetError(Contraseña, "Debe colocarse un caracter antes");
+                Contraseña.Focus();
             }
             else if (Usuario.Text.Trim() == string.Empty)
             {
                 errorProvider1.SetError(Usuario, "Debe colocarse un caracter antes");
                 Usuario.Focus();
-                return;  // Aqu� salimos del m�todo despu�s de enfocar
+                return;  // Aquí salimos del método después de enfocar
             }
-            else if (Contrase�a.Text.Trim() == string.Empty)
+            else if (Contraseña.Text.Trim() == string.Empty)
             {
-                errorProvider1.SetError(Contrase�a, "Debe colocarse un caracter antes");
-                Contrase�a.Focus();
-                return;  // Salimos del m�todo despu�s de enfocar
+                errorProvider1.SetError(Contraseña, "Debe colocarse un caracter antes");
+                Contraseña.Focus();
+                return;  // Salimos del método después de enfocar
             }
             btnInicio.Enabled = false;
         }
@@ -66,7 +67,7 @@ namespace GestionDeBiblioteca
         }
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            Contrase�a.UseSystemPasswordChar = true;
+            Contraseña.UseSystemPasswordChar = true;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -76,11 +77,8 @@ namespace GestionDeBiblioteca
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            btnInicio.Enabled = false;
-            controlBotones();
-            FormBibliotecario ventanaBibliotecario = new FormBibliotecario();
-            ventanaBibliotecario.Show();
-            this.Hide();
+            Program.ComprobarPassword(Usuario.Text, Contraseña.Text);
+
         }
 
         private void form1_Load(object sender, EventArgs e)

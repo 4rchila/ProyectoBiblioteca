@@ -51,9 +51,10 @@
             panel1.Controls.Add(listViewLibros);
             panel1.Controls.Add(txtBoxBuscar);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(58, 27);
+            panel1.Location = new Point(83, 45);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(789, 362);
+            panel1.Size = new Size(1127, 603);
             panel1.TabIndex = 1;
             // 
             // listViewLibros
@@ -63,9 +64,10 @@
             listViewLibros.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5, columnHeader6 });
             listViewLibros.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listViewLibros.ForeColor = Color.FromArgb(166, 152, 128);
-            listViewLibros.Location = new Point(35, 95);
+            listViewLibros.Location = new Point(50, 158);
+            listViewLibros.Margin = new Padding(4, 5, 4, 5);
             listViewLibros.Name = "listViewLibros";
-            listViewLibros.Size = new Size(731, 237);
+            listViewLibros.Size = new Size(1044, 395);
             listViewLibros.TabIndex = 4;
             listViewLibros.UseCompatibleStateImageBehavior = false;
             listViewLibros.View = View.Details;
@@ -109,11 +111,12 @@
             txtBoxBuscar.BorderStyle = BorderStyle.FixedSingle;
             txtBoxBuscar.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxBuscar.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxBuscar.Location = new Point(33, 55);
+            txtBoxBuscar.Location = new Point(47, 92);
+            txtBoxBuscar.Margin = new Padding(4, 5, 4, 5);
             txtBoxBuscar.MaxLength = 15;
             txtBoxBuscar.Name = "txtBoxBuscar";
             txtBoxBuscar.PlaceholderText = "Ingrese el titulo del libro";
-            txtBoxBuscar.Size = new Size(733, 22);
+            txtBoxBuscar.Size = new Size(1046, 30);
             txtBoxBuscar.TabIndex = 3;
             txtBoxBuscar.TextChanged += txtBoxBuscar_TextChanged;
             // 
@@ -122,25 +125,27 @@
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(140, 122, 91);
-            label1.Location = new Point(33, 12);
+            label1.Location = new Point(47, 27);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(224, 29);
+            label1.Size = new Size(353, 43);
             label1.TabIndex = 1;
-            label1.Text = "Catalogo de libros";
+            label1.Text = "Catálogo de Libros ";
             // 
             // textBox1
             // 
             textBox1.Location = new Point(0, 0);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
+            textBox1.Size = new Size(100, 31);
             textBox1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 27);
+            pictureBox1.Location = new Point(17, 45);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(32, 28);
+            pictureBox1.Size = new Size(46, 47);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
@@ -148,14 +153,15 @@
             // 
             // FormBuscarLibro
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 230, 211);
-            ClientSize = new Size(882, 424);
+            ClientSize = new Size(1260, 707);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
             Cursor = Cursors.Hand;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "FormBuscarLibro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormBuscarLibro";
