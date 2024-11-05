@@ -85,7 +85,12 @@ namespace GestionDeBiblioteca
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.ComprobarPassword(txtBoxUsuario.Text,txtBoxContraseña.Text);
+            Program.ComprobarPassword(txtBoxUsuario.Text, txtBoxContraseña.Text);
+        }
+
+        private void txtBoxContraseña_TextChanged(object sender, EventArgs e)
+        {
+            txtBoxContraseña.UseSystemPasswordChar = true;
         }
     }
 }

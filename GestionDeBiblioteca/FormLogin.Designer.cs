@@ -148,6 +148,7 @@
             txtBoxContraseña.PlaceholderText = "Ingrese la contraseña";
             txtBoxContraseña.Size = new Size(318, 30);
             txtBoxContraseña.TabIndex = 16;
+            txtBoxContraseña.TextChanged += txtBoxContraseña_TextChanged;
             // 
             // label3
             // 

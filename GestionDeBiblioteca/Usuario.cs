@@ -8,6 +8,7 @@ namespace GestionDeBiblioteca
 {
     public class Usuario
     {
+        public List<Libro> EstanteriaPersonal = new List<Libro>();
         public string Password { get; set; }
         public string Name { get; set; }
         public string Rol { get; set; }

@@ -21,7 +21,7 @@ namespace GestionDeBiblioteca
             ListaBibliotecarios.Add(new Blibliotecario("Pablito666","ApjLorenzo","Bibliotecario"));
             ListaBibliotecarios.Add(new Blibliotecario("tonnotos", "tonny", "Bibliotecario"));
             ListaLibros.Add(new Libro("don quijote", "robet piere", "123456", "historico", true, 2));
-            ListaLibros.Add(new Libro("leyes del poder", "robert green", "234567", "Psicologico", true, 1));
+            ListaLibros.Add(new Libro("leyes del poder", "robert green", "234567", "Psicologico", false, 1));
             ListaLibros.Add(new Libro("Naturaleza humana", "robert green", "345678", "Filosofico", true, 0));
             ApplicationConfiguration.Initialize();
             Application.Run(new FormLogin());

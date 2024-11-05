@@ -69,7 +69,7 @@ namespace GestionDeBiblioteca
                 var libroParaDevolver = Lector.EstanteriaPersonal.FirstOrDefault(libro => libro.Titulo == item.SubItems[1].Text);
                 if (libroParaDevolver != null)
                 {
-                    var libroEnListaGeneral = Program.listaDeLibros.FirstOrDefault(libro => libro.Titulo == libroParaDevolver.Titulo);
+                    var libroEnListaGeneral = Program.ListaLibros.FirstOrDefault(libro => libro.Titulo == libroParaDevolver.Titulo);
                     if (libroEnListaGeneral != null && !libroEnListaGeneral.Disponibilidad)
                     {
                         libroEnListaGeneral.Disponibilidad = true;

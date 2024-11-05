@@ -21,7 +21,7 @@ namespace GestionDeBiblioteca
 
         private void FormLector_Load(object sender, EventArgs e)
         {
-            CargarLibros(Program.listaDeLibros);
+            CargarLibros(Program.ListaLibros);
             listViewLibros.MouseClick += new MouseEventHandler(listViewLibros_MouseClick);
             listViewLibros.HideSelection = true;
         }
@@ -30,7 +30,7 @@ namespace GestionDeBiblioteca
         {
             string filtro = txtBoxBuscarLector.Text.ToUpper();
 
-            var librosFiltrados = Program.listaDeLibros
+            var librosFiltrados = Program.ListaLibros
                 .Where(libro =>
                     libro.Titulo.ToUpper().Contains(filtro) ||
                     libro.Autor.ToUpper().Contains(filtro) ||
@@ -84,7 +84,8 @@ namespace GestionDeBiblioteca
 
                 if (columnIndex == 0)
                 {
-                    var libroSeleccionado = Program.listaDeLibros
+                    
+                    var libroSeleccionado = Program.ListaLibros
                         .FirstOrDefault(libro => libro.Titulo == item.SubItems[1].Text);
 
                     if (libroSeleccionado != null)
@@ -104,11 +105,11 @@ namespace GestionDeBiblioteca
                         }
                         else if (!Lector.EstanteriaPersonal.Contains(libroSeleccionado))
                         {
-                            MessageBox.Show("El libro no se encuentra disponible");  
+                            MessageBox.Show("El libro no se encuentra disponible");
                         }
                     }
 
-                    CargarLibros(Program.listaDeLibros);
+                    CargarLibros(Program.ListaLibros);
                     listViewLibros.Invalidate();
                     listViewLibros.Update();
                 }
@@ -129,7 +130,7 @@ namespace GestionDeBiblioteca
                 if (disponibilidad == "Sí")
                 {
                     item.SubItems[4].ForeColor = Color.Green;
-                    item.SubItems[4].BackColor = Color.LightGreen;  
+                    item.SubItems[4].BackColor = Color.LightGreen;
                 }
                 else if (disponibilidad == "No")
                 {
