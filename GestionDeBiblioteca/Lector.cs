@@ -8,7 +8,7 @@ namespace GestionDeBiblioteca
 {
     public class Lector : Usuario
     {
-        public Lector(string id, string name, string rol) : base(id, name, rol)
+        public Lector(string password, string name, string rol) : base(password, name, rol)
         {
 
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,48 +17,97 @@ namespace GestionDeBiblioteca
         {
             InitializeComponent();
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            string buscarUsuario = txtBoxUsuario.Text.ToUpper();
-            Libro existe = Program.ListaLibros.Find(p => p.ISBN == buscarUsuario);
-            if (existe != null)
+            string nombreUsuario = txtBoxUsuario.Text;
+            var busqueda = Program.BuscarUsuario(nombreUsuario);
+
+            if (busqueda == null)
             {
-                MostrarControles(true);
-
-                //txtBoxUsuario.Tag = existe.ISBN;
-                //txtBoxUsuario.Text = existe.Usuario;
-                //txtBoxContraseña.Text = existe.Contraseña;
-                //comboBoxTipo.Text = existe.Tipo;
-
-                button1.Enabled = true;
+                MessageBox.Show("Usuario no encontrado");
             }
             else
             {
-                InicializarControles();
-                MessageBox.Show("No hay libros con ese ISBN.");
+                MostrarControles(true);
+                button1.Visible = true;
+                button1.Enabled = true;
+                button2.Enabled = true;
+                label3.Visible = true;
+                txtBoxContraseña.Visible = true;
+                txtBoxContraseña.Enabled = true;
+            }
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string nombreUsuario = txtBoxUsuario.Text;
+            var busqueda = Program.BuscarUsuario(nombreUsuario);
+
+            if (busqueda == null)
+            {
+                MessageBox.Show("Usuario no encontrado");
+            }
+            else
+            {
+
+                var resultado = Program.ListaBibliotecarios.Find(x => x.Password == txtBoxContraseña.Text);
+
+                if (resultado == null)
+                {
+                    MessageBox.Show("contraseña incorrecta");
+                }
+                else
+                {
+                    foreach (var c in Program.ListaBibliotecarios)
+                    {
+                        if (busqueda == c)
+                        {
+                            Program.ListaBibliotecarios.Remove(c);
+                            MessageBox.Show("Usuario eliminado exitosamente");
+                            break;
+                        }
+                    }
+                    foreach (var c in Program.ListaLectores)
+                    {
+                        Program.ListaLectores.Remove(c);
+                        MessageBox.Show("Usuario eliminado exitosamente");
+                        break;
+                    }
+                    label3.Visible = false;
+                    txtBoxContraseña.Visible = false;
+                    button1.Visible = false;
+
+                }
             }
         }
         public void InicializarControles()
         {
+            button2.Enabled = true;
+            button1.Visible = false;
             button1.Enabled = false;
             label3.Visible = false;
-            label5.Visible = false;
             txtBoxContraseña.Visible = false;
-            comboBoxTipo.Visible = false;
         }
         public void MostrarControles(bool estado)
         {
             button1.Enabled = estado;
             label3.Visible = estado;
-            label5.Visible = estado;
+            button1.Enabled = estado;
+            label3.Visible = estado;
             txtBoxContraseña.Visible = estado;
-            comboBoxTipo.Visible = estado;
 
         }
-        private void button3_Click_1(object sender, EventArgs e)
+
+        private void txtBoxContraseña_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

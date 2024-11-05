@@ -15,7 +15,8 @@ namespace GestionDeBiblioteca
         public ListaUsuarios()
         {
             InitializeComponent();
-            CargarLibros(Program.ListaLibros);
+            CargarBibliotecarios(Program.ListaBibliotecarios);
+            CargarUsuario(Program.ListaLectores);
             listViewUsuarios.Sorting = SortOrder.None;
         }
 
@@ -24,27 +25,39 @@ namespace GestionDeBiblioteca
             string filtro = txtBoxBuscar.Text.ToUpper();
 
             // Filtrar los libros que coincidan con el texto ingresado en título, autor o ISBN
-            var librosFiltrados = Program.ListaLibros
-                .Where(libro =>
-                    libro.Titulo.ToUpper().Contains(filtro) ||
-                    libro.Autor.ToUpper().Contains(filtro) ||
-                    libro.ISBN.ToUpper().Contains(filtro) ||
-                    libro.Genero.ToUpper().Contains(filtro))
-                .OrderBy(libro => libro.Titulo) // Ordenar por título
+            var FiltradosLector = Program.ListaLectores
+                .Where(usuario =>
+                    usuario.Name.ToUpper().Contains(filtro) ||
+                    usuario.Rol.ToUpper().Contains(filtro)) 
+                .OrderBy(usuario => usuario.Name) // Ordenar por título
                 .ToList();
 
-            CargarLibros(librosFiltrados); // Mostrar solo los libros filtrados
+             var FiltradosBibliotecarios = Program.ListaBibliotecarios
+                .Where(bibliotecario =>
+                    bibliotecario.Name.ToUpper().Contains(filtro) ||
+                    bibliotecario.Rol.ToUpper().Contains(filtro))
+                .OrderBy(bibliotecario => bibliotecario.Name) // Ordenar por título
+                .ToList();
+
+            CargarBibliotecarios(FiltradosBibliotecarios);
+            CargarUsuario(FiltradosLector); 
         }
-        public void CargarLibros(IEnumerable<Libro> libros)
+        public void CargarUsuario(IEnumerable<Lector> usuarioLector)
+        {
+            foreach (var usuario in usuarioLector)
+            {
+                ListViewItem item = new ListViewItem(usuario.Name);
+                item.SubItems.Add(usuario.Rol);
+                listViewUsuarios.Items.Add(item);
+            }
+        }
+        public void CargarBibliotecarios(IEnumerable<Blibliotecario> usuarioBibliotecario)
         {
             listViewUsuarios.Items.Clear();
-            foreach (var libro in libros)
+            foreach (var bibliotecario in usuarioBibliotecario)
             {
-                ListViewItem item = new ListViewItem(libro.Titulo);
-                item.SubItems.Add(libro.Autor);
-                item.SubItems.Add(libro.ISBN);
-                item.SubItems.Add(libro.Genero);
-
+                ListViewItem item = new ListViewItem(bibliotecario.Name);
+                item.SubItems.Add(bibliotecario.Rol);
                 listViewUsuarios.Items.Add(item);
             }
         }

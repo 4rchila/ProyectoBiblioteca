@@ -15,25 +15,28 @@ namespace GestionDeBiblioteca
         public GestionUsuarios()
         {
             InitializeComponent();
-            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
+            // Actualizar el encabezado con información de los usuarios, si es necesario
+            labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
             listaUsuarios1.BringToFront();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
+            // Actualizar el encabezado con la información de los usuarios
+            labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
             SidePanel.Height = button1.Height;
             SidePanel.Top = button1.Top;
-            listaUsuarios1.CargarLibros(Program.ListaLibros);
+            listaUsuarios1.CargarBibliotecarios(Program.ListaBibliotecarios);
+            listaUsuarios1.CargarUsuario(Program.ListaLectores);
             listaUsuarios1.BringToFront();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
+            // Actualizar el encabezado con la información de los usuarios
+            labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
             SidePanel.Height = button2.Height;
             SidePanel.Top = button2.Top;
             agregaUsuario1.BringToFront();
@@ -41,7 +44,8 @@ namespace GestionDeBiblioteca
 
         private void button3_Click(object sender, EventArgs e)
         {
-            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
+            // Actualizar el encabezado con la información de los usuarios
+            labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
             SidePanel.Height = button3.Height;
             SidePanel.Top = button3.Top;
             editarUsuario1.InicializarControles();
@@ -51,13 +55,13 @@ namespace GestionDeBiblioteca
 
         private void button4_Click(object sender, EventArgs e)
         {
-            labelHeader.Text = Program.InfoLibros(Program.ListaLibros);
+            // Actualizar el encabezado con la información de los usuarios
+            labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
             SidePanel.Height = button4.Height;
             SidePanel.Top = button4.Top;
             editarUsuario1.InicializarControles();
             eliminarUsuario1.InicializarControles();
             eliminarUsuario1.BringToFront();
-
         }
 
         private void button5_Click(object sender, EventArgs e)

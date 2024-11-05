@@ -8,13 +8,13 @@ namespace GestionDeBiblioteca
 {
     public class Usuario
     {
-        public string ID { get; set; }
+        public string Password { get; set; }
         public string Name { get; set; }
         public string Rol { get; set; }
 
-        public Usuario(string id, string name, string rol)
+        public Usuario(string password, string name, string rol)
         {
-            this.ID = id;
+            this.Password = password;
             this.Name = name;
             this.Rol = rol;
         }

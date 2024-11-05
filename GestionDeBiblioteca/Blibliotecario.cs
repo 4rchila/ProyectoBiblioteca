@@ -8,7 +8,7 @@ namespace GestionDeBiblioteca
 {
     public class Blibliotecario : Usuario
     {
-        public Blibliotecario(string id, string name, string rol) : base(id, name, rol)
+        public Blibliotecario(string password, string name, string rol) : base(password, name, rol)
         {
 
         }

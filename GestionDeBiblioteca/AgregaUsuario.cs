@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GestionDeBiblioteca
 {
@@ -19,30 +20,32 @@ namespace GestionDeBiblioteca
 
         private void buttonAgregar_Click(object sender, EventArgs e)
         {
-            string usuario = txtBoxUsuario.Text;
-            string contraseña = txtBoxContraseña.Text;
-            string tipo = comboBoxTipo.Text;
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(contraseña) ||
-                string.IsNullOrEmpty(tipo))
+            string nombre = txtBoxUsuario.Text;
+            string password = txtBoxContraseña.Text;
+            string rol; 
+            var existencia = Program.ComprobarExistencia(nombre, password);
+            if (existencia != true)
             {
-                MessageBox.Show("Por favor complete todos los campos.");
-                return;
-            }
-            Libro buscarTitulo = Program.ListaLibros.Find(p => p.Titulo == usuario);
-            if (buscarTitulo == null)
-            {
-                //Libro nuevoLibro = new Libro(titulo, autor, isbn, genero, true, 0);
-                // Program.ListaLibros.Add(nuevoLibro);
-                MessageBox.Show("Libro agregado correctamente.");
-                txtBoxUsuario.Clear();
-                txtBoxContraseña.Clear();
-                comboBoxTipo.SelectedIndex = -1;
-
+                MessageBox.Show($"El usuario con nombre: {nombre} existe");
             }
             else
             {
-                MessageBox.Show("Ya existe un usuario con ese nombre.");
+                if (comboBoxTipo.Text == "")
+                {
+                    rol = "Lector";
+
+                }
+                else
+                {
+                    rol = comboBoxTipo.Text;
+
+
+                }
+                Program.AgregarUsuario(nombre, rol, password);
+
             }
         }
+
     }
 }
+

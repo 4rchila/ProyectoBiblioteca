@@ -14,6 +14,7 @@ namespace GestionDeBiblioteca
 {
     public partial class EditarUsuario : UserControl
     {
+        Usuario LectorBibliotecario;
         public EditarUsuario()
         {
             InitializeComponent();
@@ -22,57 +23,76 @@ namespace GestionDeBiblioteca
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string buscarTitulo = txtBoxUsuario.Text.ToUpper();
-            Libro existe = Program.ListaLibros.Find(p => p.ISBN == buscarTitulo);
-            if (existe != null)
+            string nombreUsuario = textBox1BuscarUsuario.Text;
+            var busqueda = Program.BuscarUsuario(nombreUsuario);
+
+            if (busqueda == null)
             {
-                MostrarControles(true);
+                MessageBox.Show("Usuario no encontrado");
 
-                //txtBoxUsuario.Tag = existe.ISBN;
-                //txtBoxUsuario.Text = existe.Usuario;
-                //txtBoxContraseña.Text = existe.Contraseña;
-                //comboBoxTipo.Text = existe.Tipo;
-
-                button1.Enabled = true;
             }
             else
             {
-                InicializarControles();
-                MessageBox.Show("No hay libros con ese ISBN.");
+                MessageBox.Show("Usuario encontrado");
+                MostrarControles(true);
+                label0.Visible = false;
+                textBox1BuscarUsuario.Visible = false;
+                label3.Visible = true;
+                label4.Visible = true;
+                txtBoxUsuario.Visible = true;
+                txtBoxContraseña.Visible = true;
+                button1.Visible = true;
+                button1.Enabled = true;
+                LectorBibliotecario = busqueda;
+                
             }
+
         }
         public void InicializarControles()
         {
             button1.Enabled = false;
+            button1.Visible = false;
             label3.Visible = false;
-            label5.Visible = false;
+            label4.Visible = false;
             txtBoxContraseña.Visible = false;
-            comboBoxTipo.Visible = false;
+            txtBoxUsuario.Visible = false; 
         }
         public void MostrarControles(bool estado)
         {
             button1.Enabled = estado;
             label3.Visible = estado;
-            label5.Visible = estado;
+            label4.Visible= estado;
+            txtBoxUsuario.Visible = estado;
             txtBoxContraseña.Visible = estado;
-            comboBoxTipo.Visible = estado;
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string usuarioOriginal = txtBoxUsuario.Tag?.ToString();
-            string nuevoUsuario = txtBoxUsuario.Text.ToUpper();
-            string nuevaContraseña = txtBoxContraseña.Text.ToUpper();
-            string nuevoTipo = comboBoxTipo.Text.ToUpper();
-            Libro existe = Program.ListaLibros.Find(p => p.ISBN == usuarioOriginal);
-            if (existe != null)
+
+            if (LectorBibliotecario == null)
             {
-                //existe.Usuario = nuevoUsuario;
-                //existe.Contraseña = nuevaContraseña;
-                //existe.Tipo = nuevoTipo;
-                MessageBox.Show("Usuario actualizado correctamente.");
+                MessageBox.Show("Usuario no existe");
             }
+            else
+            {
+                string cambioNombre = txtBoxUsuario.Text;
+                string cambioPassword = txtBoxContraseña.Text;
+
+                if (cambioNombre == "" && cambioPassword == "")
+                {
+                    MessageBox.Show("No hay parametros que editar, vuelve a intentarlo");
+                }
+                else
+                {
+                    Program.CambiarUsuario(cambioNombre, cambioPassword, LectorBibliotecario);
+                }
+            }
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
