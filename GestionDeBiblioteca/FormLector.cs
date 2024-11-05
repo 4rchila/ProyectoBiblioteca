@@ -52,6 +52,13 @@ namespace GestionDeBiblioteca
                 item.SubItems.Add(libro.Autor);
                 item.SubItems.Add(libro.ISBN);
                 item.SubItems.Add(EsDisponible(libro.Disponibilidad));
+
+                // Añadir estilo al botón "Prestar"
+                item.UseItemStyleForSubItems = false;
+                item.SubItems[0].BackColor = Color.LightBlue; // Fondo del botón "Prestar"
+                item.SubItems[0].Font = new Font("Arial", 10, FontStyle.Bold); // Estilo de letra
+                item.SubItems[0].ForeColor = Color.White; // Color de texto del botón
+
                 listViewLibros.Items.Add(item);
             }
             CambiarColorDisponibilidadEnListView();
@@ -77,29 +84,27 @@ namespace GestionDeBiblioteca
 
                 if (columnIndex == 0)
                 {
-                    foreach (var libro in Program.listaDeLibros)
+                    var libroSeleccionado = Program.listaDeLibros
+                        .FirstOrDefault(libro => libro.Titulo == item.SubItems[1].Text);
+
+                    if (libroSeleccionado != null)
                     {
-                        if (libro.Titulo == item.SubItems[1].Text)
+                        if (libroSeleccionado.Disponibilidad)
                         {
-                            if (libro.Disponibilidad)
+                            if (!Lector.EstanteriaPersonal.Contains(libroSeleccionado))
                             {
-                                if (!Lector.EstanteriaPersonal.Contains(libro))
-                                {
-                                    libro.Disponibilidad = false;
-                                    Lector.EstanteriaPersonal.Add(libro);
-                                    MessageBox.Show("El libro fue almacenado en tu Estantería Personal");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("El libro ya está en tu Estantería Personal");
-                                }
+                                libroSeleccionado.Disponibilidad = false;
+                                Lector.EstanteriaPersonal.Add(libroSeleccionado);
+                                MessageBox.Show("El libro fue almacenado en tu Estantería Personal");
                             }
-                            else if (!Lector.EstanteriaPersonal.Contains(libro))
+                            else
                             {
-                                // Este mensaje solo se mostrará si el libro está marcado como no disponible 
-                                // y el usuario no lo tiene en su estantería personal.
-                                MessageBox.Show("El libro no se encuentra disponible");
+                                MessageBox.Show("El libro ya está en tu Estantería Personal");
                             }
+                        }
+                        else if (!Lector.EstanteriaPersonal.Contains(libroSeleccionado))
+                        {
+                            MessageBox.Show("El libro no se encuentra disponible");  
                         }
                     }
 
@@ -112,7 +117,7 @@ namespace GestionDeBiblioteca
 
         private string EsDisponible(bool disponible)
         {
-            return disponible ? "Si" : "No";
+            return disponible ? "Sí" : "No";
         }
 
         private void CambiarColorDisponibilidadEnListView()
@@ -121,13 +126,15 @@ namespace GestionDeBiblioteca
             {
                 string disponibilidad = item.SubItems[4].Text;
 
-                if (disponibilidad == "Si")
+                if (disponibilidad == "Sí")
                 {
                     item.SubItems[4].ForeColor = Color.Green;
+                    item.SubItems[4].BackColor = Color.LightGreen;  
                 }
                 else if (disponibilidad == "No")
                 {
                     item.SubItems[4].ForeColor = Color.Red;
+                    item.SubItems[4].BackColor = Color.LightCoral;
                 }
             }
         }
@@ -145,8 +152,4 @@ namespace GestionDeBiblioteca
         }
     }
 }
-
-
-
-
 
