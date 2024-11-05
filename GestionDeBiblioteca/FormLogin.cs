@@ -17,6 +17,7 @@ namespace GestionDeBiblioteca
         // Configuramos el TextBox de Contraseña para que oculte el texto
         // Contraseña.UseSystemPasswordChar = true;
         //}
+        /*
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -80,10 +81,11 @@ namespace GestionDeBiblioteca
             Program.ComprobarPassword(Usuario.Text, Contraseña.Text);
 
         }
+        */
 
-        private void form1_Load(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            Program.ComprobarPassword(txtBoxUsuario.Text,txtBoxContrase�a.Text);
         }
     }
 }

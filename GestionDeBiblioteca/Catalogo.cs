@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace GestionDeBiblioteca
 {
-    public partial class FormBuscarLibro : Form
+    public partial class Catalogo : UserControl
     {
-        private ImageList imageList;
-        public FormBuscarLibro()
+        public Catalogo()
         {
             InitializeComponent();
-            CargarLibros(DatosGlobales.Libros);
+            CargarLibros(Program.ListaLibros);
             listViewLibros.Sorting = SortOrder.None;
         }
         public void CargarLibros(IEnumerable<Libro> libros)
@@ -35,15 +34,14 @@ namespace GestionDeBiblioteca
         }
         private string EsDisponible(bool disponible)
         {
-            return disponible ? "Si" : "No";
+            return disponible ? "SI" : "NO";
         }
-
         private void txtBoxBuscar_TextChanged(object sender, EventArgs e)
         {
             string filtro = txtBoxBuscar.Text.ToUpper();
 
             // Filtrar los libros que coincidan con el texto ingresado en título, autor o ISBN
-            var librosFiltrados = DatosGlobales.Libros
+            var librosFiltrados = Program.ListaLibros
                 .Where(libro =>
                     libro.Titulo.ToUpper().Contains(filtro) ||
                     libro.Autor.ToUpper().Contains(filtro) ||
@@ -55,16 +53,5 @@ namespace GestionDeBiblioteca
             CargarLibros(librosFiltrados); // Mostrar solo los libros filtrados
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            FormBibliotecario ventanaBibliotecario = new FormBibliotecario();
-            ventanaBibliotecario.Show();
-        }
-
-        private void listViewLibros_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
