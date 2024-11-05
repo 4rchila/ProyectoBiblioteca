@@ -106,6 +106,11 @@ namespace GestionDeBiblioteca
             FormLector ventanaLector = new FormLector(Lector);
             ventanaLector.Show();
         }
+        private void listViewLibros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
     }
+
 }
 
