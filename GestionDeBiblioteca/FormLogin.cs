@@ -92,6 +92,13 @@ namespace GestionDeBiblioteca
         {
             txtBoxContraseña.UseSystemPasswordChar = true;
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormRegistrarse formRegistrarse = new FormRegistrarse();
+            formRegistrarse.Show();
+        }
     }
 }
 

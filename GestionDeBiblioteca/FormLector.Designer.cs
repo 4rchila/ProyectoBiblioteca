@@ -20,6 +20,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLector));
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            button2 = new Button();
             button1 = new Button();
             buttonFavoritos = new Button();
             label2 = new Label();
@@ -32,7 +33,6 @@
             columnHeader5 = new ColumnHeader();
             txtBoxBuscarLector = new TextBox();
             label1 = new Label();
-            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -41,10 +41,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-196, -76);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
+            pictureBox1.Location = new Point(-137, -46);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(46, 47);
+            pictureBox1.Size = new Size(32, 28);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
@@ -60,11 +59,24 @@
             panel1.Controls.Add(listViewLibros);
             panel1.Controls.Add(txtBoxBuscarLector);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(105, 39);
-            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Location = new Point(39, 24);
             panel1.Name = "panel1";
-            panel1.Size = new Size(948, 603);
+            panel1.Size = new Size(817, 383);
             panel1.TabIndex = 5;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(140, 122, 91);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.FromArgb(237, 226, 213);
+            button2.Location = new Point(44, 323);
+            button2.Name = "button2";
+            button2.Size = new Size(70, 25);
+            button2.TabIndex = 25;
+            button2.Text = "Salir";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
@@ -72,10 +84,9 @@
             button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.FromArgb(237, 226, 213);
-            button1.Location = new Point(358, 522);
-            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Location = new Point(280, 323);
             button1.Name = "button1";
-            button1.Size = new Size(159, 41);
+            button1.Size = new Size(111, 25);
             button1.TabIndex = 24;
             button1.Text = "Regresar";
             button1.UseVisualStyleBackColor = false;
@@ -87,10 +98,9 @@
             buttonFavoritos.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
             buttonFavoritos.FlatStyle = FlatStyle.Flat;
             buttonFavoritos.ForeColor = Color.FromArgb(237, 226, 213);
-            buttonFavoritos.Location = new Point(191, 522);
-            buttonFavoritos.Margin = new Padding(4, 5, 4, 5);
+            buttonFavoritos.Location = new Point(163, 323);
             buttonFavoritos.Name = "buttonFavoritos";
-            buttonFavoritos.Size = new Size(159, 41);
+            buttonFavoritos.Size = new Size(111, 25);
             buttonFavoritos.TabIndex = 23;
             buttonFavoritos.Text = "Libros Favoritos";
             buttonFavoritos.UseVisualStyleBackColor = false;
@@ -101,18 +111,20 @@
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(140, 122, 91);
-            label2.Location = new Point(750, 494);
+            label2.Location = new Point(658, 296);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(195, 24);
+            label2.Size = new Size(144, 16);
             label2.TabIndex = 6;
             label2.Text = "Estanteria Personal";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = Properties.Resources.Captura_de_pantalla_2024_11_03_125553_removebg_preview;
-            pictureBox2.Location = new Point(789, 494);
+            pictureBox2.Location = new Point(685, 296);
+            pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(126, 109);
+            pictureBox2.Size = new Size(88, 65);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
@@ -125,10 +137,10 @@
             listViewLibros.Columns.AddRange(new ColumnHeader[] { columnHeader6, columnHeader1, columnHeader2, columnHeader3, columnHeader5 });
             listViewLibros.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listViewLibros.ForeColor = Color.FromArgb(166, 152, 128);
-            listViewLibros.Location = new Point(87, 117);
-            listViewLibros.Margin = new Padding(4, 5, 4, 5);
+            listViewLibros.Location = new Point(44, 70);
             listViewLibros.Name = "listViewLibros";
-            listViewLibros.Size = new Size(787, 395);
+            listViewLibros.Scrollable = false;
+            listViewLibros.Size = new Size(729, 221);
             listViewLibros.TabIndex = 4;
             listViewLibros.UseCompatibleStateImageBehavior = false;
             listViewLibros.View = View.Details;
@@ -166,12 +178,11 @@
             txtBoxBuscarLector.BorderStyle = BorderStyle.FixedSingle;
             txtBoxBuscarLector.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxBuscarLector.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxBuscarLector.Location = new Point(54, 68);
-            txtBoxBuscarLector.Margin = new Padding(4, 5, 4, 5);
+            txtBoxBuscarLector.Location = new Point(44, 42);
             txtBoxBuscarLector.MaxLength = 15;
             txtBoxBuscarLector.Name = "txtBoxBuscarLector";
             txtBoxBuscarLector.PlaceholderText = "Buscar libro...";
-            txtBoxBuscarLector.Size = new Size(165, 30);
+            txtBoxBuscarLector.Size = new Size(729, 22);
             txtBoxBuscarLector.TabIndex = 3;
             txtBoxBuscarLector.TextChanged += txtBoxBuscarLector_TextChanged;
             // 
@@ -179,39 +190,26 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(140, 122, 91);
-            label1.Location = new Point(322, 25);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.ForeColor = Color.FromArgb(62, 44, 25);
+            label1.Location = new Point(280, 10);
             label1.Name = "label1";
-            label1.Size = new Size(299, 43);
+            label1.Size = new Size(232, 29);
             label1.TabIndex = 1;
-            label1.Text = "Catálo de Libros";
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(140, 122, 91);
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.FromArgb(237, 226, 213);
-            button2.Location = new Point(22, 522);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(100, 41);
-            button2.TabIndex = 25;
-            button2.Text = "Salir";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            label1.Text = "Catalogo de Libros";
             // 
             // FormLector
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 230, 211);
-            ClientSize = new Size(1128, 694);
+            ClientSize = new Size(893, 445);
             Controls.Add(panel1);
             Controls.Add(pictureBox1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "FormLector";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ventanaDeLector";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstanteriaPersonal));
             panel1 = new Panel();
+            button1 = new Button();
             pictureBox1 = new PictureBox();
             listViewLibros = new ListView();
             columnHeader6 = new ColumnHeader();
@@ -38,7 +39,6 @@
             columnHeader3 = new ColumnHeader();
             txtBoxBuscarLector = new TextBox();
             label1 = new Label();
-            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -51,18 +51,32 @@
             panel1.Controls.Add(listViewLibros);
             panel1.Controls.Add(txtBoxBuscarLector);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(1, 3);
-            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Location = new Point(1, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(805, 449);
+            panel1.Size = new Size(735, 299);
             panel1.TabIndex = 6;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(140, 122, 91);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.FromArgb(237, 226, 213);
+            button1.Location = new Point(587, 260);
+            button1.Name = "button1";
+            button1.Size = new Size(111, 25);
+            button1.TabIndex = 25;
+            button1.Text = "Regresar acción";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(26, 34);
+            pictureBox1.Location = new Point(10, 17);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(92, 75);
+            pictureBox1.Size = new Size(38, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -75,10 +89,10 @@
             listViewLibros.Columns.AddRange(new ColumnHeader[] { columnHeader6, columnHeader1, columnHeader2, columnHeader3 });
             listViewLibros.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listViewLibros.ForeColor = Color.FromArgb(166, 152, 128);
-            listViewLibros.Location = new Point(104, 129);
-            listViewLibros.Margin = new Padding(4, 5, 4, 5);
+            listViewLibros.Location = new Point(73, 77);
             listViewLibros.Name = "listViewLibros";
-            listViewLibros.Size = new Size(634, 304);
+            listViewLibros.Scrollable = false;
+            listViewLibros.Size = new Size(625, 182);
             listViewLibros.TabIndex = 4;
             listViewLibros.UseCompatibleStateImageBehavior = false;
             listViewLibros.View = View.Details;
@@ -111,12 +125,11 @@
             txtBoxBuscarLector.BorderStyle = BorderStyle.FixedSingle;
             txtBoxBuscarLector.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBoxBuscarLector.ForeColor = Color.FromArgb(107, 91, 61);
-            txtBoxBuscarLector.Location = new Point(590, 79);
-            txtBoxBuscarLector.Margin = new Padding(4, 5, 4, 5);
+            txtBoxBuscarLector.Location = new Point(73, 49);
             txtBoxBuscarLector.MaxLength = 15;
             txtBoxBuscarLector.Name = "txtBoxBuscarLector";
             txtBoxBuscarLector.PlaceholderText = "Buscar libro...";
-            txtBoxBuscarLector.Size = new Size(165, 30);
+            txtBoxBuscarLector.Size = new Size(625, 22);
             txtBoxBuscarLector.TabIndex = 3;
             txtBoxBuscarLector.TextChanged += txtBoxBuscarLector_TextChanged;
             // 
@@ -124,36 +137,21 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(140, 122, 91);
-            label1.Location = new Point(225, 29);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.ForeColor = Color.FromArgb(62, 44, 25);
+            label1.Location = new Point(73, 17);
             label1.Name = "label1";
-            label1.Size = new Size(371, 41);
+            label1.Size = new Size(251, 26);
             label1.TabIndex = 1;
             label1.Text = "Mi Estanteria Personal";
             // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(140, 122, 91);
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.FromArgb(237, 226, 213);
-            button1.Location = new Point(579, 364);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(159, 41);
-            button1.TabIndex = 25;
-            button1.Text = "Regresar acción";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
             // EstanteriaPersonal
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(733, 299);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             MaximizeBox = false;
             Name = "EstanteriaPersonal";
             StartPosition = FormStartPosition.CenterScreen;

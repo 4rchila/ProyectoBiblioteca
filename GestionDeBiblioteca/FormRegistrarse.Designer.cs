@@ -1,16 +1,16 @@
 ﻿namespace GestionDeBiblioteca
 {
-    partial class AgregaUsuario
+    partial class FormRegistrarse
     {
-        /// <summary> 
-        /// Variable del diseñador necesaria.
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Limpiar los recursos que se estén usando.
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,19 +20,17 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de componentes
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             panel1 = new Panel();
             label6 = new Label();
-            comboBoxTipo = new ComboBox();
             buttonAgregar = new Button();
-            label5 = new Label();
             txtBoxContraseña = new TextBox();
             label3 = new Label();
             txtBoxUsuario = new TextBox();
@@ -45,18 +43,16 @@
             // 
             panel1.BackColor = Color.FromArgb(251, 243, 232);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(comboBoxTipo);
             panel1.Controls.Add(buttonAgregar);
-            panel1.Controls.Add(label5);
             panel1.Controls.Add(txtBoxContraseña);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(txtBoxUsuario);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(164, 3);
+            panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(374, 402);
-            panel1.TabIndex = 2;
+            panel1.Size = new Size(374, 433);
+            panel1.TabIndex = 3;
             // 
             // label6
             // 
@@ -67,17 +63,6 @@
             label6.Size = new Size(126, 15);
             label6.TabIndex = 11;
             label6.Text = "Crea un nuevo usuario";
-            // 
-            // comboBoxTipo
-            // 
-            comboBoxTipo.BackColor = Color.FromArgb(255, 249, 240);
-            comboBoxTipo.ForeColor = Color.FromArgb(107, 91, 61);
-            comboBoxTipo.FormattingEnabled = true;
-            comboBoxTipo.Items.AddRange(new object[] { "Lector", "Bibliotecario" });
-            comboBoxTipo.Location = new Point(29, 290);
-            comboBoxTipo.Name = "comboBoxTipo";
-            comboBoxTipo.Size = new Size(300, 23);
-            comboBoxTipo.TabIndex = 10;
             // 
             // buttonAgregar
             // 
@@ -93,16 +78,6 @@
             buttonAgregar.UseVisualStyleBackColor = false;
             buttonAgregar.Click += buttonAgregar_Click;
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.ForeColor = Color.FromArgb(166, 152, 128);
-            label5.Location = new Point(29, 262);
-            label5.Name = "label5";
-            label5.Size = new Size(88, 15);
-            label5.TabIndex = 7;
-            label5.Text = "Tipo de usuario";
-            // 
             // txtBoxContraseña
             // 
             txtBoxContraseña.BackColor = Color.FromArgb(255, 249, 240);
@@ -112,6 +87,7 @@
             txtBoxContraseña.Location = new Point(29, 217);
             txtBoxContraseña.MaxLength = 30;
             txtBoxContraseña.Name = "txtBoxContraseña";
+            txtBoxContraseña.PasswordChar = '*';
             txtBoxContraseña.PlaceholderText = "Ingrese la contraseña";
             txtBoxContraseña.Size = new Size(300, 22);
             txtBoxContraseña.TabIndex = 4;
@@ -160,14 +136,17 @@
             label1.TabIndex = 0;
             label1.Text = "Agregar Nuevo Usuario";
             // 
-            // AgregaUsuario
+            // FormRegistrarse
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 243, 232);
+            ClientSize = new Size(398, 450);
             Controls.Add(panel1);
-            Name = "AgregaUsuario";
-            Size = new Size(718, 412);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "FormRegistrarse";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormRegistrarse";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -177,9 +156,7 @@
 
         private Panel panel1;
         private Label label6;
-        private ComboBox comboBoxTipo;
         private Button buttonAgregar;
-        private Label label5;
         private TextBox txtBoxContraseña;
         private Label label3;
         private TextBox txtBoxUsuario;

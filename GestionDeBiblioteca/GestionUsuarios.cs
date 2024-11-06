@@ -21,8 +21,7 @@ namespace GestionDeBiblioteca
             SidePanel.Top = button1.Top;
             listaUsuarios1.BringToFront();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             // Actualizar el encabezado con la información de los usuarios
             labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
@@ -32,8 +31,7 @@ namespace GestionDeBiblioteca
             listaUsuarios1.CargarUsuario(Program.ListaLectores);
             listaUsuarios1.BringToFront();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             // Actualizar el encabezado con la información de los usuarios
             labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
@@ -42,7 +40,7 @@ namespace GestionDeBiblioteca
             agregaUsuario1.BringToFront();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             // Actualizar el encabezado con la información de los usuarios
             labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
@@ -53,7 +51,7 @@ namespace GestionDeBiblioteca
             editarUsuario1.BringToFront();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
             // Actualizar el encabezado con la información de los usuarios
             labelHeader.Text = Program.InfoUsuarios(Program.ListaBibliotecarios, Program.ListaLectores);
@@ -64,16 +62,11 @@ namespace GestionDeBiblioteca
             eliminarUsuario1.BringToFront();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void button5_Click_1(object sender, EventArgs e)
         {
             FormBibliotecario ventanaPrincipal = new FormBibliotecario();
             ventanaPrincipal.Show();
             this.Close();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

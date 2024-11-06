@@ -38,9 +38,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(36, 28);
+            pictureBox1.Location = new Point(11, 17);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(80, 67);
+            pictureBox1.Size = new Size(41, 34);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 29;
             pictureBox1.TabStop = false;
@@ -52,10 +53,9 @@
             listViewLibros.BorderStyle = BorderStyle.None;
             listViewLibros.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listViewLibros.ForeColor = Color.FromArgb(166, 152, 128);
-            listViewLibros.Location = new Point(105, 103);
-            listViewLibros.Margin = new Padding(4, 5, 4, 5);
+            listViewLibros.Location = new Point(74, 62);
             listViewLibros.Name = "listViewLibros";
-            listViewLibros.Size = new Size(634, 304);
+            listViewLibros.Size = new Size(444, 182);
             listViewLibros.TabIndex = 28;
             listViewLibros.UseCompatibleStateImageBehavior = false;
             listViewLibros.View = View.Details;
@@ -65,23 +65,24 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(140, 122, 91);
-            label1.Location = new Point(318, 28);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.ForeColor = Color.FromArgb(62, 44, 25);
+            label1.Location = new Point(223, 17);
             label1.Name = "label1";
-            label1.Size = new Size(151, 41);
+            label1.Size = new Size(104, 26);
             label1.TabIndex = 26;
             label1.Text = "Historial\r\n";
             // 
             // VentanPrestamosDevoluciones
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 243, 232);
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(pictureBox1);
             Controls.Add(listViewLibros);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "VentanPrestamosDevoluciones";
             StartPosition = FormStartPosition.CenterScreen;

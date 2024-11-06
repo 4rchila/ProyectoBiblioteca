@@ -45,7 +45,7 @@
             panel2.Controls.Add(label7);
             panel2.Location = new Point(31, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(660, 433);
+            panel2.Size = new Size(660, 414);
             panel2.TabIndex = 3;
             // 
             // listViewUsuarios
@@ -57,6 +57,7 @@
             listViewUsuarios.ForeColor = Color.FromArgb(166, 152, 128);
             listViewUsuarios.Location = new Point(16, 95);
             listViewUsuarios.Name = "listViewUsuarios";
+            listViewUsuarios.Scrollable = false;
             listViewUsuarios.Size = new Size(594, 306);
             listViewUsuarios.TabIndex = 4;
             listViewUsuarios.UseCompatibleStateImageBehavior = false;
@@ -104,7 +105,7 @@
             BackColor = Color.FromArgb(251, 243, 232);
             Controls.Add(panel2);
             Name = "ListaUsuarios";
-            Size = new Size(718, 439);
+            Size = new Size(718, 420);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);

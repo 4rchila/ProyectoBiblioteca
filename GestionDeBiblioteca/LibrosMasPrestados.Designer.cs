@@ -47,10 +47,9 @@
             panel1.BackColor = Color.FromArgb(251, 243, 232);
             panel1.Controls.Add(listViewLibros);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(107, 46);
-            panel1.Margin = new Padding(4, 5, 4, 5);
+            panel1.Location = new Point(75, 28);
             panel1.Name = "panel1";
-            panel1.Size = new Size(948, 603);
+            panel1.Size = new Size(664, 362);
             panel1.TabIndex = 6;
             // 
             // listViewLibros
@@ -60,10 +59,10 @@
             listViewLibros.Columns.AddRange(new ColumnHeader[] { columnHeader6, columnHeader1, columnHeader2, columnHeader3, columnHeader5 });
             listViewLibros.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             listViewLibros.ForeColor = Color.FromArgb(166, 152, 128);
-            listViewLibros.Location = new Point(87, 117);
-            listViewLibros.Margin = new Padding(4, 5, 4, 5);
+            listViewLibros.Location = new Point(33, 76);
             listViewLibros.Name = "listViewLibros";
-            listViewLibros.Size = new Size(787, 395);
+            listViewLibros.Scrollable = false;
+            listViewLibros.Size = new Size(603, 237);
             listViewLibros.TabIndex = 4;
             listViewLibros.UseCompatibleStateImageBehavior = false;
             listViewLibros.View = View.Details;
@@ -99,20 +98,20 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.FromArgb(140, 122, 91);
-            label1.Location = new Point(280, 23);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.ForeColor = Color.FromArgb(62, 44, 25);
+            label1.Location = new Point(196, 14);
             label1.Name = "label1";
-            label1.Size = new Size(435, 43);
+            label1.Size = new Size(290, 29);
             label1.TabIndex = 1;
             label1.Text = "Libros mas prestados!!!!";
             // 
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 69);
+            pictureBox1.Location = new Point(11, 28);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(92, 75);
+            pictureBox1.Size = new Size(41, 30);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
@@ -120,12 +119,14 @@
             // 
             // LibrosMasPrestados
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(245, 230, 211);
-            ClientSize = new Size(1128, 694);
+            ClientSize = new Size(790, 416);
             Controls.Add(pictureBox1);
             Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             MaximizeBox = false;
             Name = "LibrosMasPrestados";
             StartPosition = FormStartPosition.CenterScreen;
