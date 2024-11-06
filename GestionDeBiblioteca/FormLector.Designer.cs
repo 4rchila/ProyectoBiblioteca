@@ -20,6 +20,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLector));
             pictureBox1 = new PictureBox();
             panel1 = new Panel();
+            button1 = new Button();
+            buttonFavoritos = new Button();
             label2 = new Label();
             pictureBox2 = new PictureBox();
             listViewLibros = new ListView();
@@ -30,6 +32,7 @@
             columnHeader5 = new ColumnHeader();
             txtBoxBuscarLector = new TextBox();
             label1 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -49,6 +52,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(251, 243, 232);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(buttonFavoritos);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(listViewLibros);
@@ -59,6 +65,36 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(948, 603);
             panel1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(140, 122, 91);
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.FromArgb(237, 226, 213);
+            button1.Location = new Point(358, 522);
+            button1.Margin = new Padding(4, 5, 4, 5);
+            button1.Name = "button1";
+            button1.Size = new Size(159, 41);
+            button1.TabIndex = 24;
+            button1.Text = "Regresar";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // buttonFavoritos
+            // 
+            buttonFavoritos.BackColor = Color.FromArgb(140, 122, 91);
+            buttonFavoritos.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
+            buttonFavoritos.FlatStyle = FlatStyle.Flat;
+            buttonFavoritos.ForeColor = Color.FromArgb(237, 226, 213);
+            buttonFavoritos.Location = new Point(191, 522);
+            buttonFavoritos.Margin = new Padding(4, 5, 4, 5);
+            buttonFavoritos.Name = "buttonFavoritos";
+            buttonFavoritos.Size = new Size(159, 41);
+            buttonFavoritos.TabIndex = 23;
+            buttonFavoritos.Text = "Libros Favoritos";
+            buttonFavoritos.UseVisualStyleBackColor = false;
+            buttonFavoritos.Click += buttonFavoritos_Click;
             // 
             // label2
             // 
@@ -151,6 +187,21 @@
             label1.TabIndex = 1;
             label1.Text = "Catálo de Libros";
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(140, 122, 91);
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(62, 44, 25);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.FromArgb(237, 226, 213);
+            button2.Location = new Point(22, 522);
+            button2.Margin = new Padding(4, 5, 4, 5);
+            button2.Name = "button2";
+            button2.Size = new Size(100, 41);
+            button2.TabIndex = 25;
+            button2.Text = "Salir";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // FormLector
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -183,5 +234,8 @@
         private Label label1;
         private PictureBox pictureBox2;
         private Label label2;
+        private Button buttonFavoritos;
+        private Button button1;
+        private Button button2;
     }
 }

@@ -50,11 +50,10 @@ namespace GestionDeBiblioteca
                 item.SubItems.Add(libro.Autor);
                 item.SubItems.Add(libro.ISBN);
 
-                // Decorar el botón de devolución con un fondo de color que contraste
                 item.UseItemStyleForSubItems = false;
-                item.SubItems[0].BackColor = Color.FromArgb(225, 240, 255); // Fondo azul claro suave
-                item.SubItems[0].ForeColor = Color.DarkSlateBlue; // Texto en azul oscuro
-                item.SubItems[0].Font = new Font("Segoe UI", 10, FontStyle.Bold); // Fuente más visible
+                item.SubItems[0].BackColor = Color.FromArgb(225, 240, 255);
+                item.SubItems[0].ForeColor = Color.DarkSlateBlue;
+                item.SubItems[0].Font = new Font("Segoe UI", 10, FontStyle.Bold);
 
                 listViewLibros.Items.Add(item);
             }
@@ -74,9 +73,12 @@ namespace GestionDeBiblioteca
                     {
                         libroEnListaGeneral.Disponibilidad = true;
                         Lector.EstanteriaPersonal.Remove(libroParaDevolver);
+
+                        // Guardar el libro y el usuario en el historial de devoluciones
+                        Program.historialDevueltos.Push((libroParaDevolver, Lector));
+
                         MessageBox.Show("El libro fue devuelto correctamente");
 
-                        // Refrescar la lista de libros en el ListView
                         CargarLibros(Lector.EstanteriaPersonal);
                     }
                     else
@@ -93,10 +95,9 @@ namespace GestionDeBiblioteca
 
         private void CambiarColorDisponibilidadEnListView()
         {
-            // Cambia el color de fondo para hacer el contraste
             foreach (ListViewItem item in listViewLibros.Items)
             {
-                item.BackColor = Color.FromArgb(245, 245, 245); // Fondo gris claro para todos los elementos
+                item.BackColor = Color.FromArgb(245, 245, 245);
             }
         }
 
@@ -106,11 +107,41 @@ namespace GestionDeBiblioteca
             FormLector ventanaLector = new FormLector(Lector);
             ventanaLector.Show();
         }
+
         private void listViewLibros_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
 
-    }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Program.historialDevueltos.Count > 0)
+            {
+                var (libroRestaurado, usuarioDevolucion) = Program.historialDevueltos.Pop(); // Recuperar el último libro devuelto
 
+                // Verificar que la devolución corresponde al usuario actual
+                if (usuarioDevolucion == Lector)
+                {
+                    Lector.EstanteriaPersonal.Add(libroRestaurado);
+
+                    var libroEnListaGeneral = Program.ListaLibros.FirstOrDefault(libro => libro.Titulo == libroRestaurado.Titulo);
+                    if (libroEnListaGeneral != null)
+                    {
+                        libroEnListaGeneral.Disponibilidad = false;
+                    }
+
+                    MessageBox.Show("El libro ha sido restaurado a tu estantería personal.");
+                    CargarLibros(Lector.EstanteriaPersonal);
+                }
+                else
+                {
+                    MessageBox.Show("No tienes libros que puedas restaurar de la devolución.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay libros para deshacer la devolución.");
+            }
+        }
+    }
 }
 

@@ -9,6 +9,7 @@ namespace GestionDeBiblioteca
     public partial class FormLector : Form
     {
         private ImageList imageList;
+
         public Usuario Lector { get; set; }
 
         public FormLector(Usuario lector)
@@ -24,22 +25,6 @@ namespace GestionDeBiblioteca
             CargarLibros(Program.ListaLibros);
             listViewLibros.MouseClick += new MouseEventHandler(listViewLibros_MouseClick);
             listViewLibros.HideSelection = true;
-        }
-
-        private void txtBoxBuscarLector_TextChanged(object sender, EventArgs e)
-        {
-            string filtro = txtBoxBuscarLector.Text.ToUpper();
-
-            var librosFiltrados = Program.ListaLibros
-                .Where(libro =>
-                    libro.Titulo.ToUpper().Contains(filtro) ||
-                    libro.Autor.ToUpper().Contains(filtro) ||
-                    libro.ISBN.ToUpper().Contains(filtro) ||
-                    libro.Genero.ToUpper().Contains(filtro))
-                .OrderBy(libro => libro.Titulo)
-                .ToList();
-
-            CargarLibros(librosFiltrados);
         }
 
         public void CargarLibros(IEnumerable<Libro> libros)
@@ -84,7 +69,6 @@ namespace GestionDeBiblioteca
 
                 if (columnIndex == 0)
                 {
-                    
                     var libroSeleccionado = Program.ListaLibros
                         .FirstOrDefault(libro => libro.Titulo == item.SubItems[1].Text);
 
@@ -96,6 +80,11 @@ namespace GestionDeBiblioteca
                             {
                                 libroSeleccionado.Disponibilidad = false;
                                 Lector.EstanteriaPersonal.Add(libroSeleccionado);
+                                libroSeleccionado.TotalPrestamo += 1;
+
+                                // Guardar el libro y el usuario en el historial
+                                Program.historialPrestamos.Push((libroSeleccionado, Lector));
+
                                 MessageBox.Show("El libro fue almacenado en tu Estantería Personal");
                             }
                             else
@@ -140,9 +129,26 @@ namespace GestionDeBiblioteca
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        // Método para revertir la última acción de préstamo
+        private void button1_Click(object sender, EventArgs e)
         {
-            // Puedes añadir lógica de pintura aquí si es necesario
+            if (Program.historialPrestamos.Count > 0)
+            {
+                var (ultimoLibroPrestado, usuarioPrestamo) = Program.historialPrestamos.Pop(); // Recuperar el último préstamo
+
+                // Verificar que el préstamo corresponde al usuario actual
+                if (usuarioPrestamo == Lector && Lector.EstanteriaPersonal.Contains(ultimoLibroPrestado))
+                {
+                    Lector.EstanteriaPersonal.Remove(ultimoLibroPrestado);
+                    ultimoLibroPrestado.Disponibilidad = true; // Marcar como disponible
+                    MessageBox.Show("Se ha revertido la acción de préstamo. El libro está disponible nuevamente.");
+                }
+                CargarLibros(Program.ListaLibros);
+            }
+            else
+            {
+                MessageBox.Show("No hay acciones de préstamo que se puedan deshacer.");
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -151,6 +157,36 @@ namespace GestionDeBiblioteca
             EstanteriaPersonal estanteriaPersonal = new EstanteriaPersonal(Lector);
             estanteriaPersonal.Show();
         }
+
+        private void buttonFavoritos_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LibrosMasPrestados librosMasPrestados = new LibrosMasPrestados(Lector);
+            librosMasPrestados.Show();
+        }
+
+        private void txtBoxBuscarLector_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtBoxBuscarLector.Text.ToUpper();
+
+            var librosFiltrados = Program.ListaLibros
+                .Where(libro =>
+                    libro.Titulo.ToUpper().Contains(filtro) ||
+                    libro.Autor.ToUpper().Contains(filtro))
+                .OrderBy(libro => libro.Titulo)
+                .ToList();
+
+            CargarLibros(librosFiltrados);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
+        }
     }
 }
+
+
 

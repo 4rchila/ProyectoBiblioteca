@@ -55,7 +55,9 @@ namespace GestionDeBiblioteca
             label3.Visible = false;
             label4.Visible = false;
             txtBoxContraseña.Visible = false;
-            txtBoxUsuario.Visible = false; 
+            txtBoxUsuario.Visible = false;
+            textBox1BuscarUsuario.Visible = true;
+            label0.Visible = true;
         }
         public void MostrarControles(bool estado)
         {
@@ -64,6 +66,9 @@ namespace GestionDeBiblioteca
             label4.Visible= estado;
             txtBoxUsuario.Visible = estado;
             txtBoxContraseña.Visible = estado;
+            textBox1BuscarUsuario.Visible = estado;
+            textBox1BuscarUsuario.Enabled = estado;
+            label0.Visible = estado;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,6 +90,12 @@ namespace GestionDeBiblioteca
                 else
                 {
                     Program.CambiarUsuario(cambioNombre, cambioPassword, LectorBibliotecario);
+                    button1.Enabled = false;
+                    button1.Visible = false;
+                    label3.Visible = false;
+                    label4.Visible = false;
+                    txtBoxContraseña.Visible = false;
+                    txtBoxUsuario.Visible = false;
                 }
             }
 

@@ -8,6 +8,8 @@ namespace GestionDeBiblioteca
         public static List<Lector>ListaLectores = new List<Lector>();
         public static List<Blibliotecario> ListaBibliotecarios = new List<Blibliotecario>();
         public static List<Libro> ListaLibros = new List<Libro>();
+        public static Stack<(Libro libro, Usuario usuario)> historialPrestamos = new Stack<(Libro, Usuario)>();
+        public static Stack<(Libro libro, Usuario usuario)> historialDevueltos = new Stack<(Libro, Usuario)>();
 
         [STAThread]
         static void Main()
@@ -20,8 +22,8 @@ namespace GestionDeBiblioteca
             ListaLectores.Add(new Lector("carlos", "batz", "Lector"));
             ListaBibliotecarios.Add(new Blibliotecario("Pablito666","ApjLorenzo","Bibliotecario"));
             ListaBibliotecarios.Add(new Blibliotecario("tonnotos", "tonny", "Bibliotecario"));
-            ListaLibros.Add(new Libro("don quijote", "robet piere", "123456", "historico", true, 2));
-            ListaLibros.Add(new Libro("leyes del poder", "robert green", "234567", "Psicologico", false, 1));
+            ListaLibros.Add(new Libro("don quijote", "robet piere", "123456", "historico", true, 4));
+            ListaLibros.Add(new Libro("leyes del poder", "robert green", "234567", "Psicologico", false, 2));
             ListaLibros.Add(new Libro("Naturaleza humana", "robert green", "345678", "Filosofico", true, 0));
             ApplicationConfiguration.Initialize();
             Application.Run(new FormLogin());

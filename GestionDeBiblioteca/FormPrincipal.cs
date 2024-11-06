@@ -25,9 +25,23 @@ namespace GestionDeBiblioteca
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GestionUsuarios gestionUsuarios = new GestionUsuarios();    
+            GestionUsuarios gestionUsuarios = new GestionUsuarios();
             gestionUsuarios.Show();
             this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            VentanPrestamosDevoluciones ventanPrestamosDevoluciones = new VentanPrestamosDevoluciones();
+            ventanPrestamosDevoluciones.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FormLogin formLogin = new FormLogin();
+            formLogin.Show();
         }
     }
 }
